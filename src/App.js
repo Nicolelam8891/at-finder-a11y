@@ -38,7 +38,6 @@ const App = () => {
     <main className="App">
       <Header />
       <Home />
-      <h1>Your App</h1>
       {/* <Form onTechParamsSelection={handleTechParamsSelection} /> */}
     </main>
   );
