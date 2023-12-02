@@ -6,11 +6,17 @@ import CategoryCard from './CategoryCard';
 
 const Form = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedTechParam, setSelectedTechParam] = useState(null);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory((prevCategory) =>
       prevCategory === category ? null : category
     );
+    setSelectedTechParam(null);
+  };
+
+  const handleTechParamClick = (techParam) => {
+    setSelectedTechParam(techParam);
   };
 
   const getTechParams = () => {
@@ -23,12 +29,20 @@ const Form = () => {
   return (
     <div>
       <div>
-        <h2>Selected Technology Parameters</h2>
-        <ul>
-          {getTechParams().map((tech, index) => (
-            <li key={index}>{tech}</li>
-          ))}
-        </ul>
+        <h2>Selected Technology Parameter</h2>
+        {selectedCategory && (
+          <ul>
+            {getTechParams().map((tech, index) => (
+              <li
+                key={index}
+                className={tech === selectedTechParam ? 'selected' : ''}
+                onClick={() => handleTechParamClick(tech)}
+              >
+                {tech}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
 
       <div className="category-list">
