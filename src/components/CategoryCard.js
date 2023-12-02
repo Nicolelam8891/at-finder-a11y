@@ -1,11 +1,16 @@
-import './CategoryCard.css'
+// CategoryCard.js
+import React from 'react';
 
-function CategoryCard ({ category }) {
+const CategoryCard = ({ category, data, onCategoryClick }) => {
+  const handleCategoryClick = () => {
+    onCategoryClick(category);
+  };
+
   return (
-    <div>
-      <p>{category}</p>
+    <div className="category-card" onClick={handleCategoryClick}>
+      <h2>{category}</h2>
     </div>
-  )
-}
+  );
+};
 
-export default CategoryCard
+export default CategoryCard;
