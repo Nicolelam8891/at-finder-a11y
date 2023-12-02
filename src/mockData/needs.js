@@ -96,8 +96,10 @@ const needs = {
     "disability parameter": "have difficulty maintaining cognitive focus",
   },
   "Communication Supports": {
-    "category": "Communication Supports",
-    "technology parameter": ["physical", "cognitive"],
-    "disability parameter": "have communication disabilities",
-  },
-};
+      "category": "Communication Supports",
+      "technology parameter": ["physical", "cognitive"],
+      "disability parameter": "have communication disabilities"
+  }
+}
+
+export default needs
