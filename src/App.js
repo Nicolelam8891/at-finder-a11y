@@ -36,7 +36,6 @@ const App = () => {
     <div>
       <h1>Your App</h1>
       <Form onTechParamsSelection={handleTechParamsSelection} />
-      {/* Other components or content */}
     </div>
   );
 };
