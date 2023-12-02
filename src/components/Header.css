@@ -1,6 +1,6 @@
 header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   background-color: #6b9080;
   height: 120px;
@@ -9,7 +9,7 @@ header {
 
 .header-title {
   display: flex;
-  color: #EAF4F4;
+  color: #eaf4f4;
   font-size: 18px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 900;
@@ -18,18 +18,16 @@ header {
 .title {
   display: flex;
   align-items: center;
-  color: #f6fff8;
+  color: #eaf4f4;
   font-size: 50px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 900;
   margin-bottom: 0px;
-
 }
 
 .logo-title-container {
   display: flex;
   align-items: center;
-
 }
 
 .help-logo {
@@ -46,7 +44,21 @@ header {
   display: flex;
 }
 
-.about-button {
-  
+.about-button,
+.sign-in-button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background: #c0a49d;
+  width: 80px;
+  height: 30px;
+  color: #f6fff8;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-

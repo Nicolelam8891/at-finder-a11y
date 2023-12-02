@@ -18,8 +18,8 @@ function Header() {
       </Link>
 
       <div className='button-container'>
-        <button className='about-button'>ABOUT</button>
-        <button className='sign-in-button'>SIGN IN</button>
+        <button className='sign-in-button'>Log in</button>
+        <button className='about-button'>About</button>
       </div>
     </header>
   );
