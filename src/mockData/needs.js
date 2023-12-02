@@ -16,7 +16,7 @@ const needs = {
   },
   "Mobility Supports for Fine Motor Issues":  {
       "category": "Mobility Supports for Fine Motor Issues",
-      "technology parameter": ["personal care", "hygiene", "dressing", "clothing", "writing", "communication", "cooking", "meal preparation", "home organization", "home access", "mobility", "transportation", "environmental control", "computer access", "internet acess", "entertainment", "leisure", "personal safety"],
+      "technology parameter": ["personal care", "hygiene", "dressing", "clothing", "writing", "communication", "cooking", "meal preparation", "home organization", "home access", "mobility", "transportation", "environmental control", "computer access", "internet access", "entertainment", "leisure", "personal safety"],
       "disability parameter": "have fine motor disabilities"
   },
   "Mobility Supports for Gross Motor Issues": {
