@@ -45,3 +45,5 @@ const needs = {
       "disability parameter": "have communication disabilities"
   }
 }
+
+export default needs
