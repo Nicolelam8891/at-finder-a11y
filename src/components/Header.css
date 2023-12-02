@@ -1,0 +1,64 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6b9080;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+.header-title {
+  display: flex;
+  color: #eaf4f4;
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 900;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  color: #eaf4f4;
+  font-size: 50px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 900;
+  margin-bottom: 0px;
+}
+
+.logo-title-container {
+  display: flex;
+  align-items: center;
+}
+
+.help-logo {
+  height: 20x;
+  width: 120px;
+}
+
+.header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.button-container {
+  display: flex;
+}
+
+.about-button,
+.sign-in-button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background: #c0a49d;
+  width: 80px;
+  height: 30px;
+  color: #f6fff8;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}

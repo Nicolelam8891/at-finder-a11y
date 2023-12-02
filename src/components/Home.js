@@ -2,7 +2,7 @@ import './Home.css'
 
 function Home () {
   return (
-    <div>
+    <div className>
 
     </div>
   )

@@ -1,6 +1,7 @@
-// App.js
+
 import React, { useState } from 'react';
 import Form from './Form';
+import Header from './components/Header';
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -33,10 +34,11 @@ const App = () => {
   };
 
   return (
-    <div>
+    <main className="App">
+      <Header />
       <h1>Your App</h1>
       <Form onTechParamsSelection={handleTechParamsSelection} />
-    </div>
+    </main>
   );
 };
 
