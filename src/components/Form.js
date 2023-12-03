@@ -29,7 +29,6 @@ const Form = () => {
   return (
     <div>
       <div>
-        <h2>Selected Technology Parameter</h2>
         {selectedCategory && (
           <ul>
             {getTechParams().map((tech, index) => (
