@@ -1,13 +1,15 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Form from './components/Form';
 import Header from './components/Header';
 import Home from './components/Home'
 import {Route, Routes} from 'react-router-dom'
+import tech from './mockData/mockTech'
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedTechParam, setSelectedTechParam] = useState(null);
+  const [techResults, setTechResults] = useState(tech)
 
   // const handleTechParamsSelection = (category, techParam) => {
   //   setSelectedCategory(category);
@@ -43,6 +45,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/findmyat' element={<Form/>}/>
+        <Route path='/results' element={<Results tech={techResults}/>}/>
       </Routes>
     </main>
   );
