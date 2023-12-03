@@ -1,105 +1,134 @@
 const needs = {
-  "Blindness": {
-    "category": "Blindness",
-    "technology parameter": ["screen readers", "refreshable braille displays"],
-    "disability parameter": "are totally blind and cannot use a mouse",
-  },
-  "Low Vision": {
-    "category": "Low Vision",
-    "technology parameter": [
-      "magnification software",
-      "browser tools",
-      "cctv",
-      "magnifying device",
+  'Blindness': {
+    'category': 'Blindness',
+    'definition': [
+      'A person is functionally blind if they are unable to use vision in certain environments or for certain tasks, even with correction.',
     ],
-    "disability parameter": "have low vision",
+    'technology parameter': ['screen readers', 'refreshable braille displays'],
+    'disability parameter': 'are totally blind and cannot use a mouse',
   },
-  "Deaf / Hard of Hearing": {
-    "category": "Deaf / Hard of Hearing",
-    "technology parameter": [
-      "hearing",
-      "telecommunication",
-      "sign language",
-      "alert devices",
+  'Low Vision': {
+    'category': 'Low Vision',
+    'definition': [
+      'Visual acuity between 20/70 and 20/400, with the best possible correction, or a visual field of 20 degrees or less.',
     ],
-    "disability parameter": "are deaf or hard of hearing",
-  },
-  "Mobility Supports for Fine Motor Issues": {
-    "category": "Mobility Supports for Fine Motor Issues",
-    "technology parameter": [
-      "personal care",
-      "hygiene",
-      "dressing",
-      "clothing",
-      "writing",
-      "communication",
-      "cooking",
-      "meal preparation",
-      "home organization",
-      "home access",
-      "mobility",
-      "transportation",
-      "environmental control",
-      "computer access",
-      "internet access",
-      "entertainment",
-      "leisure",
-      "personal safety",
+    'technology parameter': [
+      'magnification software',
+      'browser tools',
+      'cctv',
+      'magnifying device',
     ],
-    "disability parameter": "have fine motor disabilities",
+    'disability parameter': 'have low vision',
   },
-  "Mobility Supports for Gross Motor Issues": {
-    "category": "Mobility Supports for Gross Motor Issues",
-    "technology parameter": [
-      "mobility aids",
-      "home access",
-      "environmental control",
-      "communication aids",
-      "computer access",
-      "daily living aids",
-      "vehicle modifications",
-      "recreation",
-      "leisure",
-      "personal safety",
-      "emergency response",
+  'Deaf / Hard of Hearing': {
+    'category': 'Deaf / Hard of Hearing',
+    'definition': [
+      'Deaf: Very little to no functional hearing.',
+      'Hard of Hearing: Enough functional hearing that an auditory device may be useful for amplifying sounds.',
     ],
-    "disability parameter": "have gross motor disabilities",
-  },
-  "Cognitive Supports for Reading and Writing": {
-    "category": "Cognitive Supports for Reading and Writing",
-    "technology parameter": [
-      "text-to-speech",
-      "mind mapping",
-      "word prediction",
-      "speech to text",
-      "graphic organizer",
+    'technology parameter': [
+      'hearing',
+      'telecommunication',
+      'sign language',
+      'alert devices',
     ],
-    "disability parameter":
-      "have cognitive disabilities in reading and writing",
+    'disability parameter': 'are deaf or hard of hearing',
   },
-  "Cognitive Supports for Math": {
-    "category": "Cognitive Supports for Math",
-    "technology parameter": ["computation", "calculators"],
-    "disability parameter": "have cognitive disabilities in math",
-  },
-  "Cognitive Supports for Focus": {
-    "category": "Cognitive Supports for Focus",
-    "technology parameter": [
-      "noise-cancelling headphones",
-      "background music",
-      "time management",
-      "white noise",
-      "brain training",
-      "note taking",
-      "calendar",
+  'Mobility Supports for Fine Motor Issues': {
+    'category': 'Mobility Supports for Fine Motor Issues',
+    'definition': [
+      'A person with a fine motor disability may have difficulty making precise, voluntary, and coordinated hand movements.',
     ],
-    "disability parameter": "have difficulty maintaining cognitive focus",
+    'technology parameter': [
+      'personal care',
+      'hygiene',
+      'dressing',
+      'clothing',
+      'writing',
+      'communication',
+      'cooking',
+      'meal preparation',
+      'home organization',
+      'home access',
+      'mobility',
+      'transportation',
+      'environmental control',
+      'computer access',
+      'internet access',
+      'entertainment',
+      'leisure',
+      'personal safety',
+    ],
+    'disability parameter': 'have fine motor disabilities',
   },
-  "Communication Supports": {
-      "category": "Communication Supports",
-      "technology parameter": ["physical", "cognitive"],
-      "disability parameter": "have communication disabilities"
-  }
-}
+  'Mobility Supports for Gross Motor Issues': {
+    'category': 'Mobility Supports for Gross Motor Issues',
+    'definition': [
+      'Gross motor disabilities impact large, core stabilizing muscles used for standing, walking, running, jumping, or sitting upright.',
+    ],
+    'technology parameter': [
+      'mobility aids',
+      'home access',
+      'environmental control',
+      'communication aids',
+      'computer access',
+      'daily living aids',
+      'vehicle modifications',
+      'recreation',
+      'leisure',
+      'personal safety',
+      'emergency response',
+    ],
+    'disability parameter': 'have gross motor disabilities',
+  },
+  'Cognitive Supports for Reading and Writing': {
+    'category': 'Cognitive Supports for Reading and Writing',
+    'definition': [
+      'Reading Disability: difficulty with reading fluency, speed, comprehension, or phonological processing',
+      'Writing Disability: Unable to produce writing that aligns to age and cognitive levels.',
+    ],
+    'technology parameter': [
+      'text-to-speech',
+      'mind mapping',
+      'word prediction',
+      'speech to text',
+      'graphic organizer',
+    ],
+    'disability parameter':
+      'have cognitive disabilities in reading and writing',
+  },
+  'Cognitive Supports for Math': {
+    'category': 'Cognitive Supports for Math',
+    'definition': [
+      'Math Disability / Dyscalculia: difficulty with number-related concepts, including math reasoning, problem solving, and calculation.',
+    ],
+    'technology parameter': ['computation', 'calculators'],
+    'disability parameter': 'have cognitive disabilities in math',
+  },
+  'Cognitive Supports for Focus': {
+    'category': 'Cognitive Supports for Focus',
+    'definition': [
+      'A person with a cognitive focus disability may have difficulty finishing tasks they are capable of completing.',
+    ],
+    'technology parameter': [
+      'noise-cancelling headphones',
+      'background music',
+      'time management',
+      'white noise',
+      'brain training',
+      'note taking',
+      'calendar',
+    ],
+    'disability parameter': 'have difficulty maintaining cognitive focus',
+  },
+  'Communication Supports': {
+    'category': 'Communication Supports',
+    'definition': [
+      'Communication disabilities affect receiving, sending, processing, and understanding concepts through verbal, nonverbal, & graphic symbol systems.',
+    ],
+    'technology parameter': ['physical', 'cognitive'],
+    'disability parameter': 'have communication disabilities',
+  },
+};
 
-export default needs
+export default needs;
