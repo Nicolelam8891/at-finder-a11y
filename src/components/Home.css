@@ -1,15 +1,15 @@
 .splash-background {
+  display: flex;
+  justify-content: space-around;
   position: relative;
   background-image: url("../assets/background.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
   min-height: 100vh;
   padding-top: 120px;
 }
 
-.splash-container {
+.splash-button-container {
   display: flex;
 }
 
@@ -40,10 +40,19 @@
   z-index: 2;
 }
 
-.info {
+.splash-main-info {
+  margin: 0px;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-  font-size: 25px;
+  font-size: 32px;
+  font-weight: 600px;
+  width: 900px;
   z-index: 2;
   position: relative;
 }
@@ -54,13 +63,13 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  margin-top: 10px;
+  margin: 70px;
   border: 3px solid #354f52;
   border-radius: 25px;
   background: #55828b;
   width: 150px;
   height: 60px;
-  color: white;
+  color: #f6fff8;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
   font-weight: 600;

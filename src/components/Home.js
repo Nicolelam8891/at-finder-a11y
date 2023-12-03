@@ -4,6 +4,21 @@ function Home() {
   return (
     <div className='splash-background'>
       <div className='overlay'></div>
+
+      <div className='info-container'>
+        <p className="splash-main-info">
+          Welcome to our site! Are you or a loved one searching for an assistive
+          device to help better navigate your life? Here at AI AT Ally, you can easily do more
+          research to find the right technology for you, depending
+          on your needs. Whether you want to learn more about certain assistive
+          technologies, write our comment or submit a rating, our site is the right one for you and your family! 
+        </p>
+        <div className='splash-button-container'>
+          <button className='find-AT-button'>Find my AT</button>
+          <button className='learn-AT-button'>Learn more about AT</button>
+        </div>
+      </div>
+
       <div className='AT-info'>
         <h1>What is assistive technology (AT)</h1>
         <p>
@@ -16,18 +31,6 @@ function Home() {
           different assistive technologies.{" "}
         </p>
       </div>
-      <div className='info'>
-        <p>
-          Welcome to our site! Are you or a loved one searching for an assistive
-          device to help you better navigate your life? You can easily do more
-          research on our site to find the right technology for you, depending
-          on your needs. Whether you want to learn more about certain assistive
-          technologies or write our comment, our site is the right one for you
-          to find your needs!
-        </p>
-      </div>
-      <button className='find-AT-button'>Find my AT</button>
-      <button className='learn-AT-button'>Learn more about AT</button>
     </div>
   );
 }

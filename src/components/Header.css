@@ -4,7 +4,7 @@ header {
   align-items: center;
   background-color: #6b9080;
   height: 120px;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
 }
 
 .header-title {
@@ -50,6 +50,7 @@ header {
   align-items: center;
   text-align: center;
   justify-content: center;
+  border: 2px solid #cce3de;
   background: #55828b;
   width: 80px;
   height: 30px;
@@ -58,7 +59,6 @@ header {
   font-size: 20px;
   font-weight: 600;
   border-radius: 50px;
-  border: none;
   margin-left: 10px;
   margin-right: 10px;
 }
