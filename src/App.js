@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Form from './components/Form';
 import Header from './components/Header';
@@ -6,6 +5,7 @@ import Home from './components/Home'
 import {Route, Routes} from 'react-router-dom'
 import tech from './mockData/mockTech'
 import Results from './components/Results';
+
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
