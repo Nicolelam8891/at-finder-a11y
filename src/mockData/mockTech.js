@@ -24,3 +24,5 @@ const tech = [
     urls: ["https://www.freedomscientific.com/products/software/jaws/"]
   }
 ]
+
+export default tech
