@@ -5,7 +5,7 @@ import TechList from './TechList';
 import CommentSection from './CommentSection';
 
 function Results({ tech, comments }) {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   if (!tech || !comments) {
     return <Navigate to="/findmyat" />;
