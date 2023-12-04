@@ -3,11 +3,11 @@ import TechList from './TechList'
 import CommentSection from './CommentSection'
 
 
-function Results ({tech}) {
+function Results ({tech, comments}) {
   return (
     <div>
       <TechList tech={tech}/>
-      <CommentSection />
+      <CommentSection comments={comments}/>
     </div>
   )
 }
