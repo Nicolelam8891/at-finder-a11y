@@ -7,7 +7,7 @@ import tech from './mockData/mockTech'
 import Results from './components/Results';
 import LearnAT from './LearnAT/LearnAT';
 import About from './components/About';
-
+import Error from './components/Error';
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -52,7 +52,9 @@ const App = () => {
         <Route path='/learnat' element={<LearnAT/>}/>
         <Route path='/results' element={<Results tech={techResults}/>}/>
         <Route path='/about' element={<About/>}/>
-
+        <Route path='/*' element={<Error
+              errorRoute={"Oh no, you have gone down the wrong path. Find your path back home by clicking on the home button!"}
+            />}></Route>
       </Routes>
     </main>
   );
