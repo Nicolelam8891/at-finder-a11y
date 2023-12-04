@@ -14,8 +14,6 @@ const App = () => {
 
   const navigate = useNavigate();
 
-
-
     const handleFormSubmit = () => {
       console.log('Selected Category:', selectedCategory);
       console.log('Selected Tech Parameter:', selectedTechParam);
