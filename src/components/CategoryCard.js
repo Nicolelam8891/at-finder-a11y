@@ -13,7 +13,6 @@ const CategoryCard = ({ category, data, onCategoryClick, onTechParamClick }) => 
   return (
     <div className="category-card" onClick={handleCategoryClick}>
       <h2>{category}</h2>
-      {/* Technology parameters are not displayed in the CategoryCard */}
     </div>
   );
 };

@@ -1,9 +1,9 @@
 import './TechCard.css'
 
-function TechCard () {
+function TechCard ({title}) {
   return (
     <div>
-
+      <h1>{title}</h1>
     </div>
   )
 }
