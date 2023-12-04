@@ -20,7 +20,9 @@ const App = () => {
       console.log('Selected Category:', selectedCategory);
       console.log('Selected Tech Parameter:', selectedTechParam);
       setTechResults(tech);
-      setTechComments(comments)
+      setTechComments(comments);
+      console.log('bump', comments);
+      console.log('SNAPPLE', techComments)
       navigate('/results');
     };
 
