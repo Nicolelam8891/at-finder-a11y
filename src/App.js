@@ -5,6 +5,7 @@ import Home from './components/Home'
 import {Route, Routes, useNavigate} from 'react-router-dom'
 import tech from './mockData/mockTech'
 import Results from './components/Results';
+import comments from './mockData/comments';
 
 
 const App = () => {
