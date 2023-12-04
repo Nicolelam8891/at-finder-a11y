@@ -1,0 +1,53 @@
+.error-bad-route-container {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  width: 1200px;
+  height: 1000px;
+  border-radius: 20px;
+  border: 3px solid rgba(43, 102, 138, 0.6);
+  background: linear-gradient(
+    45deg,
+    rgba(31, 30, 30, 0.5),
+    rgba(6, 6, 6, 0.5),
+    rgba(31, 30, 30, 0.5)
+  );
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 35px;
+  text-decoration: none;
+  box-shadow: 0 0 15px 3px rgba(67, 129, 165, 0.6);
+  animation: slideInFromLeft 0.5s ease-out forwards;
+}
+
+.error-bad-route-image {
+  width: 1000px;
+  height: 600px;
+  border-radius: 20px;
+}
+
+.error-bad-route-message {
+  color: rgb(163, 176, 249);
+  font-family: fantasy;
+  font-weight: 900px;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.error-bad-route {
+  text-align: center;
+  color: rgba(145, 210, 247, 0.6);
+  font-size: 30px;
+  font-family: fantasy;
+  font-weight: 900;
+  margin: 15px;
+  margin-top: 5px;
+}
+
+.error-details {
+  display: flex;
+  justify-content: center;
+}
