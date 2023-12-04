@@ -1,4 +1,3 @@
-// Form.js
 import React, { useState } from 'react';
 import './Form.css';
 import needs from '../mockData/needs';
@@ -24,6 +23,12 @@ const Form = () => {
       return needs[selectedCategory]['technology parameter'];
     }
     return [];
+  };
+
+  const isSubmitEnabled = selectedCategory && selectedTechParam;
+
+  const handleSubmit = () => {
+    console.log('hello');
   };
 
   return (
@@ -54,6 +59,10 @@ const Form = () => {
           />
         ))}
       </div>
+
+      {isSubmitEnabled && (
+        <button onClick={handleSubmit}>Submit</button>
+      )}
     </div>
   );
 };
