@@ -40,13 +40,26 @@ const App = () => {
 
       {/* <Form onTechParamsSelection={handleTechParamsSelection} /> */}
 
+    const handleFormSubmit = () => {
+      console.log('Selected Category:', selectedCategory);
+      console.log('Selected Tech Parameter:', selectedTechParam);
+    };
 
   return (
     <main className="App">
       <Header />
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/findmyat' element={<Form/>}/>
+        <Route 
+          path='/findmyat' 
+          element=
+          {<Form
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+            selectedTechParam={selectedTechParam}
+            setSelectedTechParam={setSelectedTechParam}
+            onFormSubmit={handleFormSubmit}
+          />}/>
         <Route path='/results' element={<Results tech={techResults}/>}/>
       </Routes>
     </main>
