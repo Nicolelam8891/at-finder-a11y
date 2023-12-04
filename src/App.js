@@ -6,6 +6,8 @@ import {Route, Routes, useNavigate} from 'react-router-dom'
 import tech from './mockData/mockTech'
 import Results from './components/Results';
 import comments from './mockData/comments';
+import LearnAT from './LearnAT/LearnAT';
+
 
 
 const App = () => {
@@ -31,6 +33,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path='/' element={<Home/>}/>
+
         <Route 
           path='/findmyat' 
           element=
@@ -42,6 +45,9 @@ const App = () => {
             onFormSubmit={handleFormSubmit}
           />}/>
         <Route path='/results' element={<Results tech={techResults} comments={techComments}/>}/>
+        <Route path='/results' element={<Results tech={techResults}/>}/>
+        <Route path='/learnat' element={<LearnAT/>}/>
+
       </Routes>
     </main>
   );
