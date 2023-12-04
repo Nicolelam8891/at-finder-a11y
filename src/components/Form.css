@@ -13,6 +13,30 @@
   flex-direction: row;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 2rem;
-  width: 80vw;
+  width: 90vw;
+  align-items: center;
+  justify-content: center;
   overflow: scroll;
+}
+
+.techParam {
+  border: 2px black solid;
+  padding: 20px;
+  /* aspect-ratio: 5/1; */
+  width: 10vw;
+  height: 10vh;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.selected {
+  background: black;
+  color: white
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
