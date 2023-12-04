@@ -4,6 +4,9 @@ import CommentSection from './CommentSection'
 
 
 function Results ({tech, comments}) {
+
+  console.log('bop', comments)
+  
   return (
     <div>
       <TechList tech={tech}/>
