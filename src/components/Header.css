@@ -45,7 +45,7 @@ header {
 }
 
 .about-button,
-.sign-in-button {
+.log-in-button {
   display: flex;
   align-items: center;
   text-align: center;

@@ -1,8 +1,9 @@
-import './Login.css'
+import './LogIn.css'
+import { useState } from 'react'
 
-function Login ( {isOpen, onClose, onLogin} ) {
-  cons [username, setUserName] = useState('');
-  cons [password, setPassword] = useState('');
+function LogIn ( {isOpen, onClose, onLogin} ) {
+  const [username, setUserName] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -18,13 +19,13 @@ function Login ( {isOpen, onClose, onLogin} ) {
             type="text"
             placeholder="username"
             value={username}
-            onChange={(event) => setUsername(e.target.value)}
+            onChange={(event) => setUserName(event.target.value)}
           />
           <input 
             type="text"
             placeholder="password"
-            value={passwprd}
-            onChange={(event) => setPassword(e.target.value)}
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
           />
           <button type="submit">Login</button>
           <button onClick={onClose}>Close</button>
@@ -34,4 +35,4 @@ function Login ( {isOpen, onClose, onLogin} ) {
   )
 }
 
-export default Login
+export default LogIn

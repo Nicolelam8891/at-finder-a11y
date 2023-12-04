@@ -1,7 +1,19 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { useState } from 'react'
+import LogIn from "./LogIn";
 
 function Header() {
+
+  const [isLoginModalOpen, setLoginModalOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = (username, password) => {
+    console.log('Login with:', username, password);
+    setIsLoggedIn(true);
+    setLoginModalOpen(false);
+  }
+
   return (
     <header className='header'>
       <Link to='/'>
@@ -18,8 +30,18 @@ function Header() {
       </Link>
 
       <div className='button-container'>
-        <button className='sign-in-button'>Log in</button>
         <button className='about-button'>About</button>
+      <div className="log-in-button">
+        {!isLoggedIn && (
+          <button onClick={() => setLoginModalOpen(true)}>Log In</button>
+        )}
+        {isLoggedIn && <p>Welcome to AI AT Ally, you have successfully logged in!</p>}
+        <LogIn 
+          isOpen={isLoginModalOpen}
+          onClose={() => setLoginModalOpen(false)}
+          onLogin={handleLogin}
+        />
+      </div>
       </div>
     </header>
   );

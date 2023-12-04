@@ -1,7 +1,9 @@
 import "./Home.css";
 
 function Home() {
+
   return (
+    
     <div className='splash-background'>
       <div className='overlay'></div>
 
