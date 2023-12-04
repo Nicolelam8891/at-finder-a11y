@@ -1,18 +1,29 @@
 import './Results.css'
-import TechList from './TechList'
-import CommentSection from './CommentSection'
+import React, { useEffect } from 'react';
+import { useNavigate, Navigate } from 'react-router-dom';
+import TechList from './TechList';
+import CommentSection from './CommentSection';
 
+function Results({ tech, comments }) {
+  const navigate = useNavigate();
 
-function Results ({tech, comments}) {
+  if (!tech || !comments) {
+    // Redirect to '/'
+    return <Navigate to="/findmyat" />;
+  }
 
-  console.log('bop', comments)
-  
+  // useEffect(() => {
+  //   if (!tech || !comments) {
+  //     navigate('/');
+  //   }
+  // }, [tech, comments, navigate]);
+
   return (
     <div>
-      <TechList tech={tech}/>
-      <CommentSection comments={comments}/>
+      <TechList tech={tech} />
+      <CommentSection comments={comments} />
     </div>
-  )
+  );
 }
 
-export default Results
+export default Results;
