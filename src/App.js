@@ -5,6 +5,7 @@ import Home from './components/Home'
 import {Route, Routes} from 'react-router-dom'
 import tech from './mockData/mockTech'
 import Results from './components/Results';
+import LearnAT from './LearnAT/LearnAT';
 
 
 const App = () => {
@@ -47,6 +48,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/findmyat' element={<Form/>}/>
+        <Route path='/learnat' element={<LearnAT/>}/>
         <Route path='/results' element={<Results tech={techResults}/>}/>
       </Routes>
     </main>
