@@ -8,15 +8,9 @@ function Results({ tech, comments }) {
   const navigate = useNavigate();
 
   if (!tech || !comments) {
-    // Redirect to '/'
     return <Navigate to="/findmyat" />;
   }
 
-  // useEffect(() => {
-  //   if (!tech || !comments) {
-  //     navigate('/');
-  //   }
-  // }, [tech, comments, navigate]);
 
   return (
     <div>
