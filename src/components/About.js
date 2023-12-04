@@ -1,11 +1,17 @@
-import './About.css'
+import contributors from "../mockData/aboutData";
+import React from 'react';
+import "./About.css";
+import Contributor from "./Contributor";
 
-function About () {
+
+function About() {
   return (
-    <div>
-
+    <div className='about-page'>
+      {contributors.map((contributor) => (
+        <Contributor key={contributor.id} {...contributor} />
+      ))}
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

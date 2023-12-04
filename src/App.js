@@ -1,8 +1,9 @@
-
-import React, { useState } from 'react';
+import React, { useState } from "react";
 // import Form from './Form';
-import Header from './components/Header';
-import Home from './components/Home';
+import Header from "./components/Header";
+import Home from "./components/Home";
+import About from "./components/About";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -35,12 +36,21 @@ const App = () => {
   // };
 
   return (
-    <main className="App">
-      <Header />
-      <Home />
-      {/* <Form onTechParamsSelection={handleTechParamsSelection} /> */}
-    </main>
+    <Router>
+      <main className='App'>
+        <Header />
+        <Home />
+        <Routes>
+          <Route path='/about' element={<About />} />
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </main>
+    </Router>
   );
 };
 
 export default App;
+
+{
+  /* <Form onTechParamsSelection={handleTechParamsSelection} /> */
+}
