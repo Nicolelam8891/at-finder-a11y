@@ -20,3 +20,5 @@ const comments = [
     id: 1
 },
 ]
+
+export default comments
