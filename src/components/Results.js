@@ -27,3 +27,6 @@ function Results({ tech, comments }) {
 }
 
 export default Results;
+
+
+//eventually we will use params to make sure this page persists on reload, using index position for the tech param
