@@ -1,0 +1,12 @@
+.results-cont {
+  display: flex;
+  width: 80vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
