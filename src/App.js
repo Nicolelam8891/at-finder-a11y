@@ -11,7 +11,8 @@ import comments from './mockData/comments';
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedTechParam, setSelectedTechParam] = useState(null);
-  const [techResults, setTechResults] = useState(null)
+  const [techResults, setTechResults] = useState(null);
+  const [techComments, setTechComments] = useState(null);
 
   const navigate = useNavigate();
 
@@ -19,6 +20,7 @@ const App = () => {
       console.log('Selected Category:', selectedCategory);
       console.log('Selected Tech Parameter:', selectedTechParam);
       setTechResults(tech);
+      setTechComments(comments)
       navigate('/results');
     };
 
@@ -37,7 +39,7 @@ const App = () => {
             setSelectedTechParam={setSelectedTechParam}
             onFormSubmit={handleFormSubmit}
           />}/>
-        <Route path='/results' element={<Results tech={techResults}/>}/>
+        <Route path='/results' element={<Results tech={techResults} comments={techComments}/>}/>
       </Routes>
     </main>
   );
