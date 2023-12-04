@@ -13,9 +13,11 @@ function Results({ tech, comments }) {
 
 
   return (
-    <div>
+    <div className='Results'>
+      <div  className='results-cont'>
       <TechList tech={tech} />
       <CommentSection comments={comments} />
+      </div>
     </div>
   );
 }
