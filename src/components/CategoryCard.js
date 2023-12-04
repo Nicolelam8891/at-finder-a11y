@@ -1,4 +1,5 @@
 // CategoryCard.js
+import './CategoryCard.css'
 import React from 'react';
 
 const CategoryCard = ({ category, data, onCategoryClick, onTechParamClick }) => {
