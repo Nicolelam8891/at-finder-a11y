@@ -39,23 +39,7 @@ const Form = ({
   };
 
   return (
-    <div>
-      <div>
-        {selectedCategory && (
-          <ul>
-            {getTechParams().map((tech, index) => (
-              <li
-                key={index}
-                className={tech === selectedTechParam ? 'selected' : ''}
-                onClick={() => handleTechParamClick(tech)}
-              >
-                {tech}
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-
+    <div className='Form'>
       <div className="category-list">
         {Object.keys(needs).map((category) => (
           <CategoryCard
@@ -63,14 +47,31 @@ const Form = ({
             category={category}
             data={needs[category]}
             onCategoryClick={handleCategoryClick}
+            isSelected={category === selectedCategory}
           />
         ))}
       </div>
-
+      <div>
+        {selectedCategory && (
+          <div className='subcategory-list'>
+            {getTechParams().map((tech, index) => (
+              <p
+                key={index}
+                className={tech === selectedTechParam ? 'selected techParam' : 'techParam'}
+                onClick={() => handleTechParamClick(tech)}
+              >
+                {tech}
+              </p>
+            ))}
+          </div>
+        )}
+      </div>
       {isSubmitEnabled && (
         <button onClick={handleSubmit}>Submit</button>
       )}
+      
     </div>
+    
   );
 };
 
