@@ -6,6 +6,7 @@ import {Route, Routes} from 'react-router-dom'
 import tech from './mockData/mockTech'
 import Results from './components/Results';
 import LearnAT from './LearnAT/LearnAT';
+import About from './components/About';
 
 
 const App = () => {
@@ -50,6 +51,8 @@ const App = () => {
         <Route path='/findmyat' element={<Form/>}/>
         <Route path='/learnat' element={<LearnAT/>}/>
         <Route path='/results' element={<Results tech={techResults}/>}/>
+        <Route path='/about' element={<About/>}/>
+
       </Routes>
     </main>
   );
