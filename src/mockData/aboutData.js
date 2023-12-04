@@ -1,10 +1,14 @@
+import nicoleImage from '../assets/nicole.png';
+import janImage from '../assets/jan.png';
+import elizaImage from '../assets/eliza.png';
+
 const contributors = [
   {
     id: 1,
     name: 'Nicole Lam',
     role: 'Front End Software Developer',
     bio: 'Nicole is cool.',
-    imageUrl: '../assets/nicole.png',
+    imageUrl: nicoleImage,
    
   },
   {
@@ -12,7 +16,7 @@ const contributors = [
     name: 'Jan McSorley',
     role: 'Front End Software Developer',
     bio: 'Jan is cool',
-    imageUrl: '../assets/jan.png',
+    imageUrl: janImage,
    
   },
   {
@@ -44,7 +48,7 @@ const contributors = [
     name: 'Eliza Keating',
     role: 'Back End Software Developer',
     bio: 'Eliza is cool',
-    imageUrl: '../assets/eliza.png',
+    imageUrl: elizaImage,
   },
 ];
 
