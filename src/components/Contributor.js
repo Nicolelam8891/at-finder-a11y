@@ -1,3 +1,5 @@
+import './Contributor.css'
+
 function Contributor({ name, role, bio, imageUrl }) {
   return (
     <div className="contributor-card">
