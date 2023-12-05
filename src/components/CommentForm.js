@@ -19,9 +19,7 @@ function CommentForm({ title, link, category, description, onCommentSubmit }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Pass the commentData up to the parent component
     onCommentSubmit(formData);
-    // Optionally, reset the form
     setFormData({
       link: '',
       category: '',
