@@ -54,7 +54,7 @@ function Header({handleButtonClick}) {
           onClose={() => setLoginOpen(false)}
           onLogin={handleLogin}
         />
-          <button className='about-button' onClick={() => handleButtonClick('/about')>About</button>
+          <button className='about-button' onClick={() => handleButtonClick('/about')}>About</button>
       </div>
 
       </div>
