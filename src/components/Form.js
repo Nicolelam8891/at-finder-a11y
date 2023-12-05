@@ -55,13 +55,11 @@ const Form = ({
         {selectedCategory && (
           <div className='subcategory-list'>
             {getTechParams().map((tech, index) => (
-              <p
-                key={index}
-                className={tech === selectedTechParam ? 'selected techParam' : 'techParam'}
-                onClick={() => handleTechParamClick(tech)}
-              >
+              <div key={index} className={tech === selectedTechParam ? 'selected techParam' : 'techParam'} onClick={() => handleTechParamClick(tech)}>
+              <p>
                 {tech}
               </p>
+              </div>
             ))}
           </div>
         )}
