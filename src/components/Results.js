@@ -9,8 +9,6 @@ function Results({ tech, techComments }) {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
-    // Load comments from some source, e.g., an API or local storage
-    // For demonstration purposes, comments are set to an empty array initially
     setComments(techComments);
   }, []);
 
