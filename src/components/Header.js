@@ -1,7 +1,27 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { useState } from 'react'
+import LogIn from "./LogIn";
+import users from "../mockData/userData";
 
 function Header() {
+
+  const [isLoginOpen, setLoginOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null)
+
+  const handleLogin = (username, password) => {
+   const user = users.find(user => user.email === username && user.password === password);
+   if (user) {
+    console.log('Logged in as:', user.name);
+    setIsLoggedIn(true);
+    setCurrentUser(user);
+    setLoginOpen(false);
+   } else {
+    console.log('Invalid credentials')
+   }
+  }
+
   return (
     <header className='header'>
       <Link to='/'>
@@ -18,8 +38,18 @@ function Header() {
       </Link>
 
       <div className='button-container'>
-        <button className='sign-in-button'>Log in</button>
-        <button className='about-button'>About</button>
+      <div className="login-button-container">
+        {!isLoggedIn && (
+          <button className="login-button" onClick={() => setLoginOpen(true)}>Log In</button>
+          )}
+        {isLoggedIn && <p>Welcome to AI AT Ally, {currentUser.name}! You have successfully logged in!</p>}
+        <LogIn 
+          isOpen={isLoginOpen}
+          onClose={() => setLoginOpen(false)}
+          onLogin={handleLogin}
+        />
+          <button className='about-button'>About</button>
+      </div>
       </div>
     </header>
   );
