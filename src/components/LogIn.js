@@ -4,9 +4,14 @@ import { useState } from 'react'
 function LogIn ( {isOpen, onClose, onLogin} ) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loginErrorMessage, setLoginErrorMessage] = useState('')
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (!email.length || !password.length) {
+      setLoginErrorMessage("Form is incomplete. All fields need to be filled in.");
+      return;
+    }
     onLogin(email, password);
   };
 
@@ -28,7 +33,9 @@ function LogIn ( {isOpen, onClose, onLogin} ) {
             onChange={(event) => setPassword(event.target.value)}
           />
           <button type="submit">Login</button>
+        {loginErrorMessage && <div className='login-error-message'> {loginErrorMessage}</div>}
         </form>
+
 
     </div>
   )

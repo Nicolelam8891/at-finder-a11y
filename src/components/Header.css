@@ -62,3 +62,8 @@ header {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.login-button-container {
+  display: flex;
+
+}

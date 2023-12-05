@@ -38,17 +38,17 @@ function Header() {
       </Link>
 
       <div className='button-container'>
-        <button className='about-button'>About</button>
       <div className="login-button-container">
         {!isLoggedIn && (
           <button className="login-button" onClick={() => setLoginOpen(true)}>Log In</button>
-        )}
+          )}
         {isLoggedIn && <p>Welcome to AI AT Ally, {currentUser.name}! You have successfully logged in!</p>}
         <LogIn 
           isOpen={isLoginOpen}
           onClose={() => setLoginOpen(false)}
           onLogin={handleLogin}
         />
+          <button className='about-button'>About</button>
       </div>
       </div>
     </header>
