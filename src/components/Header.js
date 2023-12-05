@@ -2,16 +2,24 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 import { useState } from 'react'
 import LogIn from "./LogIn";
+import users from "../mockData/userData";
 
 function Header() {
 
-  const [isLoginModalOpen, setLoginModalOpen] = useState(false);
+  const [isLoginOpen, setLoginOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null)
 
   const handleLogin = (username, password) => {
-    console.log('Login with:', username, password);
+   const user = users.find(user => user.email === username && user.password === password);
+   if (user) {
+    console.log('Logged in as:', user.name);
     setIsLoggedIn(true);
-    setLoginModalOpen(false);
+    setCurrentUser(user);
+    setLoginOpen(false);
+   } else {
+    console.log('Invalid credentials')
+   }
   }
 
   return (
@@ -33,12 +41,12 @@ function Header() {
         <button className='about-button'>About</button>
       <div className="log-in-button">
         {!isLoggedIn && (
-          <button onClick={() => setLoginModalOpen(true)}>Log In</button>
+          <button onClick={() => setLoginOpen(true)}>Log In</button>
         )}
-        {isLoggedIn && <p>Welcome to AI AT Ally, you have successfully logged in!</p>}
+        {isLoggedIn && <p>Welcome to AI AT Ally, {currentUser.name}! You have successfully logged in!</p>}
         <LogIn 
-          isOpen={isLoginModalOpen}
-          onClose={() => setLoginModalOpen(false)}
+          isOpen={isLoginOpen}
+          onClose={() => setLoginOpen(false)}
           onLogin={handleLogin}
         />
       </div>

@@ -2,12 +2,12 @@ import './LogIn.css'
 import { useState } from 'react'
 
 function LogIn ( {isOpen, onClose, onLogin} ) {
-  const [username, setUserName] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onLogin(username, password);
+    onLogin(email, password);
   };
 
   if (!isOpen) return null; 
@@ -17,9 +17,9 @@ function LogIn ( {isOpen, onClose, onLogin} ) {
         <form onSubmit={handleSubmit}>
           <input 
             type="text"
-            placeholder="username"
-            value={username}
-            onChange={(event) => setUserName(event.target.value)}
+            placeholder="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
           />
           <input 
             type="text"
