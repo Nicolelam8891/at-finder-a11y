@@ -53,7 +53,7 @@ const App = () => {
             setSelectedTechParam={setSelectedTechParam}
             onFormSubmit={handleFormSubmit}
           />}/>
-        <Route path='/results' element={<Results tech={techResults} comments={techComments}/>}/>
+        <Route path='/results' element={<Results tech={techResults} techComments={techComments}/>}/>
         <Route path='/results' element={<Results tech={techResults}/>}/>
         <Route path='/learnat' element={<LearnAT/>}/>
         <Route path='/about' element={<About/>}/>

@@ -45,15 +45,15 @@ header {
 }
 
 .about-button,
-.sign-in-button {
+.login-button {
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
   border: 2px solid #cce3de;
   background: #55828b;
-  width: 80px;
-  height: 30px;
+  width: 100px;
+  height: 35px;
   color: #f6fff8;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
@@ -61,4 +61,9 @@ header {
   border-radius: 50px;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.login-button-container {
+  display: flex;
+
 }

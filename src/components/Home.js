@@ -1,8 +1,11 @@
 import "./Home.css";
 
+
 function Home( {handleButtonClick} ) {
 
+
   return (
+    
     <div className='splash-background'>
       <div className='overlay'></div>
 
