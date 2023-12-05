@@ -28,7 +28,6 @@ function LogIn ( {isOpen, onClose, onLogin} ) {
             onChange={(event) => setPassword(event.target.value)}
           />
           <button type="submit">Login</button>
-          <button onClick={onClose}>Close</button>
         </form>
 
     </div>

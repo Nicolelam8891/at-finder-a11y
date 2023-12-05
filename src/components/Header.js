@@ -39,9 +39,9 @@ function Header() {
 
       <div className='button-container'>
         <button className='about-button'>About</button>
-      <div className="log-in-button">
+      <div className="login-button-container">
         {!isLoggedIn && (
-          <button onClick={() => setLoginOpen(true)}>Log In</button>
+          <button className="login-button" onClick={() => setLoginOpen(true)}>Log In</button>
         )}
         {isLoggedIn && <p>Welcome to AI AT Ally, {currentUser.name}! You have successfully logged in!</p>}
         <LogIn 
