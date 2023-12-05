@@ -15,8 +15,6 @@ function Results({ tech, techComments }) {
   }, []);
 
   const handleCommentSubmit = (commentData) => {
-    // Handle the comment submission logic, e.g., send to an API
-    // For demonstration purposes, just updating the state
     setComments((prevComments) => [...prevComments, commentData]);
   };
 
