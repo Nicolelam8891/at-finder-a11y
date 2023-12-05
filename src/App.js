@@ -29,11 +29,19 @@ const App = () => {
       navigate('/results');
     };
 
+    const handleButtonClick = (route) => {
+      navigate(route);
+    };
+
   return (
     <main className="App">
-      <Header />
+      <Header handleButtonClick={handleButtonClick}/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route
+          path='/'
+          element={<Home
+            handleButtonClick={handleButtonClick}
+          />}/>
 
         <Route 
           path='/findmyat' 

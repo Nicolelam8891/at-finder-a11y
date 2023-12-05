@@ -4,7 +4,10 @@ import { useState } from 'react'
 import LogIn from "./LogIn";
 import users from "../mockData/userData";
 
-function Header() {
+
+
+
+function Header({handleButtonClick}) {
 
   const [isLoginOpen, setLoginOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -22,6 +25,7 @@ function Header() {
    }
   }
 
+
   return (
     <header className='header'>
       <Link to='/'>
@@ -38,6 +42,8 @@ function Header() {
       </Link>
 
       <div className='button-container'>
+
+
       <div className="login-button-container">
         {!isLoggedIn && (
           <button className="login-button" onClick={() => setLoginOpen(true)}>Log In</button>
@@ -48,8 +54,9 @@ function Header() {
           onClose={() => setLoginOpen(false)}
           onLogin={handleLogin}
         />
-          <button className='about-button'>About</button>
+          <button className='about-button' onClick={() => handleButtonClick('/about')>About</button>
       </div>
+
       </div>
     </header>
   );
