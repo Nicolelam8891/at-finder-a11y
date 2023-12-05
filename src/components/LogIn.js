@@ -18,7 +18,7 @@ function LogIn ( {isOpen, onClose, onLogin} ) {
   if (!isOpen) return null; 
 
   return (
-    <div className='login-modal'>
+    <div className='login'>
         <form onSubmit={handleSubmit}>
           <input 
             type="text"
