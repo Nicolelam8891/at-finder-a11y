@@ -2,7 +2,7 @@
 import './CategoryCard.css'
 import React from 'react';
 
-const CategoryCard = ({ category, data, onCategoryClick, onTechParamClick }) => {
+const CategoryCard = ({ category, data, onCategoryClick, onTechParamClick, isSelected }) => {
   const handleCategoryClick = () => {
     onCategoryClick(category);
   };
@@ -12,7 +12,7 @@ const CategoryCard = ({ category, data, onCategoryClick, onTechParamClick }) => 
   };
 
   return (
-    <div className="category-card" onClick={handleCategoryClick}>
+    <div className={`category-card ${isSelected ? 'selected' : ''}`} onClick={handleCategoryClick}>
       <h2>{category}</h2>
     </div>
   );
