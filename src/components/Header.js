@@ -1,7 +1,7 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
 
-function Header() {
+function Header({handleButtonClick}) {
   return (
     <header className='header'>
       <Link to='/'>
@@ -19,7 +19,7 @@ function Header() {
 
       <div className='button-container'>
         <button className='sign-in-button'>Log in</button>
-        <button className='about-button'>About</button>
+        <button className='about-button' onClick={() => handleButtonClick('/about')}>About</button>
       </div>
     </header>
   );
