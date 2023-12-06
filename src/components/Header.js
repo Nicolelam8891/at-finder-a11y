@@ -43,7 +43,8 @@ function Header({ currentUser, setCurrentUser, handleButtonClick}) {
         {!isLoggedIn && (
           <button className="login-button" onClick={() => setLoginOpen(true)}>Log In</button>
           )}
-        {isLoggedIn && <p>Welcome to AI AT Ally, {currentUser.name}! You have successfully logged in!</p>}
+        {isLoggedIn && currentUser && <p>Welcome, {currentUser.name}! You have successfully logged in!</p>}
+
         <LogIn 
           isOpen={isLoginOpen}
           onLogin={handleLogin}

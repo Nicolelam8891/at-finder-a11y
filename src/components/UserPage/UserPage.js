@@ -1,8 +1,6 @@
 import './UserPage.css'
 import users from '../../mockData/userData'
 
-
-
 function UserPage({currentUser, setCurrentUser}) {
     console.log("currentUser:=====", currentUser);
     if (!currentUser) {
@@ -10,7 +8,8 @@ function UserPage({currentUser, setCurrentUser}) {
     }
     return (
         <div>
-        Welcome <h2>{currentUser.name} </h2>
+            <h2 className='welcome-user'>Welcome to your page, {currentUser.name}! </h2>
+            <p>Below are your comments and favorite items.</p>
         </div>
     )
 }
