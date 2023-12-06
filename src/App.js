@@ -7,6 +7,7 @@ import tech from './mockData/mockTech'
 import Results from './components/Results';
 import comments from './mockData/comments';
 import LearnAT from './LearnAT/LearnAT';
+import UserPage from './components/UserPage/UserPage';
 import About from './components/About';
 import Error from './components/Error';
 
