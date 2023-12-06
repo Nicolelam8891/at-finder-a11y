@@ -31,7 +31,6 @@ function Header({handleButtonClick}) {
       <Link to='/'>
         <div className='logo-title-container'>
           <img src='help.png' className='help-logo' alt='Helping Hands Logo' />
-
           <div className='title-container'>
             <h1 className='title'>AI AT Ally</h1>
             <p className='header-title'>
@@ -51,7 +50,6 @@ function Header({handleButtonClick}) {
         {isLoggedIn && <p>Welcome to AI AT Ally, {currentUser.name}! You have successfully logged in!</p>}
         <LogIn 
           isOpen={isLoginOpen}
-          onClose={() => setLoginOpen(false)}
           onLogin={handleLogin}
         />
           <button className='about-button' onClick={() => handleButtonClick('/about')}>About</button>

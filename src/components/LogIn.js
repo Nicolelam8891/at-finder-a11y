@@ -1,7 +1,7 @@
 import './LogIn.css'
 import { useState } from 'react'
 
-function LogIn ( {isOpen, onClose, onLogin} ) {
+function LogIn ( {isOpen, onLogin} ) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loginErrorMessage, setLoginErrorMessage] = useState('')
