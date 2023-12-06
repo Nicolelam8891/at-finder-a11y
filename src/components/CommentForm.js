@@ -37,7 +37,7 @@ function CommentForm({ title, link, category, description, onCommentSubmit }) {
         </label>
         <label>
           Link:
-          <input type="text" name="link" value={formData.link} onChange={handleChange} />
+          <input type="text" name="link" value={link} onChange={handleChange} readOnly/>
         </label>
         <label>
           Category:
