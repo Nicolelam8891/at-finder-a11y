@@ -1,13 +1,16 @@
 import nicoleImage from '../assets/nicole.png';
 import janImage from '../assets/jan.png';
 import elizaImage from '../assets/eliza.png';
+import joopImage from '../assets/joop.png';
+// import nickImage from '../assets/nick.png';
+// import jackImage from '../assets/jack.png';
 
 const contributors = [
   {
     id: 1,
     name: 'Nicole Lam',
     role: 'Front End Software Developer',
-    bio: 'Nicole is cool.',
+    bio: 'Nicole is a a software engineer and registered nurse at at a hospital serving the underprivledged populations in Denver, CO. Driven by a passion for organization, attention-to-detail, and creativity, she transitioned herself into Tech through Turing Front End Engineering Program. Nicole aims to expand her tech skills into making impactful work, striving to make a difference and assist people in underserved populations. Her short-term goal is to learn Typescript and Redux. Her long-term goal is to become a full-stack Software Developer or Projecr Manager.', 
     imageUrl: nicoleImage,
    
   },
@@ -24,7 +27,7 @@ const contributors = [
     name: 'Jack Alfonso',
     role: 'Front End Software Developer',
     bio: 'Jack is cool',
-    imageUrl: '../assets/jack.png',
+    // imageUrl: jackImage
    
   },
   {
@@ -32,7 +35,7 @@ const contributors = [
     name: 'Joop Stark',
     role: 'Back End Software Developer',
     bio: 'Joop is cool',
-    imageUrl: '../assets/joop.png',
+    imageUrl: joopImage
    
   },
   {
@@ -40,7 +43,7 @@ const contributors = [
     name: 'Nicholas Spencer',
     role: 'Back End Software Developer',
     bio: 'Nickolas is cool',
-    imageUrl: '../assets/nicholas.png',
+    // imageUrl: nickImage
    
   },
   {
