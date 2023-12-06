@@ -7,6 +7,7 @@ import tech from './mockData/mockTech'
 import Results from './components/Results';
 import comments from './mockData/comments';
 import LearnAT from './LearnAT/LearnAT';
+import UserPage from './components/UserPage/UserPage';
 import About from './components/About';
 import Error from './components/Error';
 
@@ -57,6 +58,7 @@ const App = () => {
         <Route path='/results' element={<Results tech={techResults}/>}/>
         <Route path='/learnat' element={<LearnAT/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/userpage' element={<UserPage/>}/>
         <Route path='/*' element={<Error
               errorRoute={"Oh no, you have gone down the wrong path. Find your path back home by clicking on the home button!"}
             />}></Route>
