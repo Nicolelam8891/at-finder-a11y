@@ -24,53 +24,55 @@ const App = () => {
   console.log('afsdfas', selectedTechParam)
 
   const handleTechParamsSelection = (category, techParam) => {
-    setSelectedCategory(category);
-    setSelectedTechParam(techParam);
-    const techArr = [];
-    techArr.push(selectedTechParam);
-    const disabilityArr = [];
-    disabilityArr.push(needs[category]['disability parameter'])
-    console.log('disarr', disabilityArr)
-    console.log('sdafdf', techArr)
-    
-    fetch('https://assistivie-tech-2307-648a3d563927.herokuapp.com/api/v1/ai_requests', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        needs: {
-          [category]: {
-            tech_needs: techArr,
-            disability_description: disabilityArr,
-          },
+    return new Promise((resolve, reject) => {
+      setSelectedCategory(category);
+      setSelectedTechParam(techParam);
+      const techArr = [techParam]; // Use an array directly
+      const disabilityArr = [needs[category]['disability parameter']];
+  
+      fetch('https://assistivie-tech-2307-648a3d563927.herokuapp.com/api/v1/ai_requests', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-      }),
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
+        body: JSON.stringify({
+          needs: {
+            [category]: {
+              tech_needs: techArr,
+              disability_description: disabilityArr,
+            },
+          },
+        }),
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
       .then(data => {
-        console.log('here is the data', data);
+        console.log('here is the data', data.data);
+        setTechResults(data.data);
+        resolve(); 
       })
       .catch(error => {
         console.error('Error:', error);
+        reject(error);
       });
+    });
   };
+  
 
-
-    const handleFormSubmit = () => {
-      console.log('Selected Category:', selectedCategory);
-      console.log('Selected Tech Parameter:', selectedTechParam);
-      handleTechParamsSelection(selectedCategory, selectedTechParam);
-      setTechResults(tech);
-      setTechComments(comments);
-      console.log('bump', comments);
-      console.log('SNAPPLE', techComments)
+  const handleFormSubmit = async () => {
+    try {
+      // Call the asynchronous function using await
+      await handleTechParamsSelection(selectedCategory, selectedTechParam);
+      console.log('THIS IS YOUR PROMISE RETURNING')
       navigate('/results');
+      setTechComments(comments);
+    } catch (error) {
+      console.error('Error:', error);
+    }
     };
 
     const handleButtonClick = (route) => {
