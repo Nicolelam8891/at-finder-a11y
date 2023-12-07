@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Form from './components/Form';
 import Header from './components/Header';
 import Home from './components/Home'
+import TestComments from './components/TestComments/TestComments';
 import {Route, Routes, useNavigate} from 'react-router-dom'
 import tech from './mockData/mockTech'
 import Results from './components/Results';
@@ -87,6 +88,7 @@ const App = () => {
         <Route path='/learnat' element={<LearnAT/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/userpage' element={<UserPage/>}/>
+        <Route path='/testcomments' element={<TestComments handleButtonClick={handleButtonClick} />}/>
         <Route path='/*' element={<Error
               errorRoute={"Oh no, you have gone down the wrong path. Find your path back home by clicking on the home button!"}
             />}></Route>
