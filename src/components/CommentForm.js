@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CommentForm.css';
 
-function CommentForm({ title, link, category, description, onCommentSubmit }) {
+function CommentForm({ title, link, techPiece, category, description, onCommentSubmit }) {
   const [formData, setFormData] = useState({
     link: '',
     category: '',
@@ -26,6 +26,7 @@ function CommentForm({ title, link, category, description, onCommentSubmit }) {
       description: '',
     });
   };
+  console.log('cat', category)
 
 
   return (
@@ -33,15 +34,15 @@ function CommentForm({ title, link, category, description, onCommentSubmit }) {
       <form onSubmit={handleSubmit}>
         <label>
           Title:
-          <input type="text" name="title" value={title} readOnly />
+          <input type="text" name="title" value={techPiece.title} readOnly />
         </label>
         <label>
           Link:
-          <input type="text" name="link" value={formData.link} onChange={handleChange} />
+          <input type="text" name="link" value={techPiece.title} onChange={handleChange} readOnly/>
         </label>
         <label>
           Category:
-          <input type="text" name="category" value={formData.category} onChange={handleChange} />
+          <input type="text" name="category" value={category} onChange={handleChange} />
         </label>
         <label>
           Description:

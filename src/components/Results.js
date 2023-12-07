@@ -5,7 +5,7 @@ import TechList from './TechList';
 import CommentSection from './CommentSection';
 // import comments from '../mockData/comments';
 
-function Results({ tech, techComments }) {
+function Results({ tech, techComments, category }) {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
@@ -24,8 +24,8 @@ function Results({ tech, techComments }) {
   return (
     <div className='Results'>
       <div  className='results-cont'>
-      <TechList tech={tech} onCommentSubmit={handleCommentSubmit}/>
-      <CommentSection comments={comments} />
+      <TechList tech={tech} onCommentSubmit={handleCommentSubmit} category={category}/>
+      <CommentSection comments={comments} category={category}/>
       </div>
     </div>
   );
