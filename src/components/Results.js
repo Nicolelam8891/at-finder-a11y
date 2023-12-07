@@ -24,8 +24,14 @@ function Results({ tech, techComments, category }) {
   return (
     <div className='Results'>
       <div  className='results-cont'>
-      <TechList tech={tech} onCommentSubmit={handleCommentSubmit} category={category}/>
-      <CommentSection comments={comments} category={category}/>
+        <div>
+          <h1>AI Suggested Tech</h1>
+          <TechList tech={tech} onCommentSubmit={handleCommentSubmit} category={category}/>
+        </div>
+        <div>
+          <h1>Community Comments</h1>
+          <CommentSection comments={comments} category={category}/>
+        </div>
       </div>
     </div>
   );
