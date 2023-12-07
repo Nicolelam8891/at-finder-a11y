@@ -21,9 +21,18 @@ const App = () => {
 
   const navigate = useNavigate();
 
+  console.log('afsdfas', selectedTechParam)
+
   const handleTechParamsSelection = (category, techParam) => {
     setSelectedCategory(category);
     setSelectedTechParam(techParam);
+    const techArr = [];
+    techArr.push(selectedTechParam);
+    const disabilityArr = [];
+    disabilityArr.push(needs[category]['disability parameter'])
+    console.log('disarr', disabilityArr)
+    console.log('sdafdf', techArr)
+    
     fetch('https://assistivie-tech-2307-648a3d563927.herokuapp.com/api/v1/ai_requests', {
       method: 'POST',
       headers: {
@@ -32,13 +41,18 @@ const App = () => {
       body: JSON.stringify({
         needs: {
           [category]: {
-            tech_needs: techParam,
-            disability_category: needs[category]['disability parameter'],
+            tech_needs: techArr,
+            disability_description: disabilityArr,
           },
         },
       }),
     })
-      .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
       .then(data => {
         console.log('here is the data', data);
       })
