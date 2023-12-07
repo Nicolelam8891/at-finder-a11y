@@ -17,7 +17,7 @@ function TechCard({ title, website, techPiece, onCommentSubmit, category }) {
 
 
   return (
-    <div>
+    <div className='Tech-card'>
       <h3 onClick={handleTechClick}>{techPiece.title}</h3>
       <p>{website}</p>
       <p>{techPiece.description}</p>
