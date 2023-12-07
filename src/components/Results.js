@@ -7,6 +7,8 @@ import CommentSection from './CommentSection';
 
 function Results({ tech, techComments, category }) {
   const [comments, setComments] = useState([]);
+  const [showTechSection, setShowTechSection] = useState(true);
+  
 
   useEffect(() => {
     setComments(techComments);
@@ -14,6 +16,14 @@ function Results({ tech, techComments, category }) {
 
   const handleCommentSubmit = (commentData) => {
     setComments((prevComments) => [...prevComments, commentData]);
+  };
+
+  const handleToggleSection = (section) => {
+    if (section === 'tech') {
+      setShowTechSection(true);
+    } else if (section === 'comments') {
+      setShowTechSection(false);
+    }
   };
 
   if (!tech || !comments) {
@@ -24,14 +34,16 @@ function Results({ tech, techComments, category }) {
   return (
     <div className='Results'>
       <div  className='results-cont'>
-        <div>
-          <h1>AI Suggested Tech</h1>
-          <TechList tech={tech} onCommentSubmit={handleCommentSubmit} category={category}/>
+        <div className='results-headings'>
+          <h1 onClick={() => handleToggleSection('tech')}>AI Suggested Tech</h1>
+          <h1 onClick={() => handleToggleSection('comments')}>Community Comments</h1>
         </div>
-        <div>
-          <h1>Community Comments</h1>
-          <CommentSection comments={comments} category={category}/>
-        </div>
+        {showTechSection && (
+            <TechList tech={tech} onCommentSubmit={handleCommentSubmit} category={category} />
+        )}
+        {!showTechSection && (
+            <CommentSection comments={comments} category={category}/>
+        )}
       </div>
     </div>
   );
