@@ -12,6 +12,7 @@ const Form = ({
 }) => {
   // const [selectedCategory, setSelectedCategory] = useState(null);
   // const [selectedTechParam, setSelectedTechParam] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory((prevCategory) =>
@@ -33,9 +34,18 @@ const Form = ({
 
   const isSubmitEnabled = selectedCategory && selectedTechParam;
 
-  const handleSubmit = () => {
-    console.log('hello');
-    onFormSubmit();
+  const handleSubmit = async () => {
+    if (isSubmitEnabled) {
+      setLoading(true);
+      try {
+        // Call the asynchronous function using await
+        await onFormSubmit();
+      } catch (error) {
+        console.error('Error:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
   };
 
   return (
@@ -64,8 +74,12 @@ const Form = ({
           </div>
         )}
       </div>
-      {isSubmitEnabled && (
-        <button onClick={handleSubmit}>Submit</button>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        isSubmitEnabled && (
+          <button onClick={handleSubmit}>Submit</button>
+        )
       )}
       
     </div>
