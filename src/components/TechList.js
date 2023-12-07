@@ -7,8 +7,9 @@ function TechList ({tech, onCommentSubmit, category}) {
       <h1>Tech List</h1>
       {tech.map((techPiece) =>
         <TechCard 
-          key={techPiece.title}
-          techPiece={techPiece}
+          key={techPiece.attributes.title}
+          techPiece={techPiece.attributes}
+          website={techPiece.attributes.website}
           onCommentSubmit={onCommentSubmit} 
           category={category}
         />
