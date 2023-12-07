@@ -16,3 +16,21 @@
   display: flex;
   justify-content: space-between;
 }
+
+.result-head {
+  color: gray
+}
+
+.active-filter {
+  color: black
+}
+
+.result-head:hover {
+  cursor: pointer;
+}
+
+/* .results-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
