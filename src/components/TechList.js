@@ -3,7 +3,7 @@ import TechCard from './TechCard'
 
 function TechList ({tech, onCommentSubmit, category}) {
   return (
-    <div>
+    <div className='Tech-list'>
       {tech.map((techPiece) =>
         <TechCard 
           key={techPiece.attributes.title}
