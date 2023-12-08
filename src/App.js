@@ -3,6 +3,7 @@ import Form from './components/Form';
 import Header from './components/Header';
 import Home from './components/Home'
 import {Route, Routes, useNavigate, useLocation } from 'react-router-dom'
+import TestComments from './components/TestComments/TestComments';
 import tech from './mockData/mockTech'
 import Results from './components/Results';
 import comments from './mockData/comments';
@@ -12,12 +13,12 @@ import About from './components/About';
 import Error from './components/Error';
 import needs from './mockData/needs';
 
-
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedTechParam, setSelectedTechParam] = useState(null);
   const [techResults, setTechResults] = useState(null);
   const [techComments, setTechComments] = useState(null);
+  const [currentUser, setCurrentUser] = useState(null);
 
   const navigate = useNavigate();
 
@@ -84,7 +85,7 @@ const App = () => {
   return (
     <main className="App">
       {/* {location.pathname !== '/' && <Header handleButtonClick={handleButtonClick}/>} */}
-      <Header handleButtonClick={handleButtonClick}/>
+      <Header setCurrentUser={setCurrentUser} handleButtonClick={handleButtonClick}/>
       <Routes>
         <Route
           path='/'
@@ -105,7 +106,8 @@ const App = () => {
         <Route path='/results' element={<Results tech={techResults} techComments={techComments} category={selectedCategory}/>}/>
         <Route path='/learnat' element={<LearnAT/>}/>
         <Route path='/about' element={<About/>}/>
-        <Route path='/userpage' element={<UserPage/>}/>
+        <Route path='/userpage' element={<UserPage currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
+        <Route path='/testcomments' element={<TestComments handleButtonClick={handleButtonClick} />}/>
         <Route path='/*' element={<Error
               errorRoute={"Oh no, you have gone down the wrong path. Find your path back home by clicking on the home button!"}
             />}></Route>
