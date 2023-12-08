@@ -8,7 +8,7 @@ function LogIn({ isOpen, onLogin }) {
   const [password, setPassword] = useState('');
   const [loginErrorMessage, setLoginErrorMessage] = useState('');
 
-  const [sessionCreate, { loading, error }] = useMutation(SESSION_CREATE);
+  const [sessionCreate, { loading, error, data }] = useMutation(SESSION_CREATE);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -17,15 +17,20 @@ function LogIn({ isOpen, onLogin }) {
       return;
     }
 
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error.message}</p>;
+
     sessionCreate({ variables: { email, password } });
+    console.log("EMAIL", email)
+    console.log("PASSWORD", password)
+    console.log("DATA", data);
   };
 
   // If the login form is not open, don't render anything
   if (!isOpen) return null;
 
   // Handle loading and error states here
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+ 
 
   return (
     <div className='login'>

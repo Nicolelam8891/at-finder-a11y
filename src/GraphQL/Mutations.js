@@ -38,6 +38,7 @@ export const SESSION_CREATE = gql`
     sessionCreate(input: {email: $email, password: $password}) {
       id
       email
+      name
     }
   }
 `;
