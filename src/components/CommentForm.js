@@ -30,15 +30,15 @@ function CommentForm({ title, link, techPiece, category, description, onCommentS
 
 
   return (
-    <div>
+    <div className='Comment-form'>
       <form onSubmit={handleSubmit}>
         <label>
-          Title:
-          <input type="text" name="title" value={techPiece.title} readOnly />
+          {/* Title: */}
+          <input className='hardcoded' type="text" name="title" value={techPiece.title} readOnly />
         </label>
-        <label>
+        <label className='hide'>
           Link:
-          <input type="text" name="link" value={techPiece.title} onChange={handleChange} readOnly/>
+          <input type="text" name="link" value={techPiece.website} onChange={handleChange} readOnly/>
         </label>
         <label>
           Category:
