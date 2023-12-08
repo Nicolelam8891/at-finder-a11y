@@ -14,11 +14,15 @@
 
 .results-headings {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  /* padding: 1rem */
 }
 
 .result-head {
-  color: gray
+  color: gray;
+  padding: 1rem;
+  padding-bottom: 0;
+  /* padding: 1rem; */
 }
 
 .active-filter {
