@@ -135,3 +135,7 @@
 .sub {
   text-align: center;
 }
+
+.loader {
+  margin-bottom: 40px;
+}
