@@ -10,14 +10,17 @@ const Form = ({
   setSelectedTechParam,
   onFormSubmit,
 }) => {
-  // const [selectedCategory, setSelectedCategory] = useState(null);
-  // const [selectedTechParam, setSelectedTechParam] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [filteredCategories, setFilteredCategories] = useState(Object.keys(needs));
 
   const handleCategoryClick = (category) => {
-    setSelectedCategory((prevCategory) =>
-      prevCategory === category ? null : category
-    );
+    if (selectedCategory === category) {
+      setSelectedCategory(null);
+      setFilteredCategories(Object.keys(needs));
+    } else {
+      setSelectedCategory(category);
+      setFilteredCategories([category]);
+    }
     setSelectedTechParam(null);
   };
 
@@ -50,8 +53,8 @@ const Form = ({
 
   return (
     <div className='Form'>
-      <div className="category-list">
-        {Object.keys(needs).map((category) => (
+      <div className={selectedCategory ? 'singled' : "category-list"}>
+        {filteredCategories.map((category) => (
           <CategoryCard
             key={category}
             category={category}
@@ -75,15 +78,18 @@ const Form = ({
         )}
       </div>
       {loading ? (
-        <p>Loading...</p>
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <rect className="spinner_9y7u" x="1" y="1" rx="1" width="10" height="10"/>
+          <rect className="spinner_9y7u spinner_DF2s" x="1" y="1" rx="1" width="10" height="10"/>
+          <rect className="spinner_9y7u spinner_q27e" x="1" y="1" rx="1" width="10" height="10"/>
+        </svg>
       ) : (
         isSubmitEnabled && (
-          <button onClick={handleSubmit}>Submit</button>
+          <button className='submit' onClick={handleSubmit}>Submit</button>
         )
       )}
       
     </div>
-    
   );
 };
 
