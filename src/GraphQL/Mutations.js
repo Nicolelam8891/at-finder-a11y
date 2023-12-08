@@ -1,16 +1,31 @@
 import { gql, useMutation } from "@apollo/client";
 
 export const ADD_COMMENT = gql`
-    mutation AddComment ($text: String!) {
-    addComment (text: $text) {
-        success
-        comment {
-            id
-            text
-            completed
+mutation {
+    commentCreate(
+        input: {
+            title: "this is my title",
+            link: "link.com",
+            description: "this is my description",
+            userComment: "this is my comment",
+            rating: true,
+            category: "Blindness",
+            userId: #{@user_1.id}
         }
+    ) {
+        id
+        title
+        link
+        description
+        userComment
+        rating
+        categoryId
+        userId
+    }
+}
         error {
             message
         }
     }
 }`
+
