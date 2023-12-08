@@ -11,7 +11,7 @@ function Home( {handleButtonClick} ) {
 
       <div className='info-container'>
         <div className="splash-main-info">
-        <h2>Welcome AI AT Ally</h2>
+        <h2>Welcome to AI AT Ally</h2>
         <p>If you need to research assistive technologies (AT) for yourself or a loved one, you've come to the right place. AI AT Ally, uses generative artificial intelligence (AI) to find tools that support the needs of people with disabilities. Please explore the site to learn more, leave comments, or rate tools you may have experience using.</p>
         </div>
         <div className='splash-button-container'>

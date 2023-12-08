@@ -1,8 +1,14 @@
-.category-card {
+/* .category-card {
   box-sizing: border-box;
   border: 3px solid black;
   padding: 10px;
   height: 40vh;
   aspect-ratio: 1/1;
   margin: 10px;
+  background-color: hsl(125, 65%, 93%);
+  color: hsl(125, 86%, 14%)
+} */
+
+.img {
+  height: 10rem;
 }

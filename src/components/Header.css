@@ -2,14 +2,25 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #6b9080;
-  height: 120px;
-  margin-bottom: 2px;
+  position: sticky;
+  background: linear-gradient(hsl(122, 42%, 75%)
+  , hsl(123, 38%, 63%));
+  top: 0px;
+  height: 10vh;
+  /* margin-bottom: 2px; */
+  padding: 2rem;
+  box-sizing: border-box;
+  padding-bottom: 2rem;
+
+}
+
+.logo {
+  height: 4rem;
 }
 
 .header-title {
   display: flex;
-  color: #eaf4f4;
+  color: hsl(263, 85%, 18%);
   font-size: 18px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 900;
@@ -18,8 +29,8 @@ header {
 .title {
   display: flex;
   align-items: center;
-  color: #eaf4f4;
-  font-size: 50px;
+  color: hsl(263, 85%, 18%);
+  font-size: 2rem;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 900;
   margin-bottom: 0px;
@@ -31,8 +42,8 @@ header {
 }
 
 .help-logo {
-  height: 20x;
-  width: 120px;
+  height: 5rem;
+
 }
 
 .header a {

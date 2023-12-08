@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Form from './components/Form';
 import Header from './components/Header';
 import Home from './components/Home'
+import {Route, Routes, useNavigate, useLocation } from 'react-router-dom'
 import TestComments from './components/TestComments/TestComments';
-import {Route, Routes, useNavigate} from 'react-router-dom'
 import tech from './mockData/mockTech'
 import Results from './components/Results';
 import comments from './mockData/comments';
@@ -22,50 +22,69 @@ const App = () => {
 
   const navigate = useNavigate();
 
+  console.log('afsdfas', selectedTechParam)
+
   const handleTechParamsSelection = (category, techParam) => {
-    setSelectedCategory(category);
-    setSelectedTechParam(techParam);
-    fetch('https://assistivie-tech-2307-648a3d563927.herokuapp.com/api/v1/ai_requests', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        needs: {
-          [category]: {
-            tech_needs: techParam,
-            disability_category: needs[category]['disability parameter'],
-          },
+    return new Promise((resolve, reject) => {
+      setSelectedCategory(category);
+      setSelectedTechParam(techParam);
+      const techArr = [techParam]; // Use an array directly
+      const disabilityArr = [needs[category]['disability parameter']];
+  
+      fetch('https://assistivie-tech-2307-648a3d563927.herokuapp.com/api/v1/ai_requests', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-      }),
-    })
-      .then(response => response.json())
+        body: JSON.stringify({
+          needs: {
+            [category]: {
+              tech_needs: techArr,
+              disability_description: disabilityArr,
+            },
+          },
+        }),
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
       .then(data => {
-        console.log('here is the data', data);
+        console.log('here is the data', data.data);
+        setTechResults(data.data);
+        resolve(); 
       })
       .catch(error => {
         console.error('Error:', error);
+        reject(error);
       });
+    });
   };
+  
 
-
-    const handleFormSubmit = () => {
-      console.log('Selected Category:', selectedCategory);
-      console.log('Selected Tech Parameter:', selectedTechParam);
-      handleTechParamsSelection(selectedCategory, selectedTechParam);
-      setTechResults(tech);
-      setTechComments(comments);
-      console.log('bump', comments);
-      console.log('SNAPPLE', techComments)
+  const handleFormSubmit = async () => {
+    try {
+      // Call the asynchronous function using await
+      await handleTechParamsSelection(selectedCategory, selectedTechParam);
+      console.log('THIS IS YOUR PROMISE RETURNING')
       navigate('/results');
+      setTechComments(comments);
+    } catch (error) {
+      console.error('Error:', error);
+    }
     };
 
     const handleButtonClick = (route) => {
       navigate(route);
     };
 
+    const location = useLocation();
+
   return (
     <main className="App">
+      {/* {location.pathname !== '/' && <Header handleButtonClick={handleButtonClick}/>} */}
       <Header setCurrentUser={setCurrentUser} handleButtonClick={handleButtonClick}/>
       <Routes>
         <Route

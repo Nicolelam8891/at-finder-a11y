@@ -7,6 +7,9 @@ import CommentSection from './CommentSection';
 
 function Results({ tech, techComments, category }) {
   const [comments, setComments] = useState([]);
+  const [showTechSection, setShowTechSection] = useState(true);
+  const [activeFilter, setActiveFilter] = useState('tech');
+
 
   useEffect(() => {
     setComments(techComments);
@@ -14,6 +17,16 @@ function Results({ tech, techComments, category }) {
 
   const handleCommentSubmit = (commentData) => {
     setComments((prevComments) => [...prevComments, commentData]);
+  };
+
+  const handleToggleSection = (section) => {
+    if (section === 'tech') {
+      setShowTechSection(true);
+      setActiveFilter('tech');
+    } else if (section === 'comments') {
+      setShowTechSection(false);
+      setActiveFilter('comments');
+    }
   };
 
   if (!tech || !comments) {
@@ -24,8 +37,18 @@ function Results({ tech, techComments, category }) {
   return (
     <div className='Results'>
       <div  className='results-cont'>
-      <TechList tech={tech} onCommentSubmit={handleCommentSubmit} category={category}/>
-      <CommentSection comments={comments} category={category}/>
+        <div className='results-headings'>
+          <h1 onClick={() => handleToggleSection('tech')} className={activeFilter === 'tech' ? 'result-head active-filter' : 'result-head'}>A.I. Suggested Tech</h1>
+          <h1 onClick={() => handleToggleSection('comments')}  className={activeFilter === 'comments' ? 'result-head active-filter' : 'result-head'}>Community Comments</h1>
+        </div>
+        <div className='results-section'>
+          {showTechSection && (
+              <TechList tech={tech} onCommentSubmit={handleCommentSubmit} category={category} />
+          )}
+          {!showTechSection && (
+              <CommentSection comments={comments} category={category}/>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -1,8 +1,9 @@
 .results-cont {
   display: flex;
+  flex-direction: column;
   width: 80vw;
-  align-items: center;
-  justify-content: space-between;
+  /* align-items: center; */
+  justify-content: center;
 }
 
 .Results {
@@ -10,3 +11,30 @@
   align-items: center;
   justify-content: center;
 }
+
+.results-headings {
+  display: flex;
+  justify-content: center;
+  /* padding: 1rem */
+}
+
+.result-head {
+  color: gray;
+  padding: 1rem;
+  padding-bottom: 0;
+  /* padding: 1rem; */
+}
+
+.active-filter {
+  color: black
+}
+
+.result-head:hover {
+  cursor: pointer;
+}
+
+/* .results-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
