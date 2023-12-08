@@ -1,4 +1,10 @@
 .Tech-card {
   width: 40vw;
-  border: 2px solid black
+  border: 2px solid black;
+  margin: 1rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
