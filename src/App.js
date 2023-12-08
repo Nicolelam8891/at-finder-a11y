@@ -13,12 +13,12 @@ import About from './components/About';
 import Error from './components/Error';
 import needs from './mockData/needs';
 
-
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedTechParam, setSelectedTechParam] = useState(null);
   const [techResults, setTechResults] = useState(null);
   const [techComments, setTechComments] = useState(null);
+  const [currentUser, setCurrentUser] = useState(null);
 
   const navigate = useNavigate();
 
@@ -66,7 +66,7 @@ const App = () => {
 
   return (
     <main className="App">
-      <Header handleButtonClick={handleButtonClick}/>
+      <Header setCurrentUser={setCurrentUser} handleButtonClick={handleButtonClick}/>
       <Routes>
         <Route
           path='/'
@@ -87,7 +87,7 @@ const App = () => {
         <Route path='/results' element={<Results tech={techResults} techComments={techComments} category={selectedCategory}/>}/>
         <Route path='/learnat' element={<LearnAT/>}/>
         <Route path='/about' element={<About/>}/>
-        <Route path='/userpage' element={<UserPage/>}/>
+        <Route path='/userpage' element={<UserPage currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
         <Route path='/testcomments' element={<TestComments handleButtonClick={handleButtonClick} />}/>
         <Route path='/*' element={<Error
               errorRoute={"Oh no, you have gone down the wrong path. Find your path back home by clicking on the home button!"}
