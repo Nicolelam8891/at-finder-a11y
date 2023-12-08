@@ -83,8 +83,8 @@ const App = () => {
 
   return (
     <main className="App">
-      {location.pathname !== '/' && <Header handleButtonClick={handleButtonClick}/>}
-      {/* <Header handleButtonClick={handleButtonClick}/> */}
+      {/* {location.pathname !== '/' && <Header handleButtonClick={handleButtonClick}/>} */}
+      <Header handleButtonClick={handleButtonClick}/>
       <Routes>
         <Route
           path='/'
