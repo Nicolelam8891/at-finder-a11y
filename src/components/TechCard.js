@@ -17,10 +17,12 @@ function TechCard({ title, website, techPiece, onCommentSubmit, category }) {
 
 
   return (
-    <div className='Tech-card'>
-      <h3 onClick={handleTechClick}>{techPiece.title}</h3>
-      <p>{website}</p>
-      <p>{techPiece.description}</p>
+    <div className='tech-coll'>
+      <div onClick={handleTechClick} className='Tech-card'>
+        <h3>{techPiece.title}</h3>
+        {/* <p>{website}</p> */}
+        <p>{techPiece.description}</p>
+      </div>
       {showCommentForm && <CommentForm techPiece={techPiece} onCommentSubmit={handleCommentSubmit} category={category}/>} 
     </div>
   );
