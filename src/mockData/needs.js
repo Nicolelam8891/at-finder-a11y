@@ -6,6 +6,7 @@ const needs = {
     ],
     'technology parameter': ['Screen Readers', 'Refreshable Braille Displays'],
     'disability parameter': 'are totally blind and cannot use a mouse',
+    'ind': 0
   },
   'Low Vision': {
     'category': 'Low Vision',
@@ -19,6 +20,7 @@ const needs = {
       'Magnifying Device',
     ],
     'disability parameter': 'have low vision',
+    'ind': 1
   },
   'Deaf / Hard of Hearing': {
     'category': 'Deaf / Hard of Hearing',
@@ -33,6 +35,7 @@ const needs = {
       'Alert Devices',
     ],
     'disability parameter': 'are deaf or hard of hearing',
+    'ind': 2
   },
   'Mobility Supports for Fine Motor Issues': {
     'category': 'Mobility Supports for Fine Motor Issues',
@@ -60,6 +63,7 @@ const needs = {
       'Personal Safety',
     ],
     'disability parameter': 'have fine motor disabilities',
+    'ind': 3
   },
   'Mobility Supports for Gross Motor Issues': {
     'category': 'Mobility Supports for Gross Motor Issues',
@@ -80,6 +84,7 @@ const needs = {
       'Emergency Response',
     ],
     'disability parameter': 'have gross motor disabilities',
+    'ind': 4
   },
   'Cognitive Supports for Reading and Writing': {
     'category': 'Cognitive Supports for Reading and Writing',
@@ -96,6 +101,7 @@ const needs = {
     ],
     'disability parameter':
       'have cognitive disabilities in reading and writing',
+      'ind': 5
   },
   'Cognitive Supports for Math': {
     'category': 'Cognitive Supports for Math',
@@ -104,6 +110,7 @@ const needs = {
     ],
     'technology parameter': ['Computation', 'Calculators'],
     'disability parameter': 'have cognitive disabilities in math',
+    'ind': 6
   },
   'Cognitive Supports for Focus': {
     'category': 'Cognitive Supports for Focus',
@@ -120,6 +127,7 @@ const needs = {
       'Calendar',
     ],
     'disability parameter': 'have difficulty maintaining cognitive focus',
+    'ind': 7
   },
   'Communication Supports': {
     'category': 'Communication Supports',
@@ -128,6 +136,7 @@ const needs = {
     ],
     'technology parameter': ['Physical', 'Cognitive'],
     'disability parameter': 'have communication disabilities',
+    'ind': 8
   },
 };
 
