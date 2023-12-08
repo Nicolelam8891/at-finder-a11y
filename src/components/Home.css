@@ -1,12 +1,13 @@
 .splash-background {
   display: flex;
   justify-content: space-around;
-  position: relative;
-  background-image: url("../assets/background.png");
+  position: fixed;
+  background-image: url("../assets/background1.jpeg");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh;
-  padding-top: 120px;
+  height: 100vh;
+  width: 100vw;
 }
 
 .splash-button-container {
@@ -19,7 +20,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
+  color: hsl(0, 0%, 97%);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
   font-size: 18px;
   box-sizing: border-box;
@@ -48,7 +49,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: white;
+  color:hsl(0, 0%, 97%);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
   font-size: 32px;
   font-weight: 600px;
@@ -69,7 +70,7 @@
   background: #55828b;
   width: 150px;
   height: 60px;
-  color: #f6fff8;
+  color: hsl(0, 0%, 97%);
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
   font-weight: 600;
@@ -84,7 +85,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  /* background-color: hsl(125, 86%, 14%);
+  opacity: .8; */
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  background-color: hsl(0, 0%, 13%);
+  opacity: .7;
   pointer-events: none;
   z-index: 1;
 }
