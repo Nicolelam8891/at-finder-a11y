@@ -26,6 +26,7 @@ function TestComments() {
             <div>
                 {commentIds}
             </div>
+        </div>
     )
 }
 
