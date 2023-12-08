@@ -3,7 +3,7 @@
   display: flex;
   /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
   /* grid-gap: 2rem; */
-  overflow: auto;
+  overflow: scroll;
   scrollbar-color: red green;
   width: 90vw;
   box-sizing: border-box;

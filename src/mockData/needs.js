@@ -102,7 +102,7 @@ const needs = {
     'definition': [
       'Math Disability / Dyscalculia: difficulty with number-related concepts, including math reasoning, problem solving, and calculation.',
     ],
-    'technology parameter': ['computation', 'calculators'],
+    'technology parameter': ['Computation', 'Calculators'],
     'disability parameter': 'have cognitive disabilities in math',
   },
   'Cognitive Supports for Focus': {
