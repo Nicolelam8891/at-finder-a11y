@@ -1,31 +1,43 @@
-import { gql, useMutation } from "@apollo/client";
+import { gql } from "@apollo/client";
 
 export const ADD_COMMENT = gql`
-mutation {
+  mutation AddComment(
+    $title: String!,
+    $link: String!,
+    $description: String!,
+    $userComment: String!,
+    $rating: Boolean!,
+    $category: String!,
+    $userId: ID!
+  ) {
     commentCreate(
-        input: {
-            title: "this is my title",
-            link: "link.com",
-            description: "this is my description",
-            userComment: "this is my comment",
-            rating: true,
-            category: "Blindness",
-            userId: #{@user_1.id}
-        }
+      input: {
+        title: $title,
+        link: $link,
+        description: $description,
+        userComment: $userComment,
+        rating: $rating,
+        category: $category,
+        userId: $userId
+      }
     ) {
-        id
-        title
-        link
-        description
-        userComment
-        rating
-        categoryId
-        userId
+      id
+      title
+      link
+      description
+      userComment
+      rating
+      categoryId
+      userId
     }
-}
-        error {
-            message
-        }
-    }
-}`
+  }
+`;
 
+export const SESSION_CREATE = gql`
+  mutation SessionCreate($email: String!, $password: String!) {
+    sessionCreate(input: {email: $email, password: $password}) {
+      id
+      email
+    }
+  }
+`;
