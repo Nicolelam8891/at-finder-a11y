@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from 'react'
 import LogIn from "./LogIn";
 import users from "../mockData/userData";
+import logo from '../assets/AI-AT-Logo2.png'
 
 
 
@@ -30,13 +31,14 @@ function Header({handleButtonClick}) {
     <header className='header'>
       <Link to='/'>
         <div className='logo-title-container'>
-          <img src='help.png' className='help-logo' alt='Helping Hands Logo' />
+          <img className='logo' src={logo} />
+          {/* <img src='help.png' className='help-logo' alt='Helping Hands Logo' />
           <div className='title-container'>
             <h1 className='title'>AI AT Ally</h1>
             <p className='header-title'>
               <em>Artificial Intelligence Assistive Tech </em>
             </p>
-          </div>
+          </div> */}
         </div>
       </Link>
 
