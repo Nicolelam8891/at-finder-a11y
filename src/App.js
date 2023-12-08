@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Form from './components/Form';
 import Header from './components/Header';
 import Home from './components/Home'
-import {Route, Routes, useNavigate} from 'react-router-dom'
+import {Route, Routes, useNavigate, useLocation } from 'react-router-dom'
 import tech from './mockData/mockTech'
 import Results from './components/Results';
 import comments from './mockData/comments';
@@ -79,9 +79,12 @@ const App = () => {
       navigate(route);
     };
 
+    const location = useLocation();
+
   return (
     <main className="App">
-      <Header handleButtonClick={handleButtonClick}/>
+      {location.pathname !== '/' && <Header handleButtonClick={handleButtonClick}/>}
+      {/* <Header handleButtonClick={handleButtonClick}/> */}
       <Routes>
         <Route
           path='/'
