@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Form.css';
 import needs from '../mockData/needs';
 import CategoryCard from './CategoryCard';
@@ -12,6 +12,14 @@ const Form = ({
 }) => {
   const [loading, setLoading] = useState(false);
   const [filteredCategories, setFilteredCategories] = useState(Object.keys(needs));
+  const containerRef = useRef(null);
+  const bottomRef = useRef(null);
+
+  const scrollToBottom = () => {
+    if (bottomRef.current) {
+      window.scrollTo({ top: bottomRef.current.offsetTop, behavior: 'smooth' });
+    }
+  };
 
   const handleCategoryClick = (category) => {
     if (selectedCategory === category) {
@@ -26,6 +34,7 @@ const Form = ({
 
   const handleTechParamClick = (techParam) => {
     setSelectedTechParam(techParam);
+    setTimeout(scrollToBottom, 2)
   };
 
   const getTechParams = () => {
@@ -41,8 +50,8 @@ const Form = ({
     if (isSubmitEnabled) {
       setLoading(true);
       try {
-        // Call the asynchronous function using await
         await onFormSubmit();
+        scrollToBottom();
       } catch (error) {
         console.error('Error:', error);
       } finally {
@@ -51,10 +60,50 @@ const Form = ({
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const container = containerRef.current;
+      if (!container) return;
+
+      const cards = container.getElementsByClassName('category-card');
+
+      Array.from(cards).forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
+        const fadeOutDistance = 200; // Adjust this value based on your preference
+
+        const distanceToLeftEdge = containerRect.left - rect.left;
+        const distanceToRightEdge = rect.right - containerRect.right;
+
+        if (distanceToLeftEdge >= 0 || distanceToRightEdge >= 0) {
+          // Card is at or past either edge, apply fade
+          const maxDistance = Math.max(distanceToLeftEdge, distanceToRightEdge);
+          const opacity = 1 - Math.min(1, maxDistance / fadeOutDistance);
+          card.style.opacity = opacity.toString();
+        } else {
+          // Card is within the container, fully opaque
+          card.style.opacity = '1';
+        }
+      });
+    };
+
+    const container = containerRef.current;
+    if (container) {
+      container.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      if (container) {
+        container.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, []);
+
   return (
     <div className='Form'>
-      <div className={selectedCategory ? 'singled' : "category-list"}>
-        {filteredCategories.map((category) => (
+      <h1>Choose a category</h1>
+      <div className={selectedCategory ? 'singled' : "category-list"} ref={containerRef}>
+        {filteredCategories.map((category, index) => (
           <CategoryCard
             key={category}
             category={category}
@@ -66,6 +115,8 @@ const Form = ({
       </div>
       <div>
         {selectedCategory && (
+          <div>
+          <h2 className='sub'>Choose a subcategory</h2>
           <div className='subcategory-list'>
             {getTechParams().map((tech, index) => (
               <div key={index} className={tech === selectedTechParam ? 'selected techParam' : 'techParam'} onClick={() => handleTechParamClick(tech)}>
@@ -74,6 +125,7 @@ const Form = ({
               </p>
               </div>
             ))}
+          </div>
           </div>
         )}
       </div>
@@ -85,10 +137,10 @@ const Form = ({
         </svg>
       ) : (
         isSubmitEnabled && (
-          <button className='submit' onClick={handleSubmit}>Submit</button>
+          <button className='submit' ref={bottomRef} onClick={handleSubmit}>Submit</button>
         )
       )}
-      
+      {/* <div ref={bottomRef}></div> */}
     </div>
   );
 };
