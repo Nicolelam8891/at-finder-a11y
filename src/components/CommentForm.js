@@ -88,8 +88,8 @@ function CommentForm({ title, link, techPiece, category, description, onCommentS
           />
         </label>
           <div className='rating-btns'>
-            <button type="button" onClick={() => handleRating(true)}>I like it</button>
-            <button type="button" onClick={() => handleRating(false)}>I don't like it</button>
+            <button type="button" className={rating ? 'liked' : ''} onClick={() => handleRating(true)}>I like it</button>
+            <button type="button" className={!rating ? 'unliked' : ''} onClick={() => handleRating(false)}>I don't like it</button>
           </div>
         <button type="submit">Submit</button>
       </form>
