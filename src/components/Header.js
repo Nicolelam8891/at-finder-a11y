@@ -20,7 +20,11 @@ function Header({ currentUser, setCurrentUser, handleButtonClick}) {
    } else {
     console.log('Invalid credentials')
    }
+// console.log("FROM HEADER", user.id)
+
   }
+
+  
 
 
   return (
