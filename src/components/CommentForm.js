@@ -25,23 +25,6 @@ function CommentForm({ title, link, techPiece, category, description, onCommentS
     setRating(value);
   };
 
-
-  // const addComment = async (submittedData) => {
-  //   try {
-  //     const {data} = await commentCreate({variables: {title, link, description, userComment, rating, categoryId, userId}})
-
-  //     if(onCommentSubmit) {
-  //       onCommmentSubmit(data.commentCreate)
-  //       console.log("DATA", data.commentCreate)
-  //     }
-  //   }
-  //   catch (error) {
-  //     console.error("Mutation error:", error.message);
-  //     setLoginErrorMessage("We're sorry. An error occurred. Please try again.");
-  //   }
-  // }
-
-
   const addComment = async (submittedData) => {
     try {
       const { data } = await commentCreate({

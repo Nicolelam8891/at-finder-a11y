@@ -8,7 +8,7 @@ export const ADD_COMMENT = gql`
     $userComment: String!,
     $rating: Boolean!,
     $category: String!,
-    $userId: ID!
+    $userId: Int!
   ) {
     commentCreate(
       input: {
@@ -42,5 +42,3 @@ export const SESSION_CREATE = gql`
     }
   }
 `;
-
-//for line 11, check to see if we should change the data type to Integer!
