@@ -1,0 +1,14 @@
+{
+  "data": {
+    "commentCreate": {
+      "id": "12",
+      "title": "this is my title",
+      "link": "link.com",
+      "description": "this is my description",
+      "userComment": "this is my comment",
+      "rating": true,
+      "categoryId": 1,
+      "userId": 1
+    }
+  }
+}
