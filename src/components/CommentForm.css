@@ -33,3 +33,9 @@ label {
 .rating-btns {
   display: flex;
 }
+
+.liked {
+  background-color: green;
+}
+
+.unliked {background-color: red;}
