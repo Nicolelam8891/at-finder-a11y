@@ -11,14 +11,15 @@ function Header({ currentUser, setCurrentUser, handleButtonClick}) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogin = (username, password) => {
-   const user = users.find(user => user.email === username && user.password === password);
-   if (user) {
-    console.log('Logged in as:', user.name);
-    setIsLoggedIn(true);
-    setCurrentUser(user);
-    setLoginOpen(false);
-   } else {
-    console.log('Invalid credentials')
+    const user = users.find(user => user.email === username && user.password === password);
+    if (user) {
+      console.log('Logged in as:', user.name);
+      setIsLoggedIn(true);
+      setCurrentUser(user);
+      setLoginOpen(false);
+    } else {
+      console.log('Invalid credentials')
+   
    }
 // console.log("FROM HEADER", user.id)
 
@@ -32,13 +33,7 @@ function Header({ currentUser, setCurrentUser, handleButtonClick}) {
       <Link to='/'>
         <div className='logo-title-container'>
           <img className='logo' src={logo} />
-          {/* <img src='help.png' className='help-logo' alt='Helping Hands Logo' />
-          <div className='title-container'>
-            <h1 className='title'>AI AT Ally</h1>
-            <p className='header-title'>
-              <em>Artificial Intelligence Assistive Tech </em>
-            </p>
-          </div> */}
+        
         </div>
       </Link>
 
