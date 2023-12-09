@@ -3,9 +3,8 @@
   display: flex;
   /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
   /* grid-gap: 2rem; */
-  overflow: scroll;
-  scrollbar-color: red green;
-  width: 90vw;
+  overflow: auto;
+  width: 100vw;
   box-sizing: border-box;
   animation: fade-in 1s;
 }
@@ -138,4 +137,9 @@
 
 .loader {
   margin-bottom: 40px;
+}
+
+.form-head, .sub {
+  color:  hsl(0, 0%, 13%);
+  margin-bottom: 1rem;
 }

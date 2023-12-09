@@ -62,16 +62,36 @@ header {
   text-align: center;
   justify-content: center;
   border: 2px solid #cce3de;
-  background: #55828b;
-  width: 100px;
-  height: 35px;
+  width: 10vw;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
   color: #f6fff8;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 20px;
+  font-size: 1.5vw;
   font-weight: 600;
-  border-radius: 50px;
-  margin-left: 10px;
-  margin-right: 10px;
+  border-radius: 15px;
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.login-button {
+  background-color: rgba(66, 25, 135, .7);
+}
+
+.about-button {
+  background-color: rgba(4, 35, 14, .7);
+}
+
+.about-button:hover {
+  background-color: rgba(4, 35, 14, 1);
+  transition: .3s;
+}
+
+.login-button:hover {
+  background-color: rgba(66, 25, 135, 1);
+  transition: .3s;
 }
 
 .login-button-container {

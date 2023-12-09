@@ -5,10 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: hsl(0, 0%, 97%)
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+html {
+  background: hsl(0, 0%, 88%);
+  height: 100%;
+  background-attachment: fixed;
+
 }

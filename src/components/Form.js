@@ -105,7 +105,7 @@ const Form = ({
 
   return (
     <div className='Form'>
-      <h1>Choose a category</h1>
+      <h1 className='form-head'>Choose a category</h1>
       <div className={selectedCategory ? 'singled' : "category-list"} ref={containerRef}>
         {filteredCategories.map((category, index) => (
           <CategoryCard

@@ -1,6 +1,7 @@
 .splash-background {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   position: fixed;
   background-image: url("../assets/background1.jpeg");
   background-position: center;
@@ -12,6 +13,8 @@
 
 .splash-button-container {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .AT-info {
@@ -21,41 +24,51 @@
   align-items: center;
   text-align: center;
   color: hsl(0, 0%, 97%);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-  font-size: 18px;
+  text-shadow: 2px 2px 4px hsl(0, 0%, 13%);
+  font-size: 1.2rem;
   box-sizing: border-box;
-  width: 355px;
-  height: 450px;
-  border-radius: 20px;
-  border: 2px solid #55828b;
+  height: 50vh;
+  width: 35vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 15px;
   background: linear-gradient(
-    45deg,
-    rgba(107, 144, 128, 0.6),
-    rgba(164, 195, 178, 0.6),
-    rgba(107, 144, 128, 0.6)
-  );
+    rgba(60, 128, 110, 0.6),
+    rgba(64, 121, 102, 0.6)
+);
+  color: hsl(0, 0%, 97%);
+  border-color: hsl(125, 56%, 29%);
   text-decoration: none;
-  box-shadow: 0 0 15px 3px #364958;
+  box-shadow: 0 0 15px 3px   rgba(60, 128, 110, 1),;
   animation: slideInFromLeft 0.5s ease-out forwards;
   position: relative;
   z-index: 2;
 }
 
-.splash-main-info {
-  margin: 0px;
-}
+
 
 .info-container {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  justify-content: center;
   flex-direction: column;
   color:hsl(0, 0%, 97%);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-  font-size: 32px;
+  font-size: 2vw;
   font-weight: 600px;
-  width: 900px;
+  width: 50vw;
+  height: 80vh;
   z-index: 2;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
   position: relative;
+  /* background: linear-gradient(
+    rgba(60, 128, 110, 0.6),
+    rgba(64, 121, 102, 0.6)
+); */
+margin-bottom: 3rem;
+border-radius: 5px;
 }
 
 .find-AT-button,
@@ -64,19 +77,38 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  margin: 70px;
-  border: 3px solid #354f52;
-  border-radius: 25px;
-  background: #55828b;
-  width: 150px;
-  height: 60px;
-  color: hsl(0, 0%, 97%);
+  border: none;
+  border-radius: 10px;
+  width: 20vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 600;
   text-decoration: none;
   z-index: 2;
   position: relative;
+  margin: 1rem;
+  margin-left: 0;
+}
+
+.find-AT-button {
+  background-color: rgba(4, 35, 14, .7);
+  box-shadow: 0 0 7px 1px hsl(125, 65%, 93%);
+  color: hsl(125, 65%, 93%)
+}
+
+.learn-AT-button {
+  box-shadow: 0 0 7px 1px hsl(125, 65%, 93%);
+  color: hsl(125, 65%, 93%);
+  background-color: rgba(4, 35, 14, .4);
+}
+
+.find-AT-button:hover, .learn-AT-button:hover {
+  background-color: rgba(4, 35, 14, 1);
+  transition: .3s;
 }
 
 .overlay {
@@ -92,4 +124,24 @@
   opacity: .7;
   pointer-events: none;
   z-index: 1;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.welcome-header{
+  margin: 0;
+  font-size: 3,5vw;
+}
+
+.info-description {
+  font-size: 1.5vw;
+  text-align: left;
+}
+
+.what-is-at {
+  margin-bottom: 1rem;
+  margin-top: 0;
+  font-size: 2vw;
 }
