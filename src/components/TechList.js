@@ -1,7 +1,7 @@
 import './TechList.css'
 import TechCard from './TechCard'
 
-function TechList ({tech, onCommentSubmit, category}) {
+function TechList ({tech, onCommentSubmit, category, currentUser}) {
   return (
     <div className='Tech-list'>
       {tech.map((techPiece) =>
@@ -11,6 +11,7 @@ function TechList ({tech, onCommentSubmit, category}) {
           website={techPiece.attributes.website}
           onCommentSubmit={onCommentSubmit} 
           category={category}
+          currentUser={currentUser}
         />
       )
 

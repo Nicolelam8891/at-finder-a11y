@@ -3,7 +3,7 @@ import './CommentForm.css';
 import { useMutation } from '@apollo/client';
 import { ADD_COMMENT } from '../GraphQL/Mutations';
 
-function CommentForm({ title, link, techPiece, category, description, onCommentSubmit }) {
+function CommentForm({ title, link, techPiece, category, description, onCommentSubmit, currentUser }) {
   const [commentCreate] = useMutation(ADD_COMMENT);
   const [rating, setRating] = useState(null); 
   const [formData, setFormData] = useState({
@@ -63,7 +63,8 @@ function CommentForm({ title, link, techPiece, category, description, onCommentS
       !techPiece.website ||
       !category ||
       !techPiece.description ||
-      !formData.comment
+      !formData.comment || 
+      !currentUser
     ) {
       alert('Please fill out all required fields.');
       return; 
@@ -76,7 +77,7 @@ function CommentForm({ title, link, techPiece, category, description, onCommentS
       userComment: formData.comment,
       rating: rating,
       categoryId: category,
-      userId: 1
+      userId: currentUser.sessionCreate.id * 1
     };
 
     addComment(submittedData)
