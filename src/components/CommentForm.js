@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './CommentForm.css';
+import { useMutation } from '@apollo/client';
+import { ADD_COMMENT } from '../GraphQL/Mutations';
 
 function CommentForm({ title, link, techPiece, category, description, onCommentSubmit }) {
+  const [commentCreate] = useMutation(ADD_COMMENT);
   const [rating, setRating] = useState(null); 
   const [formData, setFormData] = useState({
     link: '',
@@ -22,10 +25,56 @@ function CommentForm({ title, link, techPiece, category, description, onCommentS
     setRating(value);
   };
 
+
+  // const addComment = async (submittedData) => {
+  //   try {
+  //     const {data} = await commentCreate({variables: {title, link, description, userComment, rating, categoryId, userId}})
+
+  //     if(onCommentSubmit) {
+  //       onCommmentSubmit(data.commentCreate)
+  //       console.log("DATA", data.commentCreate)
+  //     }
+  //   }
+  //   catch (error) {
+  //     console.error("Mutation error:", error.message);
+  //     setLoginErrorMessage("We're sorry. An error occurred. Please try again.");
+  //   }
+  // }
+
+
+  const addComment = async (submittedData) => {
+    try {
+      const { data } = await commentCreate({
+        variables: {
+          title: submittedData.title,
+          link: submittedData.link,
+          description: submittedData.description,
+          userComment: submittedData.userComment,
+          rating: submittedData.rating,
+          category: submittedData.categoryId,
+          userId: submittedData.userId,
+        },
+      });
+  
+      if (data.commentCreate && !data.commentCreate.errors) {
+        if (onCommentSubmit) {
+          onCommentSubmit(data.commentCreate);
+          console.log("DATA", data.commentCreate);
+        }
+      } else {
+        console.error("Mutation error:", data.commentCreate.errors);
+        // Handle error, set error message, etc.
+      }
+    } catch (error) {
+      console.error("Mutation error:", error.message);
+      // Handle error, set error message, etc.
+    }
+  };
+  
+
   const handleSubmit = (e) => {
     e.preventDefault();
   
-
     if (
       !techPiece.title ||
       !techPiece.website ||
@@ -39,12 +88,15 @@ function CommentForm({ title, link, techPiece, category, description, onCommentS
   
     const submittedData = {
       ...techPiece,
-      website: techPiece.website,
-      category: category,
+      link: techPiece.website,
       description: techPiece.description,
+      userComment: formData.comment,
       rating: rating,
-      comment: formData.comment
+      categoryId: category,
+      userId: 1
     };
+
+    addComment(submittedData)
   
     console.log('form', submittedData);
     setFormData({

@@ -1,6 +1,6 @@
 import './LogIn.css'
 import { useState } from 'react'
-import { useMutation, gql } from '@apollo/client';
+import { useMutation } from '@apollo/client';
 import { SESSION_CREATE } from '../GraphQL/Mutations';
 
 function LogIn({ isOpen, onLogin }) {
