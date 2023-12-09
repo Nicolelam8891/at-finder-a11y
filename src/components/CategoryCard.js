@@ -21,14 +21,19 @@ const CategoryCard = ({ category, data, ind, onCategoryClick, onTechParamClick, 
   };
 
   const arr = [Blindness, LowVision, Deafness, FineMotor, GrossMotor, Reading, Math, Focus, Communication]
-console.log(data['ind'])
+console.log(data['definition'])
 
 const index = data['ind']
 
   return (
     <div className={`category-card ${isSelected ? 'selected' : ''}`} onClick={handleCategoryClick}>
-      <h2>{category}</h2>
+      <h2 className='cat-title'>{category}</h2>
       <img className='img' src={arr[index]}/>
+      <div className='def-cont'>
+      {data['definition'].map((definition, index) => (
+  <p className={`cat-def ${isSelected ? 'hide' : ''}`} key={index}>{definition}</p>
+))}
+</div>
     </div>
   );
 };
