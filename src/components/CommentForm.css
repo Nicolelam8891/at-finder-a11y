@@ -29,3 +29,7 @@ label {
   width: 30vw;
   text-align: center;
 }
+
+.rating-btns {
+  display: flex;
+}
