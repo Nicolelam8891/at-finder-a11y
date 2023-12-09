@@ -3,7 +3,6 @@ import Form from './components/Form';
 import Header from './components/Header';
 import Home from './components/Home'
 import {Route, Routes, useNavigate, useLocation } from 'react-router-dom'
-import TestComments from './components/TestComments/TestComments';
 import tech from './mockData/mockTech'
 import Results from './components/Results';
 // import comments from './mockData/comments';
@@ -107,7 +106,6 @@ const App = () => {
         <Route path='/learnat' element={<LearnAT/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/userpage' element={<UserPage currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
-        <Route path='/testcomments' element={<TestComments handleButtonClick={handleButtonClick} />}/>
         <Route path='/*' element={<Error
               errorRoute={"Oh no, you have gone down the wrong path. Find your path back home by clicking on the home button!"}
             />}></Route>
