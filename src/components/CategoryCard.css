@@ -10,5 +10,27 @@
 } */
 
 .img {
-  height: 10rem;
+  height: 30vh;
+}
+
+.cat-title {
+  font-size: 4vh;
+  margin: 0;
+  padding: 1rem;
+}
+
+.cat-def {
+  margin-bottom: .5rem;
+  margin-top: 0;
+  font-size: 2vh;
+  font-weight: 600;
+}
+
+.def-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
