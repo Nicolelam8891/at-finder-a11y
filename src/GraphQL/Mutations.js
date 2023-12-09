@@ -8,7 +8,7 @@ export const ADD_COMMENT = gql`
     $userComment: String!,
     $rating: Boolean!,
     $category: String!,
-    $userId: ID!
+    $userId: Int!
   ) {
     commentCreate(
       input: {
