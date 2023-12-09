@@ -105,7 +105,7 @@ const Form = ({
 
   return (
     <div className='Form'>
-      <h1 className='form-head'>Choose a category</h1>
+      <h1 className={`form-head ${selectedCategory ? 'hide' : ''}`}>Choose a Disability Category</h1>
       <div className={selectedCategory ? 'singled' : "category-list"} ref={containerRef}>
         {filteredCategories.map((category, index) => (
           <CategoryCard
@@ -120,7 +120,7 @@ const Form = ({
       <div>
         {selectedCategory && (
           <div>
-          <h2 className='sub'>Choose a subcategory</h2>
+          <h2 className='sub'>What is your area of need?</h2>
           <div className='subcategory-list'>
             {getTechParams().map((tech, index) => (
               <div key={index} className={tech === selectedTechParam ? 'selected techParam' : 'techParam'} onClick={() => handleTechParamClick(tech)}>
