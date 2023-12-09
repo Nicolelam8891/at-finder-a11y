@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './TechCard.css';
 import CommentForm from './CommentForm'; 
 
-function TechCard({ title, website, techPiece, onCommentSubmit, category }) {
+function TechCard({ title, website, techPiece, onCommentSubmit, category, currentUser }) {
   const [showCommentForm, setShowCommentForm] = useState(false);
 
   const handleTechClick = () => {
@@ -23,7 +23,7 @@ function TechCard({ title, website, techPiece, onCommentSubmit, category }) {
         {/* <p>{website}</p> */}
         <p>{techPiece.description}</p>
       </div>
-      {showCommentForm && <CommentForm techPiece={techPiece} onCommentSubmit={handleCommentSubmit} category={category}/>} 
+      {showCommentForm && <CommentForm currentUser={currentUser} techPiece={techPiece} onCommentSubmit={handleCommentSubmit} category={category}/>} 
     </div>
   );
 }

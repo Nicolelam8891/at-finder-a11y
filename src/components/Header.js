@@ -49,6 +49,7 @@ function Header({ currentUser, setCurrentUser, handleButtonClick}) {
         <LogIn 
           isOpen={isLoginOpen}
           onLogin={handleLogin}
+          setCurrentUser={setCurrentUser}
         />
           <button className='about-button' onClick={() => handleButtonClick('/about')}>About</button>
       </div>

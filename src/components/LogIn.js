@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useMutation } from '@apollo/client';
 import { SESSION_CREATE } from '../GraphQL/Mutations';
 
-function LogIn({ isOpen, onLogin }) {
+function LogIn({ isOpen, onLogin, setCurrentUser }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loginErrorMessage, setLoginErrorMessage] = useState('');
@@ -30,6 +30,7 @@ function LogIn({ isOpen, onLogin }) {
       if (onLogin) {
         onLogin(data.sessionCreate);
         console.log("DATA", data.sessionCreate.id)
+        setCurrentUser(data)
       }
     } catch (error) {
       console.error("Mutation error:", error.message);

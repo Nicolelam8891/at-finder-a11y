@@ -7,7 +7,7 @@ import { useQuery } from '@apollo/client';
 import { LOAD_COMMENTS } from '../GraphQL/Queries';
 // import comments from '../mockData/comments';
 
-function Results({ tech, category }) {
+function Results({ tech, category, currentUser }) {
   const [comments, setComments] = useState([]);
   const [showTechSection, setShowTechSection] = useState(true);
   const [commentLoading, setCommentLoading] = useState(false)
@@ -73,7 +73,7 @@ useEffect(() => {
         </div>
         <div className='results-section'>
           {showTechSection && (
-              <TechList tech={tech} onCommentSubmit={handleCommentSubmit} category={category} />
+              <TechList currentUser={currentUser} tech={tech} onCommentSubmit={handleCommentSubmit} category={category} />
           )}
           {!showTechSection && (
               <CommentSection comments={comments} category={category}/>
