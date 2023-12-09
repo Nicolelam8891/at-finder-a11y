@@ -15,7 +15,6 @@ function Home( {handleButtonClick} ) {
         <div className='splash-button-container'>
           <button className='find-AT-button' onClick={() => handleButtonClick('/findmyat')}>Find my AT</button>
           <button className='learn-AT-button' onClick={() => handleButtonClick('/learnat')}>Learn more about AT</button>
-          {/* <button className='all-comments' onClick={() => handleButtonClick('/testcomments')}>Get Comments</button>    */}
         </div>
         {/* <div className='splash-button-container'>
           <button className='find-AT-button' onClick={() => handleButtonClick('/findmyat')}>Find my AT</button>
