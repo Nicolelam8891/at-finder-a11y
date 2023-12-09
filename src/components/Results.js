@@ -3,17 +3,47 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
 import TechList from './TechList';
 import CommentSection from './CommentSection';
+import { useQuery } from '@apollo/client';
+import { LOAD_COMMENTS } from '../GraphQL/Queries';
 // import comments from '../mockData/comments';
 
-function Results({ tech, techComments, category }) {
+function Results({ tech, category }) {
   const [comments, setComments] = useState([]);
   const [showTechSection, setShowTechSection] = useState(true);
+  const [commentLoading, setCommentLoading] = useState(false)
   const [activeFilter, setActiveFilter] = useState('tech');
+  const { loading, error, data } = useQuery(LOAD_COMMENTS);
+    console.log("DATA", data)
 
+//   useEffect(() => {
+//     if (loading) {
+//       setCommentLoading(true)
+//       console.log("Loading...");
+//   }
 
-  useEffect(() => {
-    setComments(techComments);
-  }, []);
+//   if (error) {
+//     console.log(`Error: ${error.message}`);
+// }
+
+//     setComments(data.allCategoryComments);
+//   }, []);
+
+useEffect(() => {
+  if (loading) {
+    setCommentLoading(true);
+    console.log("Loading...");
+  }
+
+  if (error) {
+    console.log(`Error: ${error.message}`);
+  }
+
+  if (data) {
+    // Check if data is available before accessing allCategoryComments
+    setComments(data.allCategoryComments);
+  }
+}, [loading, error, data]);
+
 
   const handleCommentSubmit = (commentData) => {
     setComments((prevComments) => [...prevComments, commentData]);

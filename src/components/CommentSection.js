@@ -7,7 +7,7 @@ function CommentSection ({comments}) {
   return (
     <div>
       {comments.map((comment) =>
-        <CommentCard comment={comment} />
+        <CommentCard comment={comment} key={comment.id}/>
       )
       }
     </div>

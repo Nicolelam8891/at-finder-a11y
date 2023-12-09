@@ -16,7 +16,7 @@ function TestComments() {
 
     const commentIds = data.allCategoryComments.map((comment) => {
         return (
-            <p>{comment.id}</p>
+            <p key={comment.id}>{comment.id}</p>
         )
     })
 
