@@ -4,7 +4,7 @@
   /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
   /* grid-gap: 2rem; */
   overflow: auto;
-  width: 100vw;
+  width: 90vw;
   box-sizing: border-box;
   animation: fade-in 1s;
 }
@@ -17,7 +17,7 @@
   aspect-ratio: 1/1;
   margin: 15px;
   margin-bottom: 20px;
-  background-color: hsl(125, 65%, 93%);
+  background-color:  hsl(122, 42%, 75%);
   color: hsl(125, 86%, 14%);
   box-shadow: 0 0 10px hsl(125, 86%, 14%);
   border-radius: 5px;
