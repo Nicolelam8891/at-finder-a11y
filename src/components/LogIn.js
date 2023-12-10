@@ -64,7 +64,7 @@ function LogIn({ isOpen, onLogin, setCurrentUser }) {
           onChange={(event) => setPassword(event.target.value)}
         />
         </label>
-        <button type="submit">Login</button>
+        <button className="submit-button" type="submit">Login</button>
         {loginErrorMessage && <div className='login-error-message'> {loginErrorMessage}</div>}
       </form>
     </div>
