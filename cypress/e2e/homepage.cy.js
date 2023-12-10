@@ -16,6 +16,7 @@ describe('Homepage user flow', () => {
     ).as("users")
     cy.visit('http://localhost:3000/')
   })
+
   it('it should contain a header, h1, log-in button, about button, two informational blocks, and buttons for additiona information', () => {
     cy.get('.header').get('.logo').click().url().should("eq", "http://localhost:3000/")
     cy.get('h1').contains("h1", "AI AT Ally")
@@ -31,11 +32,6 @@ describe('Homepage user flow', () => {
   })
   
   it('it should allow user to log in', () => {
-    // cy.get('.login-button').contains("Log In").click()
-    // cy.get('#email').should("have.attr", "placeholder", "email").type("rosa@aol.com").should("have.value", "rosa@aol.com")
-    // cy.get('form > button').contains("Login").click()
-    // cy.get('.login-error-message').should("contain", "Form is incomplete. All fields need to be filled in.")
-
     cy.get('.login-button').contains("Log In").click()
     cy.get('#email').should("have.attr", "placeholder", "email").type("rosa@aol.com").should("have.value", "rosa@aol.com")
     cy.get('#password').should("have.attr", "placeholder", "password").type("rosaslaw10!").should("have.value", "rosaslaw10!")
@@ -63,10 +59,30 @@ describe('Homepage user flow', () => {
       })
         .as('getAiTech')
         .visit('http://localhost:3000/');
-        cy.get('.find-AT-button').contains("Find my AT").click();
+        cy.get('.find-AT-button').contains("Find my AT").click()
+        cy.get('.form-head').contains("h1", "Choose a Disability Category")
     });
-})
 
+  it('it should allow user to go to the Learn more about AT page', () => {
+    cy.get('.learn-AT-button').contains("Learn more about AT").click();
+    cy.get('.App > :nth-child(2) > :nth-child(1)').contains("h2", "Assistive Technology Definition")
+    cy.get('.App > :nth-child(2) > :nth-child(2)').contains("p", "In the United States, it is legally required that assistive technology")
+    cy.get('.App > :nth-child(2) > :nth-child(3)').contains("h2", "Examples of Assistive Technologies")
+    cy.get(':nth-child(2) > :nth-child(4)').contains("p", "The following lists provide a small sample of types of assistive technologies. Some Assistive Technologies")
+    cy.get(':nth-child(2) > :nth-child(5)').contains("h3", "Blind and Low Vision")
+    cy.get(':nth-child(2) > :nth-child(6)').contains("Screen Readers")
+    cy.get(':nth-child(2) > :nth-child(7)').contains("h3", "Supports for Reading Disabilities")
+    cy.get(':nth-child(8) > :nth-child(1)').contains("Text-to-Speech Tools")
+    cy.get(':nth-child(2) > :nth-child(9)').contains("h3", "Supports for Writing and Spelling Disabilities")
+    cy.get(':nth-child(10) > :nth-child(1)').contains("Word Prediction Software")
+    cy.get(':nth-child(2) > :nth-child(11)').contains("h3", "Supports for Physical Disabilities")
+    cy.get(':nth-child(12) > :nth-child(1)').contains("Alternative Keyboards")
+    cy.get(':nth-child(2) > :nth-child(13)').contains("h2", "Assistive Technology and Accessible Educational Materials Resources")
+    cy.get('a[href="https://aem.cast.org/get-started/resources/2021/aem-navigator"]')
+    .should('have.attr', 'href', 'https://aem.cast.org/get-started/resources/2021/aem-navigator');
+
+})
+})
 
 
 
