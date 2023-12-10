@@ -6,7 +6,7 @@ import Contributor from "./Contributor";
 function About() {
   return (
     <div className='about-page'>
-      <div className="mission-statement">
+      <div className="mission-statement-container">
         <h2 className="h2-ms">Mission Statement</h2>
         <p className='p-ms'>
           Provide an AI-driven application to match the needs of people with
