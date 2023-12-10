@@ -1,7 +1,7 @@
 .contributor-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color:  hsl(122, 42%, 75%);
   color: hsl(125, 86%, 14%);
@@ -34,7 +34,7 @@
 }
 
 .contributor-image {
-  height: 400px;
-  width: 300px;
-  border-radius: 60%;
+  max-width: 60%;
+  border-radius: 50%;
+  object-fit: cover;
 }

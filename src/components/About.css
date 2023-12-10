@@ -1,17 +1,15 @@
-.mission-statement {
+/* .mission-statement {
   margin: 0 auto;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border: 3px solid black;
-  width: 400px;
-  height: 595px;
-  margin-top: 15px; */
-}
+} */
 .h2-ms,
 .p-ms {
   text-align: center;
+}
+
+.h2-ms {
+  color: #240754;
+  font-size: 1.15rem;
+  
 }
 
 /* .all-contributors-container {
@@ -25,7 +23,7 @@
   padding: 1rem;
     display: grid;
     /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
     grid-gap: 1rem;
   /* display: flex; 
   flex-wrap: wrap;
