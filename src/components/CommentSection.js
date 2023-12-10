@@ -5,7 +5,7 @@ function CommentSection ({comments}) {
   console.log('beep', comments)
   
   return (
-    <div>
+    <div className='Tech-list'>
       {comments.map((comment) =>
         <CommentCard comment={comment} key={comment.id}/>
       )
