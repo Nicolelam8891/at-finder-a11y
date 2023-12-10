@@ -31,12 +31,17 @@ describe('Homepage user flow', () => {
   })
   
   it('it should allow user to log in', () => {
+    // cy.get('.login-button').contains("Log In").click()
+    // cy.get('#email').should("have.attr", "placeholder", "email").type("rosa@aol.com").should("have.value", "rosa@aol.com")
+    // cy.get('form > button').contains("Login").click()
+    // cy.get('.login-error-message').should("contain", "Form is incomplete. All fields need to be filled in.")
+
     cy.get('.login-button').contains("Log In").click()
     cy.get('#email').should("have.attr", "placeholder", "email").type("rosa@aol.com").should("have.value", "rosa@aol.com")
     cy.get('#password').should("have.attr", "placeholder", "password").type("rosaslaw10!").should("have.value", "rosaslaw10!")
     cy.get('form > button').contains("Login")
   })
-  
+
   it('it should allow user to go to the About page', () => {
     cy.get('.about-button').contains("About").click()
     cy.get('.mission-statement-container').get('h2').contains("h2", "Mission Statement")
@@ -48,8 +53,25 @@ describe('Homepage user flow', () => {
     cy.get('.contributor-card-container > :nth-child(7)').last().get(':nth-child(7) > .contributor-image').should("have.attr", "src").and('match', /eliza\.\w+\.png$/)
     cy.get(':nth-child(7) > h3').contains("h3", "Eliza Keating")
     cy.get(':nth-child(7) > :nth-child(3)').contains("p", "Back End Software Developer")
-    cy.get(':nth-child(7) > :nth-child(4)').contains("p", "Eliza is cool")
+    cy.get(':nth-child(7) > :nth-child(4)').contains("p", "Eliza is a software developer from Denver, CO.")
   })
 
+  it('it should allow user to go to the About page', () => {
+    cy.intercept(
+      "POST", 
+      "https://nameless-stream-88171-cdff591c89ed.herokuapp.com/graphql", (req) => {
+        if (req.body && req.body.operationName === 'SessionCreate') {
+          req.reply((res) => {
+           res.send({
+             fixture: 'aiTechResults.json', 
+             statusCode: 200,
+           });
+          })
+        }
+      }
+    ).as("aiTechResults")
+    cy.get('.find-AT-button').contains("Find my AT").click()
+    
+  })
 })
 
