@@ -1,0 +1,23 @@
+.content-container {
+    background-color: #E0E0E0;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.learnat-h2 {
+    color: #240754
+}
+
+.learnat-h3 {
+    color: #2C5333
+}
+
+.learnat-a:link,
+.learnat-a:active {
+    color: blue;
+}
+
+
+.learnat-a:visited {
+color: #653CAD;
+}
