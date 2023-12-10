@@ -1,20 +1,36 @@
-
-
-.mission-statement-container {
-  display: flex;
+.mission-statement {
+  margin: 0 auto;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   border: 3px solid black;
   width: 400px;
   height: 595px;
-  margin-top: 15px;
-
+  margin-top: 15px; */
 }
+.h2-ms,
+.p-ms {
+  text-align: center;
+}
+
+/* .all-contributors-container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+} */
 
 .contributor-card-container {
-  display: flex; 
+  padding: 1rem;
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+  /* display: flex; 
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: flex-start; */
 }
+
+
