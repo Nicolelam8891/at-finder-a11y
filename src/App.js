@@ -107,7 +107,7 @@ const App = () => {
         <Route path='/about' element={<About/>}/>
         <Route path='/userpage' element={<UserPage currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
         <Route path='/*' element={<Error
-              errorRoute={"Oh no, you have gone down the wrong path. Find your path back home by clicking on the home button!"}
+              errorRoute={"Oh no, you have gone down the wrong path. Find your path back home by clicking on the logo!"}
             />}></Route>
       </Routes>
     </main>
