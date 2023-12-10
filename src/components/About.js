@@ -6,14 +6,14 @@ import Contributor from "./Contributor";
 function About() {
   return (
     <div className='about-page'>
-      <div className='contributor-card-container'>
       <div className="mission-statement-container">
-        <h2>Mission Statement</h2>
-        <p className='mission-statement'>
+        <h2 className="h2-ms">Mission Statement</h2>
+        <p className='p-ms'>
           Provide an AI-driven application to match the needs of people with
           disabilities to current and available assistive technologies.
         </p>
       </div>
+      <div className='contributor-card-container'>
       {contributors.map((contributor) => (
         <Contributor key={contributor.id} {...contributor} />
       ))}

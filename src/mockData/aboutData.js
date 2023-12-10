@@ -10,7 +10,7 @@ const contributors = [
     id: 1,
     name: 'Nicole Lam',
     role: 'Front End Software Developer',
-    bio: 'Nicole is a software engineer and registered nurse at at a hospital serving the underprivledged populations in Denver, CO. Driven by a passion for organization, attention-to-detail, and creativity, she transitioned herself into Tech through Turing Front End Engineering Program. Nicole aims to expand her tech skills into making impactful work, striving to make a difference and assist people in underserved populations. Her short-term goal is to learn Typescript and Redux. Her long-term goal is to become a full-stack Software Developer or Projecr Manager.', 
+    bio: 'Nicole is a software engineer and registered nurse at a hospital serving underprivileged populations in Denver, CO. Driven by a passion for organization, attention-to-detail, and creativity, she transitioned herself into Tech through Turing/s Front End Engineering Program. Nicole aims to expand her tech skills into making impactful work, striving to make a difference and assist people in underserved populations. Her short-term goal is to learn Typescript and Redux. Her long-term goal is to become a full-stack Software Developer.', 
     imageUrl: nicoleImage,
     altText: "Nicole Lam headshot"
   },
@@ -18,7 +18,7 @@ const contributors = [
     id: 2,
     name: 'Jan McSorley',
     role: 'Front End Software Developer',
-    bio: 'Jan is passionate about the importance of inclusive design and accessibility. She has worked in education and corporate settings has witnessed the difference inclusion can make and how it leads to more innovative solutions. Jan came to Turing to better understand the developer experience and to identify natural touch points in the Software Development Life Cycle where accessibility can be effectively integrated. After Turing, she hopes to be a part of eliminating barriers to access for people with disabilities by helping bridge the knowledge gap that leads to inaccessible digital tools.',
+    bio: 'Jan has worked in education and corporate settings and has witnessed the difference inclusion and accessibility can make and how it leads to more innovative solutions. Jan came to Turing to better understand the developer experience and to identify natural touch points in the Software Development Life Cycle where accessibility can be effectively integrated. After Turing, she hopes to be a part of eliminating barriers to access for people with disabilities by helping bridge the knowledge gap that leads to inaccessible digital tools.',
     imageUrl: janImage,
     altText: "Jan McSorley headshot"
    
@@ -35,7 +35,7 @@ const contributors = [
     id: 4,
     name: 'Joop Stark',
     role: 'Back End Software Developer',
-    bio: 'Joop has been trying to save the world. First a Recon Marine, then a Special Education Teacher, and now a Back End Software Engineer. What he really wants is to work for a company making a positive social or environmental impact that gives him problems to solve.',
+    bio: 'Joop has been trying to save the world. First a Recon Marine, then a Special Education Teacher, and now a Back End Software Engineer. His diverse background reflects a deep desire for meaningful impact, and he is seeking a role where his skills can contribute to solving societal and environmental challenges. Joop is eager to align his expertise with a company dedicated to positive change and thrives on tackling complex problems that make a lasting difference in the world.',
     imageUrl: joopImage,
     altText: "Joop Stark headshot"
 
@@ -44,7 +44,7 @@ const contributors = [
     id: 5,
     name: 'Nicholas Spencer',
     role: 'Back End Software Developer',
-    bio: 'Nick is resilient and has a passion for software development. His journey has been anything but conventional — overcoming a cancer diagnosis and navigating diverse roles from phlebotomy to custodial management. Now, on the verge of graduating from the Turing School of Software and Design, Nick is equipped with a robust skill set and a unique perspective. His dedication to continuous learning, problem-solving, and leadership, combined with a love for coding, drives him to create innovative solutions. Join him on this exciting journey as he embarks on a new chapter, bringing determination, adaptability, and a fresh outlook to the dynamic world of software development.',
+    bio: 'Nick is resilient and has a passion for software development. His journey has been anything but conventional — overcoming a cancer diagnosis and navigating diverse roles, from phlebotomy to custodial management. Nick is equipped with a robust skill set and a unique perspective. His fresh outlook, dedication to continuous learning, problem-solving, and leadership, combined with a love for coding, drives him to create innovative and adaptable software solutions.',
     imageUrl: nickImage,
     altText: "Nicholas Spencer headshot"
    
