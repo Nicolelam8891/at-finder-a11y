@@ -53,14 +53,18 @@ describe('Homepage user flow', () => {
   })
 
   it('it should allow user to go to the Find my AT page', () => {
-      cy.intercept('POST', 'https://assistivie-tech-2307-648a3d563927.herokuapp.com/', {
-        statusCode: 201,
-        fixture: 'aiTechResults',
-      })
-        .as('getAiTech')
-        .visit('http://localhost:3000/');
         cy.get('.find-AT-button').contains("Find my AT").click()
         cy.get('.form-head').contains("h1", "Choose a Disability Category")
+        cy.get('.category-list > :nth-child(1)').first().get(':nth-child(1) > .cat-title').contains("h2", "Blindness")
+        cy.get(':nth-child(1) > .img').should("have.attr", "src").and('match', /Blindness\.\w+\.png$/)
+        cy.get(':nth-child(1) > .def-cont > .cat-def').contains("p", "A person is functionally blind if they are unable to use vision in certain environments or for certain tasks, even with correction.")
+        cy.get('.category-list > :nth-child(9)').last().get(':nth-child(9) > .cat-title').contains("h2", "Communication Supports")
+        cy.get(':nth-child(9) > .img').should("have.attr", "src").and('match', /Communication\.\w+\.png$/)
+        cy.get(':nth-child(9) > .def-cont > .cat-def').contains("p", "Communication disabilities affect receiving, sending, processing, and understanding concepts through verbal, nonverbal, & graphic symbol systems.")
+        cy.get('.category-list > :nth-child(1)').first().get(':nth-child(1) > .cat-title').contains("h2", "Blindness").click()
+        cy.get('.sub').contains("h2", "What is your area of need?")
+        cy.get('.subcategory-list > :nth-child(1)').contains("p" , "Screen Readers")
+        cy.get('.subcategory-list > :nth-child(2)').contains("p", "Refreshable Braille Displays")
     });
 
   it('it should allow user to go to the Learn more about AT page', () => {
