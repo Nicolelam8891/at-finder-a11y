@@ -20,32 +20,9 @@ The project required both the front-end and back-end teams to "stretch" themselv
 
  - Back-end Repositories and Endpoint Documentation:
    - [user_service](https://github.com/Assistive-Tech-2307/user_service) / [README](https://github.com/Assistive-Tech-2307/user_service/blob/main/README.md)
-     - Endpoint for GraphQL User / Comment API: [https://nameless-stream-88171-cdff591c89ed.herokuapp.com/](https://nameless-stream-88171-cdff591c89ed.herokuapp.com/)
-   - [ai_service](https://github.com/Assistive-Tech-2307/ai_service) / [README](https://github.com/Assistive-Tech-2307/ai_service/blob/main/README.md)
-     - Endpoint for AI Services API: [https://assistivie-tech-2307-648a3d563927.herokuapp.com/](https://assistivie-tech-2307-648a3d563927.herokuapp.com/)
+     - Endpoint for GraphQL User / Comment API: [https://nameless-stream-88171-cdff591c89ed.herokuapp.com/graphql](https://nameless-stream-88171-cdff591c89ed.herokuapp.com/graphql) / [README](https://github.com/Assistive-Tech-2307/ai_service/blob/main/README.md)
+     - Endpoint for AI Services API: [https://assistivie-tech-2307-648a3d563927.herokuapp.com/api/v1/ai_requests](https://assistivie-tech-2307-648a3d563927.herokuapp.com/api/v1/ai_requests)
   
-<details>
-<summary>
-  📄 User Stories and Acceptance Criteria
- 
-</summary>
-<div align="center">
-  <br></br>
-As a user, 
-<br></br>
-Acceptance Criteria:  
-<br></br>
-  
-As a user, 
-<br></br> 
-Acceptance criteria: 
-
-As a user, 
-<br></br>
-Acceptance criteria: 
-</details>
-<br></br>
-
 ## Technologies used to build this app:
 - HTML
 - CSS
@@ -64,9 +41,11 @@ Acceptance criteria:
 - VS Code
 
 ## Preview of App:
-[Visit Our Deployed Site](???)
+[Visit Our Deployed Site](https://at-finder.vercel.app/)
 
 ### Screenshots:
+#### Home Page:
+![AI AT Ally](https://gist.github.com/assets/7227063/f2de91fb-a254-46f5-a93a-979fa2092c89)
 
 ### Video Demo: 
 
