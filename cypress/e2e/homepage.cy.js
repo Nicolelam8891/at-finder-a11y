@@ -56,22 +56,17 @@ describe('Homepage user flow', () => {
     cy.get(':nth-child(7) > :nth-child(4)').contains("p", "Eliza is a software developer from Denver, CO.")
   })
 
-  it('it should allow user to go to the About page', () => {
-    cy.intercept(
-      "POST", 
-      "https://nameless-stream-88171-cdff591c89ed.herokuapp.com/graphql", (req) => {
-        if (req.body && req.body.operationName === 'SessionCreate') {
-          req.reply((res) => {
-           res.send({
-             fixture: 'aiTechResults.json', 
-             statusCode: 200,
-           });
-          })
-        }
-      }
-    ).as("aiTechResults")
-    cy.get('.find-AT-button').contains("Find my AT").click()
-    
-  })
+  it('it should allow user to go to the Find my AT page', () => {
+      cy.intercept('POST', 'https://assistivie-tech-2307-648a3d563927.herokuapp.com/', {
+        statusCode: 201,
+        fixture: 'aiTechResults',
+      })
+        .as('getAiTech')
+        .visit('http://localhost:3000/');
+        cy.get('.find-AT-button').contains("Find my AT").click();
+    });
 })
+
+
+
 
