@@ -2,7 +2,7 @@ import './CommentCard.css'
 
 function CommentCard ({comment}) {
   return (
-    <div>
+    <div className={comment.rating === true ? 'liked-comment commentcard' : 'disliked-comment commentcard'}>
       <p>{comment.category}</p>
       <p>{comment.title}</p>
       <p>{comment.userComment}</p>

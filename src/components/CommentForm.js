@@ -21,9 +21,9 @@ function CommentForm({ title, link, techPiece, category, description, onCommentS
     }));
   };
 
-  const handleRating = (value) => {
-    setRating(value);
-  };
+
+  
+
 
   const addComment = async (submittedData) => {
     try {
@@ -63,7 +63,6 @@ function CommentForm({ title, link, techPiece, category, description, onCommentS
       !techPiece.website ||
       !category ||
       !techPiece.description ||
-      !formData.comment || 
       !currentUser
     ) {
       alert('Please fill out all required fields.');
@@ -124,8 +123,8 @@ function CommentForm({ title, link, techPiece, category, description, onCommentS
           />
         </label>
           <div className='rating-btns'>
-            <button type="button" className={rating ? 'liked' : ''} onClick={() => handleRating(true)}>I like it</button>
-            <button type="button" className={!rating ? 'unliked' : ''} onClick={() => handleRating(false)}>I don't like it</button>
+            <button type="button" className={rating ? 'liked' : ''} onClick={() => setRating(true)}>I like it</button>
+            <button type="button" className={rating === false ? 'unliked' : ''} onClick={() => setRating(false)}>I don't like it</button>
           </div>
         <button type="submit">Submit</button>
       </form>
