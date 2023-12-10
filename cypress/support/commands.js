@@ -23,3 +23,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+//fixtureName = fixture file & opName = queryName
+Cypress.Commands.add('interceptQuery', (fixtureName, opName, alias) => {
+  cy.fixture(fixtureName).then((fixture) => {
+
+      cy.intercept('POST', 'https://nameless-stream-88171-cdff591c89ed.herokuapp.com/graphql', (req) => {
+        if (req.body.operationName === opName) {
+          req.reply({
+            data: fixture
+          });
+        }
+      }).as(alias)
+    });
+})
