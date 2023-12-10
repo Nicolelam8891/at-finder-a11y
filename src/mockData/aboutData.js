@@ -18,7 +18,7 @@ const contributors = [
     id: 2,
     name: 'Jan McSorley',
     role: 'Front End Software Developer',
-    bio: 'Jan is cool',
+    bio: 'Jan is passionate about the importance of inclusive design and accessibility. She has worked in education and corporate settings has witnessed the difference inclusion can make and how it leads to more innovative solutions. Jan came to Turing to better understand the developer experience and to identify natural touch points in the Software Development Life Cycle where accessibility can be effectively integrated. After Turing, she hopes to be a part of eliminating barriers to access for people with disabilities by helping bridge the knowledge gap that leads to inaccessible digital tools.',
     imageUrl: janImage,
    
   },
@@ -26,7 +26,7 @@ const contributors = [
     id: 3,
     name: 'Jack Alfonso',
     role: 'Front End Software Developer',
-    bio: 'Jack is cool',
+    bio: 'Jack is an avid reader, sports fan, and swimmer. His professional background is in sales and education, and he has taken the skills he developed in those professions into his work as a frontend developer. Whether it is in heavily collaborative environments or more individualized coding work, Jack/s ability to communicate and organize effectively has allowed him to efficiently develop websites of various scopes. He is interested in building engaging applications with intuitive UI/UX that help people connect and learn.',
     // imageUrl: jackImage
    
   },
@@ -34,7 +34,7 @@ const contributors = [
     id: 4,
     name: 'Joop Stark',
     role: 'Back End Software Developer',
-    bio: 'Joop is cool',
+    bio: 'Joop has been trying to save the world. First a Recon Marine, then a Special Education Teacher, and now a Back End Software Engineer. What he really wants is to work for a company making a positive social or environmental impact that gives him problems to solve.',
     imageUrl: joopImage
    
   },
