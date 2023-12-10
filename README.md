@@ -28,9 +28,12 @@ The project required both the front-end and back-end teams to "stretch" themselv
 - CSS
 - JavaScript
 - React JavaScript Library
+- Ruby
+- Rails
 - Router
 - Cypress
 - Figma
+- ChatGPT
 - The Paciello Group, Coulour Contrast Analyser for testing color contrast
 - Git / Github
 - Vercel
@@ -45,7 +48,7 @@ The project required both the front-end and back-end teams to "stretch" themselv
 
 ### Screenshots:
 #### Home Page:
-![AI AT Ally](https://gist.github.com/assets/7227063/f2de91fb-a254-46f5-a93a-979fa2092c89)
+![AI AT Ally](https://gist.github.com/assets/7227063/1ae8be2a-0813-4e65-a72f-c8ae674aca2b)
 
 ### Video Demo: 
 
@@ -76,11 +79,6 @@ To get AI AT Ally running on your machine:
 - Gain experience using continuous integration tools to build and automate the deployment of features
 - Build applications that execute in development, test, CI, and production environments
 - Focus on communication between front-end and back-end teams in order to complete and deploy features that have been outlined by the project spec
-
-### 🎉 Wins & challenges:
-```
-...MORE INFO
-```
 
 
 
