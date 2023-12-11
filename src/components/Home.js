@@ -1,14 +1,10 @@
 import "./Home.css";
 
-
 function Home( {handleButtonClick} ) {
-
-
   return (
     
     <div className='splash-background'>
       <div className='overlay'></div>
-
       <div className='info-container'>
         <h2 className="welcome-header">Welcome to AI AT Ally</h2>
         <p>If you need to research assistive technologies (AT) for yourself or a loved one, you've come to the right place. AI AT Ally, uses generative artificial intelligence (AI) to find tools that support the needs of people with disabilities. Please explore the site to learn more, leave comments, or rate tools you may have experience using.</p>
@@ -22,7 +18,6 @@ function Home( {handleButtonClick} ) {
           <button className='all-comments' onClick={() => handleButtonClick('/testcomments')}>Get Comments</button>
         </div> */}
       </div>
-
       <div className='AT-info'>
         <h2 className="what-is-at">What is assistive technology?</h2>
         <div className="info-description">
