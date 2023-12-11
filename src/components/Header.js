@@ -19,14 +19,8 @@ function Header({ currentUser, setCurrentUser, handleButtonClick}) {
       setLoginOpen(false);
     } else {
       console.log('Invalid credentials')
-   
    }
-// console.log("FROM HEADER", user.id)
-
   }
-
-  
-
 
   return (
     <header className='header'>
@@ -34,19 +28,14 @@ function Header({ currentUser, setCurrentUser, handleButtonClick}) {
       <Link to='/'>
         <div className='logo-title-container'>
           <img className='logo' src={logo} alt='AI AT Ally logo'/>
-        
         </div>
       </Link>
-
       <div className='button-container'>
-
-
       <div className="login-button-container">
         {!isLoggedIn && (
           <button className="login-button" onClick={() => setLoginOpen(true)}>Log In</button>
           )}
         {isLoggedIn && currentUser && <p>Welcome, {currentUser.name}! You have successfully logged in!</p>}
-
         <LogIn 
           isOpen={isLoginOpen}
           onLogin={handleLogin}
@@ -54,7 +43,6 @@ function Header({ currentUser, setCurrentUser, handleButtonClick}) {
         />
           <button className='about-button' onClick={() => handleButtonClick('/about')}>About</button>
       </div>
-
       </div>
     </header>
   );

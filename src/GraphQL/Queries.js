@@ -16,5 +16,3 @@ query comments {
     }
 }
 `
-
-//maybe have a new query here for LOAD_CATEGORIES? Talk to Jack and Eliza about this

@@ -7,10 +7,7 @@ function LogIn({ isOpen, onLogin, setCurrentUser }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loginErrorMessage, setLoginErrorMessage] = useState('');
-
   const [sessionCreate] = useMutation(SESSION_CREATE);
-
-  //Handle Submit
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -21,15 +18,9 @@ function LogIn({ isOpen, onLogin, setCurrentUser }) {
     }
   
     try {
-      // Trigger the mutation
       const { data } = await sessionCreate({ variables: { email, password } });
-  
-      // Handle the data here
-      console.log("DATA", data);
-  
       if (onLogin) {
         onLogin(data.sessionCreate);
-        console.log("DATA", data.sessionCreate.id)
         setCurrentUser(data)
       }
     } catch (error) {
@@ -38,7 +29,6 @@ function LogIn({ isOpen, onLogin, setCurrentUser }) {
     }
   };
 
-  // If the login form is not open, don't render anything
   if (!isOpen) return null;
 
   return (
