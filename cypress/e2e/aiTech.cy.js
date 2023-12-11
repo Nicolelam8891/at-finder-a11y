@@ -1,4 +1,4 @@
-describe('template spec', () => {
+describe('Tests AI technology paths', () => {
   beforeEach(() => {
     cy.intercept('POST', 'https://assistivie-tech-2307-648a3d563927.herokuapp.com/api/v1/ai_requests', {
       statusCode: 201,
@@ -14,7 +14,6 @@ describe('template spec', () => {
   }).as('graphqlRequest');
       cy.visit('http://localhost:3000/findmyat');
     });
-   
     
       it('should allow the user to get details about assistive technologies ', () => {
           cy.get('.category-list > :nth-child(1)').click();

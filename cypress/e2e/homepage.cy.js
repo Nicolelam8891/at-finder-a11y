@@ -1,13 +1,12 @@
 describe('Homepage user flow', () => {
   beforeEach(() => {
-     // Intercept POST requests to the GraphQL endpoint
     cy.intercept(
       "POST", 
       "https://nameless-stream-88171-cdff591c89ed.herokuapp.com/graphql", (req) => {
         if (req.body && req.body.operationName === 'SessionCreate') {
           req.reply((res) => {
            res.send({
-             fixture: 'users.json', // Provide a fixture file with the desired response
+             fixture: 'users.json', 
              statusCode: 200,
            });
           })
@@ -40,16 +39,16 @@ describe('Homepage user flow', () => {
 
   it('it should allow user to go to the About page', () => {
     cy.get('.about-button').contains("About").click()
-    cy.get('.mission-statement-container').get('h2').contains("h2", "Mission Statement")
-    cy.get('.mission-statement').contains("p", "Provide an AI-driven application")
-    cy.get('.contributor-card-container > :nth-child(2)').first().get(':nth-child(2) > .contributor-image').should("have.attr", "src").and('match', /nicole\.\w+\.png$/)
-    cy.get(':nth-child(2) > h3').contains("h3", "Nicole Lam")
-    cy.get('.contributor-card-container > :nth-child(2) > :nth-child(3)').contains("p", "Front End Software Developer")
-    cy.get(':nth-child(2) > :nth-child(4)').contains("p", "Nicole is a software engineer")
-    cy.get('.contributor-card-container > :nth-child(7)').last().get(':nth-child(7) > .contributor-image').should("have.attr", "src").and('match', /eliza\.\w+\.png$/)
-    cy.get(':nth-child(7) > h3').contains("h3", "Eliza Keating")
-    cy.get(':nth-child(7) > :nth-child(3)').contains("p", "Back End Software Developer")
-    cy.get(':nth-child(7) > :nth-child(4)').contains("p", "Eliza is a software developer from Denver, CO.")
+    cy.get('.h2-ms').get('h2').contains("h2", "Mission Statement")
+    cy.get('.p-ms').contains("p", "Provide an AI-driven application")
+    cy.get('.contributor-card-container > :nth-child(2)').first().get(':nth-child(1) > .contributor-image').should("have.attr", "src").and('match', /nicole\.\w+\.png$/)
+    cy.get(':nth-child(1) > h3').contains("h3", "Nicole Lam")
+    cy.get('.contributor-card-container > :nth-child(1) > :nth-child(3)').contains("p", "Front End Software Developer")
+    cy.get(':nth-child(1) > :nth-child(4)').contains("p", "Nicole is a software engineer")
+    cy.get('.contributor-card-container > :nth-child(6)').last().get(':nth-child(6) > .contributor-image').should("have.attr", "src").and('match', /eliza\.\w+\.png$/)
+    cy.get(':nth-child(6) > h3').contains("h3", "Eliza Keating")
+    cy.get(':nth-child(6) > :nth-child(3)').contains("p", "Back End Software Developer")
+    cy.get(':nth-child(6) > :nth-child(4)').contains("p", "Eliza is a software developer from Denver, CO.")
   })
 
   it('it should allow user to go to the Find my AT page', () => {
