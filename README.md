@@ -12,18 +12,28 @@ Research was a core component of project planning. Information was gathered on d
 The project required both the front-end and back-end teams to "stretch" themselves by learning and implementing a technology they had never used before. Using generative AI to build data was new to everyone on the team, but we also decided to learn and implement GraphQL for the back-end and Apollo client for the front-end. Data retrieved from AI was passed from the back-end to the front-end in a standard JSON format, but GraphQL was used to manage login information and support features for user commenting and favoriting.
 
 ## 📉 Project Planning Docs:
- - [Project Board](https://github.com/orgs/Assistive-Tech-2307/projects/1)
-  
-<img width="1153" alt="Screenshot 2023-11-25 at 11 13 06 PM" src="https://github.com/Nicolelam8891/newsreader/assets/132624450/b2bc89de-ef47-4d40-beb6-69a5debe67f0">
+<details>
+<summary>Toggle to View Planning Docs</summary>
 
 - [Define The Relationship (DTR) Document](https://www.notion.so/Assistive-Tech-DTR-3502538cc7f843c1a622af0769a18656)
+- [Project Board](https://github.com/orgs/Assistive-Tech-2307/projects/1)
 
- - Back-end Repositories and Endpoint Documentation:
-   - [user_service](https://github.com/Assistive-Tech-2307/user_service) / [README](https://github.com/Assistive-Tech-2307/user_service/blob/main/README.md)
-     - Endpoint for GraphQL User / Comment API: [https://nameless-stream-88171-cdff591c89ed.herokuapp.com/graphql](https://nameless-stream-88171-cdff591c89ed.herokuapp.com/graphql) / [README](https://github.com/Assistive-Tech-2307/ai_service/blob/main/README.md)
-     - Endpoint for AI Services API: [https://assistivie-tech-2307-648a3d563927.herokuapp.com/api/v1/ai_requests](https://assistivie-tech-2307-648a3d563927.herokuapp.com/api/v1/ai_requests)
+![Screenshot](https://github.com/Nicolelam8891/newsreader/assets/132624450/b2bc89de-ef47-4d40-beb6-69a5debe67f0)
+
+</details>
+
+
+## Back-end Repositories and Endpoint Documentation:
+- [user_service](https://github.com/Assistive-Tech-2307/user_service) / [README](https://github.com/Assistive-Tech-2307/user_service/blob/main/README.md)
+  - Endpoint for GraphQL User / Comment API: [https://nameless-stream-88171-cdff591c89ed.herokuapp.com/graphql](https://nameless-stream-88171-cdff591c89ed.herokuapp.com/graphql)
+  
+- [ai_service](https://github.com/Assistive-Tech-2307/ai_service) / [README](https://github.com/Assistive-Tech-2307/ai_service/blob/main/README.md)
+  - Endpoint for AI Services API: [https://assistivie-tech-2307-648a3d563927.herokuapp.com/api/v1/ai_requests](https://assistivie-tech-2307-648a3d563927.herokuapp.com/api/v1/ai_requests)
   
 ## Technologies used to build this app:
+<details>
+<summary>Toggle to View Technologies</summary>
+
 - HTML
 - CSS
 - JavaScript
@@ -43,24 +53,54 @@ The project required both the front-end and back-end teams to "stretch" themselv
 - Github Project
 - VS Code
 
+</details>
+
+
 ## Preview of App:
 [Visit Our Deployed Site](https://at-finder.vercel.app/)
 
-### Screenshots:
-#### Home Page:
-![AI AT Ally](https://gist.github.com/assets/7227063/1ae8be2a-0813-4e65-a72f-c8ae674aca2b)
+## GIF of App Functionality: 
+![AT-AT-Ally](https://gist.github.com/assets/7227063/827778f1-a17e-4489-a24c-7e72361a2add)
 
-### Video Demo: 
+## Screenshots
+
+<details>
+<summary>Toggle to View Screenshots</summary>
+
+#### Home Page
+![AI AT Ally Home Page](https://gist.github.com/assets/7227063/1ae8be2a-0813-4e65-a72f-c8ae674aca2b)
+
+### Disability Categories
+![Disability Categories](https://gist.github.com/assets/7227063/1187eb94-efa0-41a8-91cf-cfca86cee95f)
+
+### Types of Technologies
+![Types of Technologies](https://gist.github.com/assets/7227063/d9eb1572-23ee-4853-adfd-4241cfc9ac55)
+
+### Suggested Technologies
+![Suggested Technologies](https://gist.github.com/assets/7227063/9d23dcba-c22a-4865-b8f5-11983891e5a1)
+
+### Make a Comment
+![Make a Comment](https://gist.github.com/assets/7227063/47300757-92aa-4825-ae60-4fda6746b1d4)
+
+### Comment List
+![Comment List](https://gist.github.com/assets/7227063/7996496c-2834-4e04-9c35-74852a50819d)
+
+### Learn More About Assistive Technology
+![Learn More About Assistive Technology](https://gist.github.com/assets/7227063/6695716e-78a4-4614-8c0e-65d507346b3c)
+
+### Project Contributor Page
+![Project Contributor Page](https://gist.github.com/assets/7227063/07d065bf-2d70-4d72-bab4-419165dff125)
+</details>
 
 ## Collaborators:
 ### Front-end team:
-- Jack Alfonso, GitHub: [alfonsojack](https://github.com/alfonsojack)
-- Nicole Lam, GitHub: [Nicolelam8891](https://github.com/Nicolelam8891)
-- Jan McSorley, GitHub: [jmcsorle](https://github.com/jmcsorle)
+- Jack Alfonso | GitHub: [alfonsojack](https://github.com/alfonsojack) | LinkedIn: [jonathan-jack-alfonso](https://www.linkedin.com/in/jonathan-jack-alfonso/)
+- Nicole Lam | GitHub: [Nicolelam8891](https://github.com/Nicolelam8891) | LinkedIn: [ngoc-lam-b9628a206](https://www.linkedin.com/in/ngoc-lam-b9628a206/)
+- Jan McSorley | GitHub: [jmcsorle](https://github.com/jmcsorle) | LinkedIn: [janmcsorley](https://www.linkedin.com/in/janmcsorley/)
 ### Back-end team:
-- Joop Stark, GitHub: [JoopStark](https://github.com/JoopStark)
-- Eliza Keating, GitHub: [elizakeating](https://github.com/elizakeating)
-- Nicholas Spencer, GitHub: [deadbert](https://github.com/deadbert)
+- Joop Stark | GitHub: [JoopStark](https://github.com/JoopStark) | LinkedIn: [joop-stark](https://www.linkedin.com/in/joop-stark/)
+- Eliza Keating | GitHub: [elizakeating](https://github.com/elizakeating) | LinkedIn: [elizakeating](https://www.linkedin.com/in/elizakeating/)
+- Nicholas Spencer | GitHub: [deadbert](https://github.com/deadbert) | LinkedIn: [nicholas-spencer-fort-collins](https://www.linkedin.com/in/nicholas-spencer-fort-collins/)
 
 ## 📗 Installation Instructions:
 To get AI AT Ally running on your machine: 
