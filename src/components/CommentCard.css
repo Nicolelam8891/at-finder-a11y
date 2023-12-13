@@ -42,12 +42,12 @@
 
 .liked-comment .primary,
 .liked-comment .secondary {
-  fill: hsl(125, 56%, 29%)
+  fill: hsl(123, 38%, 63%)
 }
 
 .disliked-comment .primary,
 .disliked-comment .secondary {
-  fill:hsl(360, 64%, 55%)
+  fill:hsl(360, 77%, 78%)
 }
 
 .disliked-comment {
