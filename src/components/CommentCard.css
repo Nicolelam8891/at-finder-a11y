@@ -12,8 +12,9 @@
 
 .container {
   position: relative;
-  width: 60vw;
-  height: 40vh;
+  width: 40vw;
+
+  height: 50vh;
 }
 
 .commentcard {
@@ -41,12 +42,12 @@
 
 .liked-comment .primary,
 .liked-comment .secondary {
-  fill: green; /* Fill color for liked comments */
+  fill: hsl(125, 56%, 29%)
 }
 
 .disliked-comment .primary,
 .disliked-comment .secondary {
-  fill: red; /* Fill color for disliked comments */
+  fill:hsl(360, 64%, 55%)
 }
 
 .disliked-comment {
