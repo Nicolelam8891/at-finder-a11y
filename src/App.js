@@ -51,7 +51,7 @@ const App = () => {
         return response.json();
       })
       .then(data => {
-        console.log('here is the data', data.data);
+        console.log('ASSISTIVE TECH DATA ===', data.data);
         setTechResults(data.data);
         resolve(); 
       })
