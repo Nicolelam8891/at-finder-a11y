@@ -25,7 +25,7 @@ function TechCard({ title, website, techPiece, onCommentSubmit, category, curren
         <p>{techPiece.description}</p>
         <button  onClick={handleTechClick} >Comment</button>
       </div>
-      {showCommentForm && <CommentForm currentUser={currentUser} techPiece={techPiece} onCommentSubmit={handleCommentSubmit} category={category}/>} 
+      {showCommentForm && <CommentForm currentUser={currentUser} techPiece={techPiece} onCommentSubmit={handleCommentSubmit} category={category} setShowCommentForm={setShowCommentForm}/>} 
     </div>
   );
 }
