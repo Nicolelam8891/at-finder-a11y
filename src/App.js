@@ -67,7 +67,6 @@ const App = () => {
     try {
       // Call the asynchronous function using await
       await handleTechParamsSelection(selectedCategory, selectedTechParam);
-      console.log('THIS IS YOUR PROMISE RETURNING')
       navigate('/results');
       // setTechComments(comments);
     } catch (error) {
