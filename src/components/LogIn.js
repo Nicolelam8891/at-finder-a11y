@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useMutation } from '@apollo/client';
 import { SESSION_CREATE } from '../GraphQL/Mutations';
 
-function LogIn({ isOpen, onLogin, setCurrentUser }) {
+function LogIn({ isOpen, onLogin, setCurrentUser, onClose, response }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loginErrorMessage, setLoginErrorMessage] = useState('');
@@ -11,7 +11,7 @@ function LogIn({ isOpen, onLogin, setCurrentUser }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
+    setLoginErrorMessage('')
     if (!email.length || !password.length) {
       setLoginErrorMessage("Form is incomplete. All fields need to be filled in.");
       return;
@@ -32,7 +32,10 @@ function LogIn({ isOpen, onLogin, setCurrentUser }) {
   if (!isOpen) return null;
 
   return (
+    <div className='modal'>
+    <div className='modal-content'>
     <div className='login'>
+      <span className='close-button' onClick={onClose}>×</span>
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">
         <input 
@@ -56,7 +59,10 @@ function LogIn({ isOpen, onLogin, setCurrentUser }) {
         </label>
         <button className="submit-button" type="submit">Login</button>
         {loginErrorMessage && <div className='login-error-message'> {loginErrorMessage}</div>}
+        {response && <p>{response}</p>}
       </form>
+    </div>
+    </div>
     </div>
   );
 }
