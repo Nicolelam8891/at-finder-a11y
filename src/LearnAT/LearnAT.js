@@ -3,7 +3,7 @@ import './LearnAT.css'
 function LearnAT() {
     return (
         <div className="content-container">
-			<h2 className="learnat-h2">Assistive Technology Definition</h2>
+			<h2 className="learnat-h2">What is Assistive Technology?</h2>
 			<p>In the United States, it is legally required that assistive technology be considered as a support for students with disabilities served under the <a href="https://sites.ed.gov/idea/regs/b/a/300.5" target="_blank" rel="noopener noreferrer" className="learnat-a">Individuals with Disabilities Act (2004)</a>. This law states that an, “Assistive technology device means any item, piece of equipment, or product system, whether acquired commercially off the shelf, modified, or customized, that is used to increase, maintain, or improve the functional capabilities of a child with a disability. The term does not include a medical device that is surgically implanted, or the replacement of such device.”</p>
 			<h2 className="learnat-h2">Examples of Assistive Technologies</h2>
 			<p>The following lists provide a small sample of types of assistive technologies. Some Assistive Technologies are free and are built into operating systems, either natively or through plugins. Others can be purchased as separate applications or devices.</p>
