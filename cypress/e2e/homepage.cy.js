@@ -68,7 +68,7 @@ describe('Homepage user flow', () => {
 
   it('it should allow user to go to the Learn more about AT page', () => {
     cy.get('.learn-AT-button').contains("Learn more about AT").click();
-    cy.get('.App > :nth-child(2) > :nth-child(1)').contains("h2", "Assistive Technology Definition")
+    cy.get('.App > :nth-child(2) > :nth-child(1)').contains("h2", "Assistive Technology")
     cy.get('.App > :nth-child(2) > :nth-child(2)').contains("p", "In the United States, it is legally required that assistive technology")
     cy.get('.App > :nth-child(2) > :nth-child(3)').contains("h2", "Examples of Assistive Technologies")
     cy.get(':nth-child(2) > :nth-child(4)').contains("p", "The following lists provide a small sample of types of assistive technologies. Some Assistive Technologies")
