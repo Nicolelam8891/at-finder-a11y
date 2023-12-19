@@ -3,7 +3,7 @@ import './CommentForm.css';
 import { useMutation } from '@apollo/client';
 import { ADD_COMMENT } from '../GraphQL/Mutations';
 
-function CommentForm({ title, link, techPiece, category, description, onCommentSubmit, currentUser }) {
+function CommentForm({ title, link, techPiece, category, description, onCommentSubmit, currentUser, setShowCommentForm }) {
   const [commentCreate] = useMutation(ADD_COMMENT);
   const [rating, setRating] = useState(null); 
   const [formData, setFormData] = useState({
@@ -42,7 +42,7 @@ function CommentForm({ title, link, techPiece, category, description, onCommentS
       if (data.commentCreate && !data.commentCreate.errors) {
         if (onCommentSubmit) {
           onCommentSubmit(data.commentCreate);
-          console.log("DATA", data.commentCreate);
+          console.log("CREATE COMMENT DATA ===", data.commentCreate);
         }
       } else {
         console.error("Mutation error:", data.commentCreate.errors);
@@ -91,9 +91,16 @@ function CommentForm({ title, link, techPiece, category, description, onCommentS
 
   };
 
+
+  const onFormClose = () => {
+    setShowCommentForm(false)
+  }
+
+
   return (
     <div className='Comment-form'>
-      <form onSubmit={handleSubmit}>
+      <form className='comment-form-content' onSubmit={handleSubmit}>
+        <span className='close-button' onClick={onFormClose}>×</span>
         <label>
           <input className='hardcoded' type="text" name="title" value={techPiece.title} readOnly />
         </label>

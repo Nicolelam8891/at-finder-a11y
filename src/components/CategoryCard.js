@@ -21,7 +21,7 @@ const CategoryCard = ({ category, data, ind, onCategoryClick, onTechParamClick, 
   };
 
   const arr = [Blindness, LowVision, Deafness, FineMotor, GrossMotor, Reading, Math, Focus, Communication]
-console.log(data['definition'])
+// console.log(data['definition'])
 
 const index = data['ind']
 

@@ -9,18 +9,24 @@ function Header({ currentUser, setCurrentUser, handleButtonClick}) {
 
   const [isLoginOpen, setLoginOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [response, setResponse] = useState(null)
 
   const handleLogin = (username, password) => {
     const user = users.find(user => user.email === username && user.password === password);
     if (user) {
-      console.log('Logged in as:', user.name);
+      console.log('LOGGED IN AS ===', user.name);
       setIsLoggedIn(true);
       setCurrentUser(user);
       setLoginOpen(false);
     } else {
       console.log('Invalid credentials')
+      setResponse('Invalid credentials')
    }
   }
+
+  const handleCloseModal = () => {
+    setLoginOpen(false);
+  };
 
   return (
     <header className='header'>
@@ -40,6 +46,8 @@ function Header({ currentUser, setCurrentUser, handleButtonClick}) {
           isOpen={isLoginOpen}
           onLogin={handleLogin}
           setCurrentUser={setCurrentUser}
+          onClose={handleCloseModal} 
+          response={response}
         />
           <button className='about-button' onClick={() => handleButtonClick('/about')}>About</button>
       </div>

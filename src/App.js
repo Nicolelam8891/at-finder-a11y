@@ -21,7 +21,7 @@ const App = () => {
 
   const navigate = useNavigate();
 
-  console.log('afsdfas', selectedTechParam)
+  console.log('SELECTED TECH PARAM ===', selectedTechParam)
 
   const handleTechParamsSelection = (category, techParam) => {
     return new Promise((resolve, reject) => {
@@ -51,7 +51,7 @@ const App = () => {
         return response.json();
       })
       .then(data => {
-        console.log('here is the data', data.data);
+        console.log('ASSISTIVE TECH DATA ===', data.data);
         setTechResults(data.data);
         resolve(); 
       })
@@ -67,7 +67,6 @@ const App = () => {
     try {
       // Call the asynchronous function using await
       await handleTechParamsSelection(selectedCategory, selectedTechParam);
-      console.log('THIS IS YOUR PROMISE RETURNING')
       navigate('/results');
       // setTechComments(comments);
     } catch (error) {

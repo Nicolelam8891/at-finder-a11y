@@ -10,6 +10,7 @@ header {
   padding: 2rem;
   box-sizing: border-box;
   padding-bottom: 2rem;
+  z-index: 100;
 }
 
 .logo {

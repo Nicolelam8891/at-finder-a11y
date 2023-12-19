@@ -29,9 +29,9 @@ describe('Tests AI technology paths', () => {
           cy.get(':nth-child(1) > .Tech-card > button').contains("Comment")
           cy.get('.results-headings > :nth-child(2)').click();
           cy.get('.Tech-list > :nth-child(1)').first().get('.Tech-list > :nth-child(1) > :nth-child(2)').contains('p', 'User 1 1')
-          cy.get('.Tech-list > :nth-child(1) > :nth-child(3)').contains("p", "one one")
+          cy.get(':nth-child(1) > .containerText > :nth-child(3)').contains("p", "one one")
           cy.get('.Tech-list > :nth-child(8)').last().get(':nth-child(8) > :nth-child(2)').contains('p', "this is my title")
-          cy.get(':nth-child(8) > :nth-child(3)').contains("p", "this is my comment")
+          cy.get(':nth-child(8) > .containerText > :nth-child(3)').contains("p", "this is my comment")
           cy.get('.results-headings > :nth-child(1)').click();
           cy.get(':nth-child(1) > .Tech-card > button').click();
           cy.get('input.hardcoded').should('have.value', 'JAWS');
@@ -39,9 +39,10 @@ describe('Tests AI technology paths', () => {
           cy.get('.rating-btns').contains('button', 'I like it').click();
           cy.get('.rating-btns').contains('button', "I don't like it").click();
           cy.get('[type="submit"]').click();
+          cy.get('.close-button').click();
           cy.get('.results-headings > :nth-child(2)').click();
           cy.get('.Tech-list > :nth-child(1)').first().get('.Tech-list > :nth-child(1) > :nth-child(2)').contains('p', 'User 1 1')
-          cy.get('.Tech-list > :nth-child(1) > :nth-child(3)').contains("p", "one one")
+          cy.get(':nth-child(2) > .containerText > :nth-child(3)')
           cy.get('.Tech-list > :nth-child(8)').last().get(':nth-child(8) > :nth-child(2)').contains('p', "this is my title")
         })
   });

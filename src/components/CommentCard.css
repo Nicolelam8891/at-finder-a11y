@@ -1,4 +1,4 @@
-.commentcard {
+/* .commentcard {
   width: 40vw;
   box-shadow: 0 0 10px hsl(125, 86%, 14%);
   border-radius: 5px;
@@ -8,12 +8,48 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+} */
+
+.container {
+  position: relative;
+  width: 40vw;
+
+  height: 50vh;
 }
 
+.commentcard {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.containerText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+/* 
 .disliked-comment {
   background-color: red;
 }
 
 .liked-comment {
   background-color: green;
+} */
+
+.liked-comment .primary,
+.liked-comment .secondary {
+  fill: hsl(123, 38%, 63%)
+}
+
+.disliked-comment .primary,
+.disliked-comment .secondary {
+  fill:hsl(360, 77%, 78%)
+}
+
+.disliked-comment {
+  transform: scaleX(-1);
 }
