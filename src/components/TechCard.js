@@ -11,8 +11,8 @@ function TechCard({ title, website, techPiece, onCommentSubmit, category, curren
   };
 
   const handleCommentSubmit = (commentData) => {
-    onCommentSubmit(commentData);
     setShowCommentForm(false);
+    onCommentSubmit(commentData);
   };
 
 
