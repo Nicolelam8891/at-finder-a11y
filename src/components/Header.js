@@ -14,7 +14,7 @@ function Header({ currentUser, setCurrentUser, handleButtonClick}) {
   const handleLogin = (username, password) => {
     const user = users.find(user => user.email === username && user.password === password);
     if (user) {
-      console.log('Logged in as:', user.name);
+      console.log('LOGGED IN AS ===', user.name);
       setIsLoggedIn(true);
       setCurrentUser(user);
       setLoginOpen(false);

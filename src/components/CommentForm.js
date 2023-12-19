@@ -42,7 +42,7 @@ function CommentForm({ title, link, techPiece, category, description, onCommentS
       if (data.commentCreate && !data.commentCreate.errors) {
         if (onCommentSubmit) {
           onCommentSubmit(data.commentCreate);
-          console.log("DATA", data.commentCreate);
+          console.log("CREATE COMMENT DATA ===", data.commentCreate);
         }
       } else {
         console.error("Mutation error:", data.commentCreate.errors);
