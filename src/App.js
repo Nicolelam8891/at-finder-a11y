@@ -21,7 +21,7 @@ const App = () => {
 
   const navigate = useNavigate();
 
-  console.log('afsdfas', selectedTechParam)
+  console.log('SELECTED TECH PARAM ===', selectedTechParam)
 
   const handleTechParamsSelection = (category, techParam) => {
     return new Promise((resolve, reject) => {
