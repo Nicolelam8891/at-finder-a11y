@@ -35,9 +35,11 @@ function Header({ currentUser, setCurrentUser, handleButtonClick}) {
         <div className='logo-title-container'>
           <img className='logo' src={logo} alt='AI AT Ally logo'/>
         </div>
+
       </Link>
       <div className='button-container'>
       <div className="login-button-container">
+        
         {!isLoggedIn && (
           <button className="login-button" onClick={() => setLoginOpen(true)}>Log In</button>
           )}

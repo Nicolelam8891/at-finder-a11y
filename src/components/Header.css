@@ -2,11 +2,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  background: linear-gradient(hsl(122, 42%, 75%)
-  , hsl(123, 38%, 63%));
-  top: 0px;
-  height: 10vh;
+  background: #FFFAEB; 
+  height: 75px;
   padding: 2rem;
   box-sizing: border-box;
   padding-bottom: 2rem;
@@ -14,16 +11,16 @@ header {
 }
 
 .logo {
-  max-height: 8vh;
-  max-width: 50vw;
+  max-height: 330px;
+  max-width: 300px;
 }
 
-.header-title {
+/* .header-title {
   display: flex;
   color: hsl(263, 85%, 18%);
   font-size: 18px;
   font-weight: 900;
-}
+} */
 
 .title {
   display: flex;
@@ -59,26 +56,28 @@ header {
   align-items: center;
   text-align: center;
   justify-content: center;
-  border: 2px solid #cce3de;
-  width: 10vw;
-  padding-left: 1rem;
+  /* width: 6%; */
+  padding: 0.6rem; 
+  /* padding-left: 1rem;
   padding-right: 1rem;
   padding-top: .5rem;
-  padding-bottom: .5rem;
-  color: #f6fff8;
-  font-size: 1.5vw;
+  padding-bottom: .5rem; */
+  color: #373F46;
+  font-size: 1rem;
   font-weight: 600;
-  border-radius: 15px;
+  border-radius: 45px;
   margin-left: .5rem;
   margin-right: .5rem;
 }
 
 .login-button {
-  background-color: rgba(66, 25, 135, .7);
+  background-color: #FFE8D9;
+  /* background-color: #B7C8DE; */
 }
 
 .about-button {
-  background-color: rgba(4, 35, 14, .7);
+  background-color: #FFE8D9;
+  /* background-color: #B7C8DE; */
 }
 
 .about-button:hover {
@@ -105,3 +104,5 @@ header {
   position: absolute;
   width: 1px;
 }
+
+
