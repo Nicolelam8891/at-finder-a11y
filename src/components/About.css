@@ -1,18 +1,21 @@
-.h2-ms,
+.h2-ms, .team {
+  text-align: center;
+  font-size: 30px;
+  color: #253D52;
+  font-weight: 900;
+}
+
 .p-ms {
   text-align: center;
+  font-size: 25px;
+  color: #253D52;
 }
 
-.h2-ms {
-  color: #240754;
-  font-size: 1.15rem;
-}
+.mission-statement-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: system-ui;
 
-.contributor-card-container {
-  padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
-    grid-gap: 1rem;
 }
-
 

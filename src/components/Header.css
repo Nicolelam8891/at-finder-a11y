@@ -70,23 +70,22 @@ header {
   margin-right: .5rem;
 }
 
-.login-button {
+.login-button, .about-button {
   background-color: #FFE8D9;
-  /* background-color: #B7C8DE; */
-}
-
-.about-button {
-  background-color: #FFE8D9;
+  color: #253D52;
+  border-color: #253D52;
   /* background-color: #B7C8DE; */
 }
 
 .about-button:hover {
-  background-color: rgba(4, 35, 14, 1);
+  background-color: #253D52;
+  color: #FFE8D9;
   transition: .3s;
 }
 
 .login-button:hover {
-  background-color: rgba(66, 25, 135, 1);
+  background-color: #253D52;
+  color: #FFE8D9;
   transition: .3s;
 }
 
