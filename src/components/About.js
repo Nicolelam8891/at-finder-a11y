@@ -12,7 +12,7 @@ function About() {
           Provide an AI-driven application to match the needs of people with
           disabilities to current and available assistive technologies.
         </p>
-        <h2 className="team">About our team</h2>
+        <h2 className="team"><em>About our team</em></h2>
       </div>
       <div className='contributor-card-container'>
       {contributors.map((contributor) => (
