@@ -61,42 +61,42 @@ const Form = ({
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const container = containerRef.current;
-      if (!container) return;
+    // const handleScroll = () => {
+    //   const container = containerRef.current;
+    //   if (!container) return;
 
-      const cards = container.getElementsByClassName('category-card');
+    //   const cards = container.getElementsByClassName('category-card');
 
-      Array.from(cards).forEach((card) => {
-        const rect = card.getBoundingClientRect();
-        const containerRect = container.getBoundingClientRect();
-        const fadeOutDistance = 200; // Adjust this value based on your preference
+    //   Array.from(cards).forEach((card) => {
+    //     const rect = card.getBoundingClientRect();
+    //     const containerRect = container.getBoundingClientRect();
+    //     const fadeOutDistance = 200; // Adjust this value based on your preference
 
-        const distanceToLeftEdge = containerRect.left - rect.left;
-        const distanceToRightEdge = rect.right - containerRect.right;
+    //     const distanceToLeftEdge = containerRect.left - rect.left;
+    //     const distanceToRightEdge = rect.right - containerRect.right;
 
-        if (distanceToLeftEdge >= 0 || distanceToRightEdge >= 0) {
-          // Card is at or past either edge, apply fade
-          const maxDistance = Math.max(distanceToLeftEdge, distanceToRightEdge);
-          const opacity = 1 - Math.min(1, maxDistance / fadeOutDistance);
-          card.style.opacity = opacity.toString();
-        } else {
-          // Card is within the container, fully opaque
-          card.style.opacity = '1';
-        }
-      });
-    };
+    //     if (distanceToLeftEdge >= 0 || distanceToRightEdge >= 0) {
+    //       // Card is at or past either edge, apply fade
+    //       const maxDistance = Math.max(distanceToLeftEdge, distanceToRightEdge);
+    //       const opacity = 1 - Math.min(1, maxDistance / fadeOutDistance);
+    //       card.style.opacity = opacity.toString();
+    //     } else {
+    //       // Card is within the container, fully opaque
+    //       card.style.opacity = '1';
+    //     }
+    //   });
+    // };
 
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener('scroll', handleScroll);
-    }
+    // const container = containerRef.current;
+    // if (container) {
+    //   container.addEventListener('scroll', handleScroll);
+    // }
 
-    return () => {
-      if (container) {
-        container.removeEventListener('scroll', handleScroll);
-      }
-    };
+    // return () => {
+    //   if (container) {
+    //     container.removeEventListener('scroll', handleScroll);
+    //   }
+    // };
   }, []);
 
   useEffect(()=>{
@@ -150,3 +150,4 @@ const Form = ({
 };
 
 export default Form;
+

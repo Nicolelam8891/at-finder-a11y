@@ -1,4 +1,3 @@
-// CategoryCard.js
 import './CategoryCard.css'
 import React from 'react';
 import Blindness from '../assets/Blindness.png'

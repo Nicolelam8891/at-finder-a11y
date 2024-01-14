@@ -15,7 +15,8 @@
 
 .cat-title {
   font-size: 4vh;
-  margin: 0;
+  /* align-items: center; */
+  margin: 0 auto;
   padding: 1rem;
 }
 
