@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Form.css';
 import needs from '../mockData/needs';
 import CategoryCard from './CategoryCard';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const Form = ({  
   selectedCategory,
@@ -14,6 +15,18 @@ const Form = ({
   const [filteredCategories, setFilteredCategories] = useState(Object.keys(needs));
   const containerRef = useRef(null);
   const bottomRef = useRef(null);
+  const navigate = useNavigate();
+  const { selectedCategory: urlSelectedCategory } = useParams();
+
+  useEffect (() => {
+    if (urlSelectedCategory) {
+      setSelectedCategory(urlSelectedCategory);
+      setFilteredCategories([urlSelectedCategory]);
+    } else {
+      setSelectedCategory(null);
+      setFilteredCategories(Object.keys(needs));
+    }
+  }, [urlSelectedCategory])
 
   const scrollToBottom = () => {
     if (bottomRef.current) {
@@ -25,9 +38,11 @@ const Form = ({
     if (selectedCategory === category) {
       setSelectedCategory(null);
       setFilteredCategories(Object.keys(needs));
+      navigate(`/findmyat`);
     } else {
       setSelectedCategory(category);
       setFilteredCategories([category]);
+      navigate(`/findmyat/${category}`);
     }
     setSelectedTechParam(null);
   };
@@ -60,7 +75,7 @@ const Form = ({
     }
   };
 
-  useEffect(() => {
+  // useEffect(() => {
     // const handleScroll = () => {
     //   const container = containerRef.current;
     //   if (!container) return;
@@ -97,7 +112,7 @@ const Form = ({
     //     container.removeEventListener('scroll', handleScroll);
     //   }
     // };
-  }, []);
+  // }, []);
 
   useEffect(()=>{
     setSelectedCategory(null)

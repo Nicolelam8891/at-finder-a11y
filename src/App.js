@@ -101,6 +101,13 @@ const App = () => {
             setSelectedTechParam={setSelectedTechParam}
             onFormSubmit={handleFormSubmit}
           />}/>
+        <Route path='/findmyat/:selectedCategory' element={<Form
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+          selectedTechParam={selectedTechParam}
+          setSelectedTechParam={setSelectedTechParam}
+          onFormSubmit={handleFormSubmit}
+          />}/>
         <Route path='/results' element={<Results tech={techResults} currentUser={currentUser} category={selectedCategory}/>}/>
         <Route path='/learnat' element={<LearnAT/>}/>
         <Route path='/about' element={<About/>}/>
