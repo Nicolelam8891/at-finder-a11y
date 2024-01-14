@@ -33,6 +33,10 @@
   justify-content: space-between
 }
 
+.category-card:focus {
+  box-shadow: 0 0 30px #253D52;
+}
+
 /* .singled {
   display: flex !important;
   justify-content: center !important;
