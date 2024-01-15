@@ -1,4 +1,3 @@
-// CategoryCard.js
 import './CategoryCard.css'
 import React from 'react';
 import Blindness from '../assets/Blindness.png'
@@ -26,7 +25,7 @@ const CategoryCard = ({ category, data, ind, onCategoryClick, onTechParamClick, 
 const index = data['ind']
 
   return (
-    <div className={`category-card ${isSelected ? 'selected' : ''}`} onClick={handleCategoryClick}>
+    <div tabIndex='0' className={`category-card ${isSelected ? 'selected' : ''}`} onClick={handleCategoryClick}>
       <h2 className='cat-title'>{category}</h2>
       <img className='img' src={arr[index]}/>
       <div className='def-cont'>
