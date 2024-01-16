@@ -1,15 +1,67 @@
-.content-container {
-    background-color: #E0E0E0;
-    margin: 1rem;
-    padding: 1rem;
+.assistive-tech-h2 {
+    color: #253D52;
+    position: relative;
+    display: flex;
+    padding: .25rem;
+    background-image: linear-gradient(45deg, #FCE8C7, #FFFAEB, #FCE8C7);
 }
 
-.learnat-h2 {
-    color: #240754
+  .assistive-tech-information {
+    position: relative;
+    background-image: linear-gradient(45deg, #FCE8C7, #FFFAEB, #FCE8C7);
+    padding: 1rem;
+    margin: 2rem;
+  }
+
+  .assistive-tech-information::after, .assistive-tech-h2::after, .examples-tech-h2::after, .assistive-tech-education-h2::after {
+    content: '';
+    background-color: #FFE8D9;
+    position: absolute;
+    inset: 0;
+    transform: skewY(-2deg);
+    z-index: -1;
+
+  }
+
+  .examples-tech-h2 {
+    color: #253D52;
+    position: relative;
+    background-image: linear-gradient(45deg, #FCE8C7, #FFFAEB, #FCE8C7);
+    padding: .25rem;
+  }
+
+  .examples-assistive-tech {
+    position: relative;
+    background-image: linear-gradient(45deg, #FCE8C7, #FFFAEB, #FCE8C7);
+    padding: 1rem;
+    margin: 2rem;
+  }
+
+  .examples-assistive-tech::after {
+    content: '';
+    background-color: #FFE8D9;
+    position: absolute;
+    inset: 0;
+    transform: skewY(-3deg);
+    z-index: -1;
+  }
+
+  .assistive-tech-education-h2 {
+    color: #253D52;
+    position: relative;
+    display: flex;
+    background-image: linear-gradient(45deg, #FCE8C7, #FFFAEB, #FCE8C7);
+    padding: .25rem;
+  }
+
+.content-container {
+    margin: 1rem;
+    padding: 1rem;
+    position: relative;
 }
 
 .learnat-h3 {
-    color: #2C5333
+    color: #7496c1;
 }
 
 .learnat-a:link,
@@ -20,4 +72,11 @@
 
 .learnat-a:visited {
 color: #653CAD;
+}
+
+.learn-At-image {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    align-content: center;
 }
