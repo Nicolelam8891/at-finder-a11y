@@ -1,9 +1,8 @@
-.splash-page-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
 }
-
 .splash-image {
   display: flex;
   align-items: center;
@@ -90,7 +89,7 @@
 }
 
 .find-AT-button:hover, .learn-AT-button:hover {
-  background-color: rgba(4, 35, 14, 1);
+  background-color: #B7C8DE;
   transition: .3s;
 }
 
