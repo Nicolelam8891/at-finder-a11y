@@ -1,19 +1,6 @@
-/* .commentcard {
-  width: 40vw;
-  box-shadow: 0 0 10px hsl(125, 86%, 14%);
-  border-radius: 5px;
-  margin: 1rem;
-  box-sizing: border-box;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
 .container {
   position: relative;
   width: 40vw;
-
   height: 50vh;
 }
 
@@ -26,28 +13,26 @@
 
 .containerText {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-}
-/* 
-.disliked-comment {
-  background-color: red;
+  padding-bottom: 1rem;
 }
 
-.liked-comment {
-  background-color: green;
-} */
+.comment-title {
+  color: #1d476e;
+  font-weight: 900;
+}
 
 .liked-comment .primary,
 .liked-comment .secondary {
-  fill: hsl(123, 38%, 63%)
+  fill: #c2d2e8;
 }
 
 .disliked-comment .primary,
 .disliked-comment .secondary {
-  fill:hsl(360, 77%, 78%)
+  fill: #FFE8D9
 }
 
 .disliked-comment {
