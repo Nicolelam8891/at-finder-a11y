@@ -23,7 +23,7 @@ function TechCard({ title, website, techPiece, onCommentSubmit, category, curren
         <h3>{techPiece.title}</h3>
         <Link to={website} target="_blank">More Info</Link>
         <p>{techPiece.description}</p>
-        <button  onClick={handleTechClick} >Comment</button>
+        <button className='comment-button' onClick={handleTechClick} >Comment</button>
       </div>
       {showCommentForm && <CommentForm currentUser={currentUser} techPiece={techPiece} onCommentSubmit={handleCommentSubmit} category={category} setShowCommentForm={setShowCommentForm}/>} 
     </div>
