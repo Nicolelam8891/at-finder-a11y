@@ -5,12 +5,11 @@
 }
 .splash-image {
   display: flex;
-  align-items: center;
-  background-image: url("../assets/background.jpeg");
+  background-image: url("../assets/background-transparent.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 40vh;
+  height: 350px;
   width: 100%;
   padding-top: 20px;
 }
@@ -85,7 +84,7 @@
 
 .find-AT-button, .learn-AT-button {
   background-color: #FCE8C7;
-  color: #373F46;
+  color: #253D52;
 }
 
 .find-AT-button:hover, .learn-AT-button:hover {
@@ -124,7 +123,7 @@ button:hover {
 
 .main-page-text {
   background-color: #FFE8D9; 
-  font-size: 18px;
+  font-size: 16px;
   padding-bottom: 20px;
   padding-top: 20px;
   padding-left: 60px;
@@ -140,4 +139,9 @@ button:hover {
   margin-bottom: 1rem;
   margin-top: 1rem;
   font-size: 2vw;
+}
+
+.AT-magnify-image, .robot-learn-more-image {
+  height: 200px;
+  width: 200px;
 }
