@@ -5,12 +5,11 @@
 }
 .splash-image {
   display: flex;
-  align-items: center;
-  background-image: url("../assets/background.jpeg");
+  background-image: url("../assets/background-transparent.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 40vh;
+  height: 350px;
   width: 100%;
   padding-top: 20px;
 }
@@ -19,6 +18,27 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  position: relative;
+  padding: 20px;
+  color: black;
+}
+
+.splash-button-container::before, .splash-button-container::after {
+  content: '';
+  position: absolute; 
+  width: 100%;
+  height: 50px;
+  background: #B7C8DE;
+  -webkit-mask-image: url('../assets/curve.svg');
+}
+
+.splash-button-container::before {
+  top: 0;
+}
+
+.splash-button-container::after {
+  bottom: 0;
+  transform: rotate(.5turn)
 }
 
 .AT-info {
@@ -78,18 +98,18 @@
   text-decoration: none;
   z-index: 2;
   position: relative;
-  
+  border: 3px solid #dfcdc1;
   margin-left: 0;
   margin-bottom: 0;
 }
 
 .find-AT-button, .learn-AT-button {
   background-color: #FCE8C7;
-  color: #373F46;
+  color: #253D52;
 }
 
 .find-AT-button:hover, .learn-AT-button:hover {
-  background-color: #B7C8DE;
+  background-color: #dfcdc1;
   transition: .3s;
 }
 
@@ -124,7 +144,7 @@ button:hover {
 
 .main-page-text {
   background-color: #FFE8D9; 
-  font-size: 18px;
+  font-size: 16px;
   padding-bottom: 20px;
   padding-top: 20px;
   padding-left: 60px;
@@ -140,4 +160,9 @@ button:hover {
   margin-bottom: 1rem;
   margin-top: 1rem;
   font-size: 2vw;
+}
+
+.AT-magnify-image, .robot-learn-more-image {
+  height: 200px;
+  width: 200px;
 }
