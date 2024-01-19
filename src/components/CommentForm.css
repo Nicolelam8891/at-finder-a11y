@@ -54,8 +54,22 @@ label {
   display: flex;
 }
 
-.liked {
-  background-color: rgb(202, 238, 202);
+.rating-btns button {
+  margin: 0 3px; 
+  padding: 5px; 
+  color: rgb(91, 118, 154); 
+  font-weight: 900;
 }
 
-.unliked {background-color: rgb(240, 203, 203);}
+.comment-form-content button[type="submit"] {
+  margin-top: 10px; 
+  width: auto; 
+  color: rgb(91, 118, 154); 
+  font-weight: 900;
+}
+
+.liked {
+  background-color: rgb(218, 232, 218);
+}
+
+.unliked {background-color: rgb(229, 216, 216);}
