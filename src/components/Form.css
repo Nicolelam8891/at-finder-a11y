@@ -69,21 +69,27 @@
 }
 
 .techParam {
-  box-shadow: 0 0 10px hsl(125, 86%, 14%);
+  /* box-shadow: 0 0 10px hsl(125, 86%, 14%); */
+  box-shadow: 0 0 8px #c58267; 
   padding: 10px;
-  background-color: hsl(122, 42%, 75%);
+  /* background-color: hsl(122, 42%, 75%); */
+  background-color: #FCE8C7;
   /* width: 20vw; */
   box-sizing: border-box;
   font-size: 1rem;
   animation: fade-in 1s;
   border-radius: 5px;
-  color: hsl(125, 86%, 14%);
+  /* color: hsl(125, 86%, 14%); */
+  color:  #253D52;
   font-weight: 600;
   text-align: center;
 }
 
 .techParam:hover {
   cursor: pointer;
+}
+.techParam:focus {
+  box-shadow: 0 0 30px #253D52;
 }
 
 
@@ -93,8 +99,10 @@
 }
 
 .selected {
-  background-color: hsl(125, 86%, 14%);
-  color: hsl(125, 65%, 93%);
+  /* background-color: hsl(125, 86%, 14%); */
+  background-color: #FCE8C7;
+  color:  #253D52;
+  /* color: hsl(125, 65%, 93%); */
   transition: 1s;
 }
 
