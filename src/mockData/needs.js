@@ -22,7 +22,7 @@ const needs = {
     'disability parameter': 'have low vision',
     'ind': 1
   },
-  'Deaf / Hard of Hearing': {
+  'Deaf and Hard of Hearing': {
     'category': 'Deaf / Hard of Hearing',
     'definition': [
       'Deaf: Very little to no functional hearing.',

@@ -51,6 +51,12 @@ const Form = ({
     setSelectedTechParam(techParam);
     setTimeout(scrollToBottom, 2)
   };
+ 
+  const handleTechKeyDown = (e, techParam) => {
+    if (document.activeElement === e.currentTarget && (e.key === ' ' || e.key === 'Enter')) {
+      handleTechParamClick(techParam);
+    }
+  };
 
   const getTechParams = () => {
     if (selectedCategory) {
@@ -75,45 +81,7 @@ const Form = ({
     }
   };
 
-  // useEffect(() => {
-    // const handleScroll = () => {
-    //   const container = containerRef.current;
-    //   if (!container) return;
-
-    //   const cards = container.getElementsByClassName('category-card');
-
-    //   Array.from(cards).forEach((card) => {
-    //     const rect = card.getBoundingClientRect();
-    //     const containerRect = container.getBoundingClientRect();
-    //     const fadeOutDistance = 200; // Adjust this value based on your preference
-
-    //     const distanceToLeftEdge = containerRect.left - rect.left;
-    //     const distanceToRightEdge = rect.right - containerRect.right;
-
-    //     if (distanceToLeftEdge >= 0 || distanceToRightEdge >= 0) {
-    //       // Card is at or past either edge, apply fade
-    //       const maxDistance = Math.max(distanceToLeftEdge, distanceToRightEdge);
-    //       const opacity = 1 - Math.min(1, maxDistance / fadeOutDistance);
-    //       card.style.opacity = opacity.toString();
-    //     } else {
-    //       // Card is within the container, fully opaque
-    //       card.style.opacity = '1';
-    //     }
-    //   });
-    // };
-
-    // const container = containerRef.current;
-    // if (container) {
-    //   container.addEventListener('scroll', handleScroll);
-    // }
-
-    // return () => {
-    //   if (container) {
-    //     container.removeEventListener('scroll', handleScroll);
-    //   }
-    // };
-  // }, []);
-
+  
   useEffect(()=>{
     setSelectedCategory(null)
   }, [])
@@ -138,7 +106,14 @@ const Form = ({
           <h2 className='sub'>What is your area of need?</h2>
           <div className='subcategory-list'>
             {getTechParams().map((tech, index) => (
-              <div key={index} className={tech === selectedTechParam ? 'selected techParam' : 'techParam'} onClick={() => handleTechParamClick(tech)}>
+              <div
+                tabIndex="0"
+                key={index}
+                className={tech === selectedTechParam ? 'selected techParam' : 'techParam'}
+                onClick={() => handleTechParamClick(tech)}
+                onKeyDown={(e) => handleTechKeyDown(e, tech)}
+                role="button"
+              >
               <p>
                 {tech}
               </p>

@@ -15,6 +15,12 @@ const CategoryCard = ({ category, data, ind, onCategoryClick, onTechParamClick, 
     onCategoryClick(category);
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === ' ' || e.key === 'Enter') {
+      handleCategoryClick();
+    }
+  };
+
   const handleTechParamClick = (techParam) => {
     onTechParamClick(techParam);
   };
@@ -22,10 +28,11 @@ const CategoryCard = ({ category, data, ind, onCategoryClick, onTechParamClick, 
   const arr = [Blindness, LowVision, Deafness, FineMotor, GrossMotor, Reading, Math, Focus, Communication]
 // console.log(data['definition'])
 
-const index = data['ind']
+// const index = data['ind'] (change 1)
+const index = data && data.ind !== undefined ? data.ind : 0;
 
   return (
-    <div tabIndex='0' className={`category-card ${isSelected ? 'selected' : ''}`} onClick={handleCategoryClick}>
+    <div tabIndex={isSelected ? null : 0} className={`category-card ${isSelected ? 'selected' : ''}`} onClick={handleCategoryClick} onKeyDown={handleKeyDown} role="button">
       <h2 className='cat-title'>{category}</h2>
       <img className='img' src={arr[index]}/>
       <div className='def-cont'>
