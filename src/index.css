@@ -5,9 +5,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #253D52;
   font-weight: 500;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
-*:focus {
+button:focus {
   outline: 2px solid #253D52;
   box-shadow: 0 0 10px rgba(37, 61, 82, 0.7); 
   padding: 4px;

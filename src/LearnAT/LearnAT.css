@@ -60,18 +60,28 @@
 }
 
 .learnat-h3 {
-    color: #7496c1;
+    /* color: #7496c1; */
+    color: #4D63B6
 }
 
 .learnat-a:link,
-.learnat-a:active {
-    color: blue;
-}
-
-
+.learnat-a:active,
 .learnat-a:visited {
-color: #653CAD;
+    /* color: blue; */
+    color: #2D3A8C
 }
+
+.learnat-a:focus {
+  border: none;
+  outline: none;
+  color: #FFFAEB;
+  background-color: #4D63B6;
+}
+
+/* .learnat-a:visited {
+color: #653CAD;
+color: #2D3A8C
+} */
 
 .learn-At-image {
     display: flex;

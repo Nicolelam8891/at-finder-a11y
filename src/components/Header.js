@@ -31,7 +31,7 @@ function Header({ currentUser, setCurrentUser, handleButtonClick}) {
   return (
     <header className='header'>
       <h1 className="sr-only">AI AT Ally</h1>
-      <Link to='/'>
+      <Link to='/' className="header-link">
         <div className='logo-title-container'>
           <img className='logo' src={logo} alt='AI AT Ally logo'/>
         </div>
