@@ -5,31 +5,34 @@
 }
 .splash-image {
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("../assets/background-transparent.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 350px;
-  width: 100%;
+  height: 550px;
+  max-width: 1000px;
   padding-top: 20px;
+  margin: 0 auto; 
 }
 
 .splash-button-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   position: relative;
   padding: 20px;
-  color: black;
+  background:#253D52;
+
 }
 
 .splash-button-container::before, .splash-button-container::after {
   content: '';
   position: absolute; 
   width: 100%;
-  height: 50px;
-  background: #B7C8DE;
-  -webkit-mask-image: url('../assets/curve.svg');
+  height: 70px;
+  background: #6895AF;
 }
 
 .splash-button-container::before {
@@ -85,15 +88,15 @@
   align-items: center;
   align-content: center;
   border: none;
-  border-radius: 50px;
-  width: 200px;
-  height: 250px;
+  border-radius: 20px;
+  width: 400px;
+  height: 350px;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-family: 'Merriweather', serif;
-  font-size: 16px;
+  font-size: 30px;
   font-weight: 600;
   text-decoration: none;
   z-index: 2;
@@ -101,6 +104,7 @@
   border: 3px solid #dfcdc1;
   margin-left: 0;
   margin-bottom: 0;
+  margin-right: 20px;
 }
 
 .find-AT-button, .learn-AT-button {
@@ -109,7 +113,7 @@
 }
 
 .find-AT-button:hover, .learn-AT-button:hover {
-  background-color: #dfcdc1;
+  background-color: #d1c0b2;
   transition: .3s;
 }
 
@@ -143,12 +147,13 @@ button:hover {
 } */
 
 .main-page-text {
-  background-color: #FFE8D9; 
-  font-size: 16px;
+  background-color: #F2BFAD; 
+  font-size: 35px;
   padding-bottom: 20px;
   padding-top: 20px;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-weight: 600;
 }
 
 .info-description {
@@ -163,6 +168,6 @@ button:hover {
 }
 
 .AT-magnify-image, .robot-learn-more-image {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
 }

@@ -23,7 +23,7 @@ body {
 
 .contributor-card::after {
   content: '';
-  background-color: #FFE8D9;
+  background-color: #F2BFAD;
   position: absolute;
   inset: 0;
   transform: skewY(-5deg);
