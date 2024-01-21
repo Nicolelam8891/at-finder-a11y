@@ -71,7 +71,8 @@
     color: #2D3A8C
 }
 
-.learnat-a:focus {
+.learnat-a:focus,
+.learnat-a:hover {
   border: none;
   outline: none;
   color: #FFFAEB;
