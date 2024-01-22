@@ -4,18 +4,18 @@
   width: 30vw;
   border-radius: 5px;
   box-sizing: border-box;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  position: fixed; 
+  z-index: 1; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.6);
   display: flex;
-  align-items: center; /* Align the modal content vertically */
-  justify-content: center; /* Align the modal content horizontally */
+  align-items: center; 
+  justify-content: center; 
 }
 
 .comment-form-content {
@@ -75,7 +75,6 @@ label {
 .liked, .liked:focus {
   background-color: rgb(218, 232, 218);
 }
-
 
 .unliked, .unliked:focus {background-color: rgb(239, 220, 220);}
 

@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   width: 80vw;
-  /* align-items: center; */
   justify-content: center;
 }
 
@@ -15,31 +14,41 @@
 .results-headings {
   display: flex;
   justify-content: center;
-  /* padding: 1rem */
 }
 
 .result-head {
-  color: gray;
+  color: #253D52;
   max-width: 800px;
   padding: 1rem;
   padding-bottom: 0;
-  border: solid 3px #F2BFAD;
+  border: solid 3px #253D52;
+  font-size: 2.5rem;
   box-shadow: 0px 4px 6px rgba(0.5, 0.5, 0.5, 0.5);
   transition: box-shadow 0.3s ease; 
   padding: 1rem;
   text-align: center;
-  margin-left: 15px;
+  margin-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-weight: 900;
+  border-radius: 5px;
 }
 
 .active-filter {
-  color: black
+  color: #253D52;
+  background-color: #6895AF;
+}
+
+.active-filter:active {
+  color: #253D52;
+  
 }
 
 .result-head:hover {
   cursor: pointer;
   transform: scale(1.05);
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-
+  background-color: #F2BFAD;
 }
 
 .result-head:active {

@@ -7,7 +7,7 @@ function CommentCard ({comment}) {
       <div className='containerText'>
       <p>{comment.category}</p>
       <p className='comment-title'>{comment.title}</p>
-      <p>{comment.userComment}</p>
+      <p className='user-comment'>{comment.userComment}</p>
       </div>
     </div>
   )
