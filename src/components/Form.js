@@ -3,6 +3,15 @@ import './Form.css';
 import needs from '../mockData/needs';
 import CategoryCard from './CategoryCard';
 import { useNavigate, useParams } from 'react-router-dom';
+import Blindness from '../assets/Blindness.png'
+import LowVision from '../assets/LowVision.png'
+import Deafness from '../assets/Deafness.png'
+import FineMotor from '../assets/FineMotor.png'
+import GrossMotor from '../assets/GrossMotor.png'
+import Reading from '../assets/Reading.png'
+import Focus from '../assets/Focus.png'
+import Math from '../assets/Math.png'
+import Communication from '../assets/Communication.png'
 
 const Form = ({  
   selectedCategory,
@@ -13,8 +22,9 @@ const Form = ({
 }) => {
   const [loading, setLoading] = useState(false);
   const [filteredCategories, setFilteredCategories] = useState(Object.keys(needs));
-  const containerRef = useRef(null);
-  const bottomRef = useRef(null);
+  const [categoryImage, setCategoryImage] = useState(null)
+  // const containerRef = useRef(null);
+  // const bottomRef = useRef(null);
   const navigate = useNavigate();
   const { selectedCategory: urlSelectedCategory } = useParams();
 
@@ -74,60 +84,35 @@ const Form = ({
     }
   };
 
-  // const handleSubmit = async () => {
-  //   if (isSubmitEnabled) {
-  //     setLoading(true);
-  //     try {
-  //       await onFormSubmit();
-  //     } catch (error) {
-  //       console.error('Error:', error);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   }
-  // };
-  
-  // const handleSubmit = async () => {
-  //   if (isSubmitEnabled) {
-  //     setLoading(true);
-  //     try {
-  //       await onFormSubmit();
-  //       scrollToBottom(); (REMOVE THIS NO MATTER WHAT)
-  //     } catch (error) {
-  //       console.error('Error:', error);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   }
-  // };
-
   const getTechParams = () => {
     if (selectedCategory) {
       return needs[selectedCategory]['technology parameter'];
     }
     return [];
   };
-
-  // const isSubmitEnabled = selectedCategory && selectedTechParam;
   
-  return (
-    <div className='Form'>
-      <h1 className={`form-head ${selectedCategory ? 'hide' : ''}`}>Choose a Disability Category</h1>
-      <div className={selectedCategory ? 'singled' : "category-list"} ref={containerRef}>
-        {filteredCategories.map((category, index) => (
-          <CategoryCard
-            key={category}
-            category={category}
-            data={needs[category]}
-            onCategoryClick={handleCategoryClick}
-            isSelected={category === selectedCategory}
-          />
-        ))}
-      </div>
-      <div>
-        {selectedCategory && (
-          <div>
-          <h2 className='sub'>What is your area of need?</h2>
+const index = selectedCategory ? needs[selectedCategory].ind : 0;
+
+const arr = [Blindness, LowVision, Deafness, FineMotor, GrossMotor, Reading, Math, Focus, Communication]
+
+const getCategoryImage = () => {
+  setCategoryImage(arr[index]);
+}
+
+useEffect(() => {
+  getCategoryImage();
+}, [selectedCategory]);
+
+return (
+  <div className='Form'>
+    <h1 className={`form-head ${selectedCategory ? 'hide' : ''}`}>Choose a Disability Category</h1>
+    <div className={selectedCategory ? 'singled' : "category-list"}>
+    {/* <div className={selectedCategory ? 'singled' : "category-list"} ref={containerRef}> */}
+    {selectedCategory ? (
+        <div>
+          <h2 className='sub'>{`Tools for ${selectedCategory}`}</h2>
+          <img src={categoryImage} alt="" />
+          <p>Choose a tool category to have ChatGPT generate a list of assistive technologies.</p>
           <div className='subcategory-list'>
             {getTechParams().map((tech, index) => (
               <div
@@ -138,26 +123,38 @@ const Form = ({
                 onKeyDown={(e) => handleTechKeyDown(e, tech)}
                 role="button"
               >
-              <p>
-                {tech}
-              </p>
+                <p>
+                  {tech}
+                </p>
               </div>
             ))}
           </div>
-          </div>
-        )}
-      </div>
-     
-      {loading && (
-        <svg className='loader' width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <rect className="spinner_9y7u" x="1" y="1" rx="1" width="10" height="10"/>
-          <rect className="spinner_9y7u spinner_DF2s" x="1" y="1" rx="1" width="10" height="10"/>
-          <rect className="spinner_9y7u spinner_q27e" x="1" y="1" rx="1" width="10" height="10"/>
-        </svg>
+        </div>
+      ) : (
+        filteredCategories.map((category, index) => (
+          <CategoryCard
+            key={category}
+            category={category}
+            data={needs[category]}
+            onCategoryClick={handleCategoryClick}
+            isSelected={category === selectedCategory}
+            image={categoryImage}
+          />
+        ))
       )}
     </div>
-  );
+    {loading && (
+      <div>
+      <p>Please wait while ChatGPT fetches your requested assistive technologies.</p>
+      <svg className='loader' width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <rect className="spinner_9y7u" x="1" y="1" rx="1" width="10" height="10"/>
+        <rect className="spinner_9y7u spinner_DF2s" x="1" y="1" rx="1" width="10" height="10"/>
+        <rect className="spinner_9y7u spinner_q27e" x="1" y="1" rx="1" width="10" height="10"/>
+      </svg>
+      </div>
+    )}
+  </div>
+);
 };
 
 export default Form;
-

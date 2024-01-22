@@ -39,7 +39,7 @@
   height: 30vh;
   align-items: center;
   justify-content: center;
-  overflow: auto;
+  /* overflow: auto; */
   box-sizing: border-box;
   padding: 2rem;
   animation: fade-in 1s;

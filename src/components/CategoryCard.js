@@ -1,16 +1,7 @@
 import './CategoryCard.css'
 import React from 'react';
-import Blindness from '../assets/Blindness.png'
-import LowVision from '../assets/LowVision.png'
-import Deafness from '../assets/Deafness.png'
-import FineMotor from '../assets/FineMotor.png'
-import GrossMotor from '../assets/GrossMotor.png'
-import Reading from '../assets/Reading.png'
-import Focus from '../assets/Focus.png'
-import Math from '../assets/Math.png'
-import Communication from '../assets/Communication.png'
 
-const CategoryCard = ({ category, data, onCategoryClick, onTechParamClick, isSelected }) => {
+const CategoryCard = ({ category, data, onCategoryClick, onTechParamClick, isSelected, image }) => {
   const handleCategoryClick = () => {
     onCategoryClick(category);
   };
@@ -25,14 +16,10 @@ const CategoryCard = ({ category, data, onCategoryClick, onTechParamClick, isSel
     onTechParamClick(techParam);
   };
 
-  const arr = [Blindness, LowVision, Deafness, FineMotor, GrossMotor, Reading, Math, Focus, Communication]
-
-  const index = data && data.ind !== undefined ? data.ind : 0;
-
   return (
     <div tabIndex={isSelected ? null : 0} className={`category-card ${isSelected ? 'selected' : ''}`} onClick={handleCategoryClick} onKeyDown={handleKeyDown} role="button">
       <h2 className='cat-title'>{category}</h2>
-      <img className='img' src={arr[index]}/>
+      <img className='img' src={image} alt="" />
       <div className='def-cont'>
       {data['definition'].map((definition, index) => (
   <p className={`cat-def ${isSelected ? 'hide' : ''}`} key={index}>{definition}</p>
