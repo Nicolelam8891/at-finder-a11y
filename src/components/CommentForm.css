@@ -72,9 +72,10 @@ label {
   font-weight: 900;
 }
 
-.liked {
+.liked, .liked:focus {
   background-color: rgb(218, 232, 218);
 }
 
-.unliked {background-color: rgb(239, 220, 220);}
+
+.unliked, .unliked:focus {background-color: rgb(239, 220, 220);}
 

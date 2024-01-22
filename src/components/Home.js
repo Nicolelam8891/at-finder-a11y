@@ -8,12 +8,13 @@ function Home( {handleButtonClick} ) {
       <div className='splash-image'></div>
       <div className='overlay'></div>
       <div className='info-container'>
-        <p className="main-page-text"> If you need to research assistive technologies (AT) for yourself or a loved one, you've come to the right place. AI AT Ally, uses generative artificial intelligence (AI) to find tools that support the needs of people with disabilities. Please explore the site to learn more, leave comments, or rate tools you may have experience using.</p>
+        <p className="main-page-text"> <em>Are you or a loved one in need of research on assistive technologies (AT)?</em> </p>
+        <p className="main-page-text-2">Welcome to AI AT Ally! We use generative artificial intelligence (AI) to find tools that support the needs of people with disabilities. Please explore the site to learn more, leave comments, or rate tools you may have experience using.</p>
         <div className='splash-button-container'>
-          <button className='find-AT-button' onClick={() => handleButtonClick('/findmyat')}>Select your assistive technology!
+          <button className='find-AT-button' onClick={() => handleButtonClick('/findmyat')}>  Find my assistive technology!
           <img src={Finding_AT} alt="Robot-AT-hand" className="AT-magnify-image"></img>
           </button>
-          <button className='learn-AT-button' onClick={() => handleButtonClick('/learnat')}>Select to learn about assistive technology!
+          <button className='learn-AT-button' onClick={() => handleButtonClick('/learnat')}>Learn about assistive technology!
           <img src={RobotBook} alt="Robot-AT-hand" className="robot-learn-more-image"></img>
           </button>
          

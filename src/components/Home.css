@@ -11,10 +11,19 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 550px;
-  max-width: 1000px;
+  height: 460px;
+  max-width: 900px;
   padding-top: 20px;
   margin: 0 auto; 
+}
+
+.splash-image::after {
+  content: '';
+  display: block;
+  height: 5px;
+  margin-top: 485px;
+  background-color: #6895AF;
+  width: 100%;
 }
 
 .splash-button-container {
@@ -89,8 +98,8 @@
   align-content: center;
   border: none;
   border-radius: 20px;
-  width: 400px;
-  height: 350px;
+  min-width: 4rem;
+  min-height: 4rem;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 1rem;
@@ -104,7 +113,8 @@
   border: 3px solid #dfcdc1;
   margin-left: 0;
   margin-bottom: 0;
-  margin-right: 20px;
+  margin-right: 17px;
+  margin-left: 17px;
 }
 
 .find-AT-button, .learn-AT-button {
@@ -115,44 +125,39 @@
 .find-AT-button:hover, .learn-AT-button:hover {
   background-color: #d1c0b2;
   transition: .3s;
+  transform: scale(1.1); /* Increase the button size by 5% */
+  transition: background-color 0.5s ease, transform 0.5s ease; /* Transition for color and transform */
 }
 
-/* .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: hsl(0, 0%, 13%);
-  opacity: .7;
-  pointer-events: none;
-  z-index: 1;
-} */
+.find-AT-button:active, .learn-AT-button:active {
+  background-color: #F2BFAD; 
+  transition: background-color 0.1s ease; 
+}
+
 
 button:hover {
   cursor: pointer;
 }
 
-/* .welcome-header{
-  text-align: center;
-  font-size: 60px;
-  color: #192933;
-  background-color: #3E4C59;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-weight: 900;
-  width: 100%;
-} */
-
 .main-page-text {
   background-color: #F2BFAD; 
-  font-size: 35px;
+  font-size: 2.2rem;
   padding-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-left: 100px;
   padding-right: 100px;
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+
+.main-page-text-2 {
+  background-color: #F2BFAD; 
+  font-size: 1.7rem;
+  margin-top: 0px;
+  padding-bottom: 20px;
+  padding-top: 5px;
+  padding-left: 4rem;
+  padding-right: 4rem;
   font-weight: 600;
 }
 
@@ -168,6 +173,6 @@ button:hover {
 }
 
 .AT-magnify-image, .robot-learn-more-image {
-  height: 300px;
-  width: 300px;
+  height: 17rem;
+  max-width: 15.2rem;
 }
