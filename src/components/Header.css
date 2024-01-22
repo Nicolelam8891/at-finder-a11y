@@ -4,7 +4,9 @@ header {
   align-items: center;
   background: #FFFAEB; 
   height: 75px;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: .5rem;
   box-sizing: border-box;
   padding-bottom: 2rem;
   z-index: 100;
@@ -61,8 +63,8 @@ header {
   display: flex;
   align-items: center;
   text-align: center;
-  width: 120px;
-  height: 40px;
+  width: 80px;
+  height: 35px;
   border: none;
   justify-content: center;
   /* width: 6%; */
@@ -90,13 +92,13 @@ header {
 
 .about-button:hover {
   background-color: #253D52;
-  color: #FFE8D9;
+  color: #F2BFAD;
   transition: .3s;
 }
 
 .login-button:hover {
   background-color: #253D52;
-  color: #FFE8D9;
+  color: #F2BFAD;
   transition: .3s;
 }
 
