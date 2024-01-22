@@ -68,8 +68,8 @@ useEffect(() => {
     <div className='Results'>
       <div  className='results-cont'>
         <div className='results-headings'>
-          <h1 onClick={() => handleToggleSection('tech')} className={activeFilter === 'tech' ? 'result-head active-filter' : 'result-head'}>A.I. Suggested Tech</h1>
-          <h1 onClick={() => handleToggleSection('comments')}  className={activeFilter === 'comments' ? 'result-head active-filter' : 'result-head'}>Community Comments</h1>
+          <button onClick={() => handleToggleSection('tech')} className={activeFilter === 'tech' ? 'result-head active-filter' : 'result-head'}>A.I. Suggested Tech</button>
+          <button onClick={() => handleToggleSection('comments')}  className={activeFilter === 'comments' ? 'result-head active-filter' : 'result-head'}>Community Comments</button>
         </div>
         <div className='results-section'>
           {showTechSection && (

@@ -1,40 +1,56 @@
 .container {
   position: relative;
-  width: 40vw;
-  height: 50vh;
+  min-width: 23rem;
+  min-height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .commentcard {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
+    padding: 1rem;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .containerText {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  padding-bottom: 1rem;
+  font-size: 1rem;
 }
 
+.user-comment {
+  margin-top: 1rem;
+  margin-bottom: 2.7rem;
+
+}
 .comment-title {
   color: #1d476e;
   font-weight: 900;
+  font-size: 1rem;
+  margin: 0px;
 }
 
 .liked-comment .primary,
 .liked-comment .secondary {
-  fill: #c2d2e8;
+  fill: #FCE8C7;
+  padding: 0rem;
+}
+
+.liked-comment, .disliked-comment {
+  transform: scaleX(-1.5);
+
 }
 
 .disliked-comment .primary,
 .disliked-comment .secondary {
-  fill: #FFE8D9
-}
-
-.disliked-comment {
-  transform: scaleX(-1);
+  fill: #F2BFAD;
+  padding: 0rem;
 }
