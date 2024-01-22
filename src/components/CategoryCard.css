@@ -14,7 +14,7 @@
 }
 
 .cat-title {
-  font-size: 4vh;
+  font-size: 4vh; /*Revisit this - try changing to rem*/
   /* align-items: center; */
   margin: 0 auto;
   padding: 1rem;

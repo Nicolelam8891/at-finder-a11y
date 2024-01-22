@@ -7,6 +7,10 @@
   animation: fade-in 1s;
 }
 
+/* .category-list h2 {
+  font-size: 2rem;
+} */
+
 .category-card {
   box-sizing: border-box;
   padding: 1rem;
@@ -130,4 +134,5 @@
 .form-head, .sub {
   color:  hsl(0, 0%, 13%);
   margin-bottom: 1rem;
+  font-size: 2rem;
 }

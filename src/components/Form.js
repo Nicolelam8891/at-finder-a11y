@@ -95,8 +95,13 @@ const index = selectedCategory ? needs[selectedCategory].ind : 0;
 
 const arr = [Blindness, LowVision, Deafness, FineMotor, GrossMotor, Reading, Math, Focus, Communication]
 
-const getCategoryImage = () => {
-  setCategoryImage(arr[index]);
+const getCategoryImage = (category) => {
+  if (selectedCategory) {
+    setCategoryImage(arr[index]);
+  } else {
+    const categoryIndex = Object.keys(needs).indexOf(category);
+    setCategoryImage(arr[categoryIndex]);
+  }
 }
 
 useEffect(() => {
@@ -104,8 +109,8 @@ useEffect(() => {
 }, [selectedCategory]);
 
 return (
-  <div className='Form'>
-    <h1 className={`form-head ${selectedCategory ? 'hide' : ''}`}>Choose a Disability Category</h1>
+                <div className='Form'>
+                  <h2 className={`form-head ${selectedCategory ? 'hide' : ''}`}>Choose a Disability Category</h2>
     <div className={selectedCategory ? 'singled' : "category-list"}>
     {/* <div className={selectedCategory ? 'singled' : "category-list"} ref={containerRef}> */}
     {selectedCategory ? (
@@ -138,7 +143,7 @@ return (
             data={needs[category]}
             onCategoryClick={handleCategoryClick}
             isSelected={category === selectedCategory}
-            image={categoryImage}
+            image={arr[needs[category].ind]}
           />
         ))
       )}
