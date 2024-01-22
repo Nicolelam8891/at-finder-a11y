@@ -1,33 +1,48 @@
-/* Modal Backdrop */
 .modal {
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  position: fixed; 
+  z-index: 3; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.6); 
   display: flex;
-  align-items: center; /* Align the modal content vertically */
-  justify-content: center; /* Align the modal content horizontally */
+  align-items: center;
 }
 
-/* Modal Content */
+.login-error-message {
+  color: #253D52;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.submit-button {
+  color: #253D52;
+  font-weight: 600;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.submit-button:hover {
+  background-color: #253D52;
+  color: #dfcdc1;
+  transition: .3s;
+}
+
 .modal-content {
-  background-color: #c2d2e8;
+  background-color: #dfcdc1;
   border-radius: 20px;
   margin: auto;
   padding: 40px;
   border: 2px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  min-width: 30%; 
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-/* Close Button */
 .close-button {
-  color: #aaa;
+  color: #253D52;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -35,7 +50,7 @@
 
 .close-button:hover,
 .close-button:focus {
-  color: black;
+  color: #6895AF;
   text-decoration: none;
   cursor: pointer;
 }
