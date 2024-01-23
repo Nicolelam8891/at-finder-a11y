@@ -98,14 +98,14 @@
   align-content: center;
   border: none;
   border-radius: 20px;
-  min-width: 4rem;
-  min-height: 4rem;
+  min-width: 5rem;
+  min-height: 5rem;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-family: 'Merriweather', serif;
-  font-size: 30px;
+  font-size: 27px;
   font-weight: 600;
   text-decoration: none;
   z-index: 2;
@@ -125,8 +125,8 @@
 .find-AT-button:hover, .learn-AT-button:hover {
   background-color: #d1c0b2;
   transition: .3s;
-  transform: scale(1.1); /* Increase the button size by 5% */
-  transition: background-color 0.5s ease, transform 0.5s ease; /* Transition for color and transform */
+  transform: scale(1.1); 
+  transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
 .find-AT-button:active, .learn-AT-button:active {

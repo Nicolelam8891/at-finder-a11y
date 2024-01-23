@@ -43,9 +43,12 @@
 }
 
 .close-button {
-  color: #253D52;
+  transform: translateX(800%);
   float: right;
+  padding: 10px;
+  color: #253D52;
   font-size: 28px;
+  float: right;
   font-weight: bold;
 }
 
