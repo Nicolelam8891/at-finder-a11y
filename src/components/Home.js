@@ -11,7 +11,7 @@ function Home( {handleButtonClick} ) {
         <p className="main-page-text"> <em>Are you or a loved one in need of research on assistive technologies (AT)?</em> </p>
         <p className="main-page-text-2">Welcome to AI AT Ally! We use generative artificial intelligence (AI) to find tools that support the needs of people with disabilities. Please explore the site to learn more, leave comments, or rate tools you may have experience using.</p>
         <div className='splash-button-container'>
-          <button className='find-AT-button' onClick={() => handleButtonClick('/findmyat')}>  Find my assistive technology!
+          <button className='find-AT-button' onClick={() => handleButtonClick('/findmyat')}>  Search for my assistive technology!
           <img src={Finding_AT} alt="Robot-AT-hand" className="AT-magnify-image"></img>
           </button>
           <button className='learn-AT-button' onClick={() => handleButtonClick('/learnat')}>Learn about assistive technology!

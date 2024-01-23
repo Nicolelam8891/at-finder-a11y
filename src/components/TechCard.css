@@ -29,7 +29,7 @@
 
 .Tech-card::after {
   content: '';
-  background-image: linear-gradient(45deg, #FCE8C7, #FFFAEB, #6895AF);
+  background-image: linear-gradient(45deg, #FCE8C7, #FFFAEB, #869EB6);
   position: absolute;
   inset: 0;
   transform: skewY(-6deg);

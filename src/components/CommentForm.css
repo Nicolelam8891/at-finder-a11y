@@ -18,9 +18,19 @@
   justify-content: center; 
 }
 
+.close-button {
+  transform: translateX(750%);
+  float: right;
+  padding: 10px;
+  color: #253D52;
+  font-size: 28px;
+  float: right;
+  font-weight: bold;
+}
+
 .comment-form-content {
   background-color: #dfcdc1;
-  max-width: 400px;
+  max-width: 700px;
   padding: 2rem;
   margin: 4rem;
   border-radius: 20px;
@@ -63,6 +73,7 @@ label {
   padding: 5px; 
   color: #253D52;
   font-weight: 900;
+  font-size: 16px;
 }
 
 .comment-form-content button[type="submit"] {
@@ -70,6 +81,7 @@ label {
   width: auto; 
   color:#253D52; 
   font-weight: 900;
+  font-size: 16px;
 }
 
 .liked, .liked:focus {
