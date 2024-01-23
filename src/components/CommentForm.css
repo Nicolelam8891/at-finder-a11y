@@ -18,6 +18,16 @@
   justify-content: center; 
 }
 
+.close-button {
+  transform: translateX(750%);
+  float: right;
+  padding: 10px;
+  color: #253D52;
+  font-size: 28px;
+  float: right;
+  font-weight: bold;
+}
+
 .comment-form-content {
   background-color: #dfcdc1;
   max-width: 700px;
