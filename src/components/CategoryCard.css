@@ -14,17 +14,18 @@
 }
 
 .cat-title {
-  font-size: 4vh; /*Revisit this - try changing to rem*/
-  /* align-items: center; */
   margin: 0 auto;
+  font-size: 1.75rem;
+  text-align: center;
   padding: 1rem;
 }
 
 .cat-def {
   margin-bottom: .5rem;
   margin-top: 0;
-  font-size: 2vh;
-  font-weight: 600;
+  font-size: 1.1rem;
+  /* font-weight: 600; */
+  line-height: 1.5;
 }
 
 .def-cont {
