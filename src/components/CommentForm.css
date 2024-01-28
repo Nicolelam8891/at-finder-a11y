@@ -19,7 +19,7 @@
 }
 
 .close-button {
-  transform: translateX(750%);
+  position: absolute;
   float: right;
   padding: 10px;
   color: #253D52;
