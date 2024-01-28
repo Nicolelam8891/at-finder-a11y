@@ -3,9 +3,8 @@ import Form from './components/Form';
 import Header from './components/Header';
 import Home from './components/Home'
 import {Route, Routes, useNavigate, useLocation } from 'react-router-dom'
-import tech from './mockData/mockTech'
+// import tech from './mockData/mockTech'
 import Results from './components/Results';
-// import comments from './mockData/comments';
 import LearnAT from './LearnAT/LearnAT';
 import UserPage from './components/UserPage/UserPage';
 import About from './components/About';
@@ -67,8 +66,7 @@ const App = () => {
     try {
       // Call the asynchronous function using await
       await handleTechParamsSelection(selectedCategory, selectedTechParam);
-      navigate('/results');
-      // setTechComments(comments);
+      navigate(`/results/suggested-at`);
     } catch (error) {
       console.error('Error:', error);
     }
@@ -82,7 +80,6 @@ const App = () => {
 
   return (
     <main className="App">
-      {/* {location.pathname !== '/' && <Header handleButtonClick={handleButtonClick}/>} */}
       <Header setCurrentUser={setCurrentUser} handleButtonClick={handleButtonClick}/>
       <Routes>
         <Route
@@ -108,7 +105,8 @@ const App = () => {
           setSelectedTechParam={setSelectedTechParam}
           onFormSubmit={handleFormSubmit}
           />}/>
-        <Route path='/results' element={<Results tech={techResults} currentUser={currentUser} category={selectedCategory}/>}/>
+        <Route path='/results/suggested-at' element={<Results tech={techResults} currentUser={currentUser} category={selectedCategory}/>} />
+        <Route path='/results/community-comments' element={<Results tech={techResults} currentUser={currentUser} category={selectedCategory}/>} />
         <Route path='/learnat' element={<LearnAT/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/userpage' element={<UserPage currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
@@ -121,7 +119,3 @@ const App = () => {
 };
 
 export default App;
-
-{
-  /* <Form onTechParamsSelection={handleTechParamsSelection} /> */
-}
