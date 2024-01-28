@@ -30,12 +30,14 @@ const Form = ({
 
   useEffect(()=>{
     setSelectedCategory(null)
+    document.title = 'Disability Categories - AI AT Ally'
   }, [])
 
   useEffect (() => {
     if (urlSelectedCategory) {
       setSelectedCategory(urlSelectedCategory);
       setFilteredCategories([urlSelectedCategory]);
+      document.title = `Tools for ${urlSelectedCategory} - AI AT Ally`
     } else {
       setSelectedCategory(null);
       setFilteredCategories(Object.keys(needs));

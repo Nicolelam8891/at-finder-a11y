@@ -1,9 +1,14 @@
 import contributors from "../mockData/aboutData";
 import React from "react";
+import { useEffect } from "react";
 import "./About.css";
 import Contributor from "./Contributor";
 
 function About() {
+  useEffect(() => {
+    document.title = 'About';
+  }, [])
+
   return (
     <div className='about-page'>
       <div className="mission-statement-container">

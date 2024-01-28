@@ -11,6 +11,13 @@
   justify-content: center;
 }
 
+.chat-message {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  padding-top: .5rem;
+}
+
 .results-headings {
   display: flex;
   justify-content: center;
@@ -36,7 +43,7 @@
 
 .active-filter {
   color: #253D52;
-  background-color: #869EB6;
+  background-color: #93A8BE
 }
 
 .active-filter:active {

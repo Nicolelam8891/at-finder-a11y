@@ -1,6 +1,12 @@
 import './LearnAT.css'
+import { useEffect } from 'react'
 
 function LearnAT() {
+
+	useEffect(() => {
+		document.title = 'Learn About AT - AI AT Ally';
+	  }, [])
+
     return (
 			<div className="content-container">
 			<h2 className="assistive-tech-h2">What is Assistive Technology?</h2>
@@ -12,19 +18,8 @@ function LearnAT() {
 					Assistive technologies work best when paired with digital products that are designed to meet the latest version of the <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer" className="learnat-a">Web Content Accessibility Guidelines</a>, developed and maintained by the World Wide Web Consortium (W3C). When implemented correctly, accessible and inclusive design can improve the user experience for everyone. The W3C's <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer" className="learnat-a">Web Accessibility Initiative (WAI)</a> is an excellent resource for learning more about accessibility.
 				</p>
 			</div>
-					{/* <img
-				 className='learn-At-image'
-				 alt='back home picture with branches'
-				 src='https://sas.yale.edu/sites/default/files/styles/adaptive/adaptive-image/public/logo_0414_notitle_whitebg.png?itok=G4RgYb1P'
-			 />	 */}
 			<h2 className="examples-tech-h2">Examples of Assistive Technologies</h2>
 			<p className='examples-assistive-tech'>The following lists provide a small sample of types of assistive technologies. Some Assistive Technologies are free and are built into operating systems, either natively or through plugins. Others can be purchased as separate applications or devices.</p>
-			{/* <img
-				 className='learn-At-image'
-				 alt='back home picture with branches'
-				 src='https://sas.yale.edu/sites/default/files/styles/adaptive/adaptive-image/public/logo_0414_notitle_whitebg.png?itok=G4RgYb1P'
-			 />	 */}
-		
 			<h3 className="learnat-h3">Blind and Low Vision</h3>
 				<ul>
 					<li>Screen Readers</li>
