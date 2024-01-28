@@ -6,12 +6,13 @@ const needs = {
     ],
     'technology parameter': ['Screen Readers', 'Refreshable Braille Displays'],
     'disability parameter': 'are totally blind and cannot use a mouse',
-    'ind': 0
+    'ind': 0,
+    'strongTerms': ['functionally blind']
   },
   'Low Vision': {
     'category': 'Low Vision',
     'definition': [
-      'Visual acuity between 20/70 and 20/400, with the best possible correction, or a visual field of 20 degrees or less.',
+      'A person with low vision has a visual acuity between 20/70 and 20/400, with the best possible correction, or a visual field of 20 degrees or less.',
     ],
     'technology parameter': [
       'Magnification Software',
@@ -20,7 +21,8 @@ const needs = {
       'Magnifying Device',
     ],
     'disability parameter': 'have low vision',
-    'ind': 1
+    'ind': 1,
+    'strongTerms': ['low vision']
   },
   'Deaf and Hard of Hearing': {
     'category': 'Deaf / Hard of Hearing',
@@ -35,7 +37,8 @@ const needs = {
       'Alert Devices',
     ],
     'disability parameter': 'are deaf or hard of hearing',
-    'ind': 2
+    'ind': 2,
+    'strongTerms': ['Deaf', 'Hard of Hearing']
   },
   'Mobility Supports for Fine Motor Issues': {
     'category': 'Mobility Supports for Fine Motor Issues',
@@ -63,7 +66,8 @@ const needs = {
       'Personal Safety',
     ],
     'disability parameter': 'have fine motor disabilities',
-    'ind': 3
+    'ind': 3,
+    'strongTerms': ['fine motor disability']
   },
   'Mobility Supports for Gross Motor Issues': {
     'category': 'Mobility Supports for Gross Motor Issues',
@@ -84,7 +88,8 @@ const needs = {
       'Emergency Response',
     ],
     'disability parameter': 'have gross motor disabilities',
-    'ind': 4
+    'ind': 4,
+    'strongTerms': ['Gross motor disabilities']
   },
   'Cognitive Supports for Reading and Writing': {
     'category': 'Cognitive Supports for Reading and Writing',
@@ -101,16 +106,18 @@ const needs = {
     ],
     'disability parameter':
       'have cognitive disabilities in reading and writing',
-      'ind': 5
+      'ind': 5,
+      'strongTerms': ['Reading Disability', 'Writing Disability']
   },
   'Cognitive Supports for Math': {
     'category': 'Cognitive Supports for Math',
     'definition': [
-      'Math Disability / Dyscalculia: difficulty with number-related concepts, including math reasoning, problem solving, and calculation.',
+      'Math Disability or Dyscalculia: difficulty with number-related concepts, including math reasoning, problem solving, and calculation.',
     ],
     'technology parameter': ['Computation', 'Calculators'],
     'disability parameter': 'have cognitive disabilities in math',
-    'ind': 6
+    'ind': 6,
+    'strongTerms': ['Math Disability or Dyscalculia']
   },
   'Cognitive Supports for Focus': {
     'category': 'Cognitive Supports for Focus',
@@ -127,7 +134,8 @@ const needs = {
       'Calendar',
     ],
     'disability parameter': 'have difficulty maintaining cognitive focus',
-    'ind': 7
+    'ind': 7,
+    'strongTerms': ['cognitive focus disability']
   },
   'Communication Supports': {
     'category': 'Communication Supports',
@@ -136,7 +144,8 @@ const needs = {
     ],
     'technology parameter': ['Physical', 'Cognitive'],
     'disability parameter': 'have communication disabilities',
-    'ind': 8
+    'ind': 8,
+    'strongTerms': ['Communication disabilities']
   },
 };
 
