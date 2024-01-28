@@ -90,13 +90,13 @@ header {
   /* background-color: #B7C8DE; */
 }
 
-.about-button:hover {
+.about-button:hover, .about-button:focus {
   background-color: #253D52;
   color: #F2BFAD;
   transition: .3s;
 }
 
-.login-button:hover {
+.login-button:hover, .login-button:focus {
   background-color: #253D52;
   color: #F2BFAD;
   transition: .3s;
