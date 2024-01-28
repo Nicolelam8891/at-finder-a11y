@@ -110,7 +110,9 @@ useEffect(() => {
 
 return (
     <div className='Form'>
+    {/* // <div className="category-list"> */}
       <h2 className={`form-head ${selectedCategory ? 'hide' : ''}`}>Choose a Disability Category</h2>
+      {/* <h2 className={`category-heading ${selectedCategory ? 'hide' : ''}`}>Choose a Disability Category</h2> */}
     <div className={selectedCategory ? 'singled' : "category-list"}>
     {/* <div className={selectedCategory ? 'singled' : "category-list"} ref={containerRef}> */}
     {selectedCategory ? (

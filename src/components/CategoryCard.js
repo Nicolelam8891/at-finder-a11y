@@ -16,15 +16,6 @@ const CategoryCard = ({ category, data, onCategoryClick, onTechParamClick, isSel
     onTechParamClick(techParam);
   };
 
-  // const formatDefinition = (definition, strongTerms, color) => {
-  //   let formattedDefinition = definition;
-  //   strongTerms.forEach(term => {
-  //     const replacement = `<strong style="color: ${color}"><em>${term}</em></strong>`;
-  //     formattedDefinition = formattedDefinition.replace(new RegExp(term, 'gi'), match => replacement);
-  //   });
-  //   return <p className={`cat-def ${isSelected ? 'hide' : ''}`} dangerouslySetInnerHTML={{ __html: formattedDefinition }} />;
-  // };
-
   const formatDefinition = (definition, strongTerms, color) => {
     const elements = [];
     let remainingText = definition;
