@@ -51,7 +51,7 @@
   
 }
 
-.result-head:hover {
+.result-head:hover, .result-head:focus {
   cursor: pointer;
   transform: scale(1.05);
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);

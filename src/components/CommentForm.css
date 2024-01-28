@@ -19,16 +19,16 @@
 }
 
 .close-button {
-  transform: translateX(750%);
-  float: right;
+  position: absolute;
   padding: 10px;
   color: #253D52;
   font-size: 28px;
-  float: right;
-  font-weight: bold;
+  top: -8px;
+  right: 5px;
 }
 
 .comment-form-content {
+  position: relative;
   background-color: #dfcdc1;
   max-width: 700px;
   padding: 2rem;
