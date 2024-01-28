@@ -18,11 +18,10 @@ describe('Tests AI technology paths', () => {
       it('should allow the user to get details about assistive technologies ', () => {
           cy.get('.category-list > :nth-child(1)').click();
           cy.get('.subcategory-list > :nth-child(1)').contains("Screen Readers").click();
-          cy.get('.submit').contains("Submit").click()
           cy.wait('@getAiTech');
           cy.wait('@graphqlRequest');
-          cy.get('.active-filter').contains('h1', "A.I. Suggested Tech")
-          cy.get('.results-headings > :nth-child(2)').contains('h1', "Community Comments" )
+          cy.get('.active-filter').contains('button', "A.I. Suggested Tech")
+          cy.get('.results-headings > :nth-child(2)').contains('button', "Community Comments" )
           cy.get(':nth-child(1) > .Tech-card').get(':nth-child(1) > .Tech-card > h3').contains('h3', 'JAWS')
           cy.get(':nth-child(1) > .Tech-card > a').contains('a', "More Info")
           cy.get(':nth-child(1) > .Tech-card > p').contains('p', "Hello I am a screen reader")
