@@ -6,7 +6,7 @@ import Contributor from "./Contributor";
 
 function About() {
   useEffect(() => {
-    document.title = 'About';
+    document.title = 'About - AI AT Ally';
   }, [])
 
   return (
