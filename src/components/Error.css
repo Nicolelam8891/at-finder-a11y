@@ -15,8 +15,8 @@
   justify-content: center;
   box-sizing: border-box;
   align-items: center;
-  width: 800px;
-  height: 670px;
+  max-width: 50rem;
+  height: 40rem;
   border-radius: 20px;
   border: 3px solid #6895AF;
   margin-bottom: 35px;
@@ -28,11 +28,12 @@
 }
 
 .error-bad-route-image {
-  width: 700px;
-  height: 400px;
+  max-width: 25rem;
+  height: 22rem;
+  padding: 0.5rem;
+  margin: 1rem;
   border-radius: 20px;
   box-shadow: 0 0 15px 3px #d1c0b2;
-  border: 3px solid #6895AF;
 }
 
 .error-bad-route-message {
