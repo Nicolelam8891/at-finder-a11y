@@ -21,7 +21,7 @@ function TechCard({ title, website, techPiece, onCommentSubmit, category, curren
     <div className='tech-coll'>
       <div onClick={handleTechClick} className='Tech-card'>
         <h3>{techPiece.title}</h3>
-        <Link to={website} target="_blank">More Info</Link>
+        <a href={website} target="_blank" rel="noopener noreferrer" className="learnat-a">More Info <span className="sr-only">about {techPiece.title}</span></a>
         <p>{techPiece.description}</p>
         <button className='comment-button' onClick={handleTechClick} >Comment</button>
       </div>

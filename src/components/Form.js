@@ -68,7 +68,19 @@ const Form = ({
   //   setTimeout(scrollToBottom, 2) (NOTE REMOVE THIS NO MATTER WHAT)
   // };
 
-  const handleTechParamClick = async (techParam) => {
+  // const handleTechParamClick = async (techParam) => {
+  //   setSelectedTechParam(techParam);
+  //   try {
+  //     setLoading(true);
+  //     await onFormSubmit();
+  //   } catch (error) {
+  //     console.error('Error', error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
+  const handleTechParamClick = async (techParam, category) => {
     setSelectedTechParam(techParam);
     try {
       setLoading(true);
@@ -123,7 +135,22 @@ return (
           <img src={categoryImage} alt="" />
           <p>Choose a tool category to have ChatGPT generate a list of assistive technologies.</p>
           <div className='subcategory-list'>
-            {getTechParams().map((tech, index) => (
+          {getTechParams().map((tech, index) => {
+             const category = selectedCategory;  // Define category here
+                return (
+                  <div
+                    tabIndex="0"
+                    key={index}
+                    className={tech === selectedTechParam ? 'selected techParam' : 'techParam'}
+                    onClick={() => handleTechParamClick(tech, category)}
+                    onKeyDown={(e) => handleTechKeyDown(e, tech)}
+                    role="button"
+                  >
+                    <p>{tech}</p>
+                  </div>
+                );
+            })}
+            {/* {getTechParams().map((tech, index) => (
               <div
                 tabIndex="0"
                 key={index}
@@ -136,11 +163,11 @@ return (
                   {tech}
                 </p>
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
       ) : (
-        filteredCategories.map((category, index) => (
+        filteredCategories.map((category) => (
           <CategoryCard
             key={category}
             category={category}
