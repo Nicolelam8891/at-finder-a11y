@@ -1,5 +1,10 @@
 import './LearnAT.css'
 import { useEffect } from 'react'
+import amoeba_blind from '../assets/amoeba_blind.png'
+import deaf_hardofhearing from '../assets/amoeba_deaf_hardofhearing.png'
+import amoeba_physical from '../assets/amoeba_physical.png'
+import amoeba_reading from '../assets/amoeba_reading.png'
+import amoeba_writing_spelling from '../assets/amoeba_writing_spelling.png'
 
 function LearnAT() {
 
@@ -20,8 +25,12 @@ function LearnAT() {
 			</div>
 			<h2 className="examples-tech-h2">Examples of Assistive Technologies</h2>
 			<p className='examples-assistive-tech'>The following lists provide a small sample of types of assistive technologies. Some Assistive Technologies are free and are built into operating systems, either natively or through plugins. Others can be purchased as separate applications or devices.</p>
+			<div className='blind-title-h3'>
 			<h3 className="learnat-h3">Blind and Low Vision</h3>
-				<ul>
+			</div>
+			<div className='blind-h3-info'>
+				<img src={amoeba_blind} alt="Blind-amoeba" className="blind-amoeba"></img>
+				<ul className='list'>
 					<li>Screen Readers</li>
 					<li>Refreshable Braille Displays</li>
 					<li>Braille Notetakers</li>
@@ -34,8 +43,13 @@ function LearnAT() {
 					<li>Large Print Keyboards</li>
 					<li>Large Monitors</li>
 				</ul>
+				</div>
+				<div className='heading-title-h3'>
         	<h3 className="learnat-h3">Deaf and Hard of Hearing</h3>
-				<ul>
+			</div>
+			<div className='heading-h3-info'>
+					<img src={deaf_hardofhearing} alt="Deaf and hard of hearing amoeba" className="deaf-hard-of-hearing-amoeba"></img>
+				<ul className='list'>
 					<li>Sign Language</li>
 					<li>Closed Captioning and Subtitles</li>
 					<li>Communication Access Readtime Translation (CART)</li>
@@ -45,8 +59,13 @@ function LearnAT() {
 					<li>Speech-to-Text</li>
 					<li>Vibrating or Flashing Alert Systems</li>
 				</ul>
+			</div>
+			<div className='reading-title-h3'>
 			<h3 className="learnat-h3">Reading</h3>
-				<ul>
+			</div>
+			<div className='reading-h3-info'>
+			<img src={amoeba_reading} alt="Reading amoeba" className="reading-amoeba"></img>
+				<ul className='list'>
 					<li>Text-to-Speech Tools</li>
 					<li>Digital Vocabulary Support</li>
 					<li>eText Readers</li>
@@ -55,8 +74,13 @@ function LearnAT() {
 					<li>Text-to-Audio Conversion (Optical Character Recognition - OCR)</li>
 					<li>Augmentative and Alternative Communication Devices</li>
 				</ul>
+			</div>
+			<div className='heading-title-h3'>
         	<h3 className="learnat-h3">Writing and Spelling</h3>
-				<ul>
+			</div>
+			<div className='heading-h3-info'>
+					<img src={amoeba_writing_spelling} alt="Writing and spelling amoeba" className="writing-spelling-amoeba"></img>
+				<ul className='list'>
 					<li>Word Prediction Software</li>
 					<li>Speech-to-Text</li>
 					<li>Phonetic Spell Check</li>
@@ -66,8 +90,13 @@ function LearnAT() {
 					<li>Academic Suite Software</li>
 					<li>Augmentative and Alternative Communication</li>
 				</ul>
+			</div>
+			<div className='physical-title-h3'>
         	<h3 className="learnat-h3">Physical and Mobility</h3>
-				<ul>
+			</div>
+			<div className='physical-h3-info'>
+					<img src={amoeba_physical} alt="Physical amoeba" className="physical-amoeba"></img>
+				<ul className='list'>
 					<li>Alternative Keyboards</li>
 					<li>Keyboard Modificatiopns</li>
 					<li>Alternative Mice / Pointing Devices</li>
@@ -75,6 +104,7 @@ function LearnAT() {
 					<li>Mounting System</li>
 					<li>Switch Access Systems</li>
 				</ul>
+				</div>
        		<h2 className="assistive-tech-education-h2">Assistive Technology and Accessible Educational Materials Resources</h2>
         		<ul>
 					 {/* <img

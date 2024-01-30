@@ -2,45 +2,45 @@
     color: #253D52;
     position: relative;
     display: flex;
-    padding: .25rem;
+    padding: 1rem;
   
 }
 
   .assistive-tech-information {
     position: relative;
     background-image: linear-gradient(45deg, #FCE8C7, #FFFAEB, #FCE8C7);
-    padding: 1rem;
+    padding: 2rem;
     margin: 2rem;
   }
 
   .assistive-tech-information::after {
     content: '';
-    background-color: #F2BFAD;
+    background-color: #dfcdc1;
     position: absolute;
     inset: 0;
-    transform: skewY(-1deg);
+    transform: skewY(-2deg);
     z-index: -1;
   }
 
   .examples-tech-h2 {
     color: #253D52;
     position: relative;
-    padding: .25rem;
+    padding: 1rem;
   }
 
   .examples-assistive-tech {
     position: relative;
     background-image: linear-gradient(45deg, #FCE8C7, #FFFAEB, #FCE8C7);
-    padding: 1rem;
-    margin: 2rem;
+    padding: 2rem;
+    margin: 3rem;
   }
 
   .examples-assistive-tech::after {
     content: '';
-    background-color: #F2BFAD;
+    background-color: #dfcdc1;
     position: absolute;
     inset: 0;
-    transform: skewY(-1deg);
+    transform: skewY(-2deg);
     z-index: -1;
   }
 
@@ -52,14 +52,14 @@
   }
 
 .content-container {
-    margin: 1rem;
-    padding: 1rem;
     position: relative;
 }
 
 .learnat-h3 {
   padding-top: 30px;
-    color: #4D63B6
+  margin: 1rem;
+  color: #32536f;
+  font-size: 1.3rem;
 }
 
 .learnat-a:link,
@@ -88,3 +88,44 @@ color: #2D3A8C
     height: 150px;
     align-content: center;
 }
+
+.heading-title-h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blind-h3-info, .reading-title-h3, .reading-h3-info, .physical-title-h3, .physical-h3-info, .blind-title-h3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem; 
+  margin-right: 1rem;
+  background-color: #dfcdc1;
+  width: 100vw;
+
+}
+
+.heading-h3-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem; 
+  margin-right: 1rem;
+}
+
+.blind-amoeba, .deaf-hard-of-hearing-amoeba, .reading-amoeba, .writing-spelling-amoeba, .physical-amoeba {
+  width: 21rem;
+  height: 15rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.list li {
+ margin-bottom: 0.3rem;
+}
+
