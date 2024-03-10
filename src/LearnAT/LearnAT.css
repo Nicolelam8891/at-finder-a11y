@@ -56,10 +56,9 @@
 }
 
 .learnat-h3 {
-  padding-top: 30px;
   margin: 1rem;
   color: #32536f;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
 }
 
 .learnat-a:link,
@@ -77,10 +76,6 @@
   background-color: #4D63B6;
 }
 
-/* .learnat-a:visited {
-color: #653CAD;
-color: #2D3A8C
-} */
 
 .learn-At-image {
     display: flex;
@@ -89,43 +84,41 @@ color: #2D3A8C
     align-content: center;
 }
 
-.heading-title-h3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.blind-h3-info, .reading-title-h3, .reading-h3-info, .physical-title-h3, .physical-h3-info, .blind-title-h3 {
+.reading-title-h3, .physical-title-h3, .blind-title-h3, .heading-title-h3{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 6rem; 
   margin-right: 1rem;
   background-color: #dfcdc1;
   width: 100vw;
-
+  height: auto;
+  padding: 0px;
 }
 
-.heading-h3-info {
+.blind-h3-info, .heading-h3-info, .reading-h3-info, .physical-h3-info{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-content: center;
   align-items: center;
-  gap: 6rem; 
-  margin-right: 1rem;
+  padding: 1rem;
 }
 
 .blind-amoeba, .deaf-hard-of-hearing-amoeba, .reading-amoeba, .writing-spelling-amoeba, .physical-amoeba {
-  width: 21rem;
-  height: 15rem; 
+  width: 20rem;
+  height: 16rem; 
   display: flex;
   align-items: center;
   justify-content: center;
   align-content: center;
 }
 
-.list li {
- margin-bottom: 0.3rem;
+.list {
+  margin-bottom: 0.3rem;
+  border: 3px solid #F2BFAD;
+  border-radius: 10px;
+  border-style: ridge;
+  max-width: 20rem;
 }
 
