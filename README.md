@@ -17,7 +17,8 @@ The project required both the front-end and back-end teams to "stretch" themselv
 
 - [Define The Relationship (DTR) Document](https://www.notion.so/Assistive-Tech-DTR-3502538cc7f843c1a622af0769a18656)
 - [Project Board](https://github.com/orgs/Assistive-Tech-2307/projects/1)
-  
+
+## GIF of our project 
 ![AI AT A11y](https://github.com/Nicolelam8891/at-finder-a11y/assets/132624450/b3546fef-10fb-4385-ac39-924d6fcc5fca)
 
 </details>
