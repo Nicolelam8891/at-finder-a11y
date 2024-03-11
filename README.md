@@ -57,10 +57,10 @@ The project required both the front-end and back-end teams to "stretch" themselv
 
 
 ## Preview of App:
-[Visit Our Deployed Site](at-finder-a11y.vercel.app/)
+[Visit Our Deployed Site](https://at-finder-a11y.vercel.app/)
 
 ## GIF of App Functionality: 
-![AT-AT-Ally](https://gist.github.com/assets/7227063/827778f1-a17e-4489-a24c-7e72361a2add)
+![AI AT A11y](https://github.com/Nicolelam8891/at-finder-a11y/assets/132624450/f204d24d-8e38-40e1-a2fd-494f534dc99a)
 
 ## Screenshots
 
