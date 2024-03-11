@@ -23,13 +23,6 @@ header {
   max-width: 300px;
 }
 
-/* .header-title {
-  display: flex;
-  color: hsl(263, 85%, 18%);
-  font-size: 18px;
-  font-weight: 900;
-} */
-
 .title {
   display: flex;
   align-items: center;

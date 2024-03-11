@@ -105,15 +105,15 @@
 .spinner_9y7u {
   animation:spinner_fUkk 2.4s linear infinite;
   animation-delay:-2.4s;
-  fill:  hsl(262, 60%, 38%);
+  fill:  #F2BFAD;
 }
 .spinner_DF2s {
   animation-delay:-1.6s;
-  fill:  hsl(262, 60%, 38%);
+  fill:  #6895Af;
 }
 .spinner_q27e{
   animation-delay:-.8s;
-  fill:  hsl(262, 60%, 38%);
+  fill:  #F2BFAD;
 }
 
 @keyframes spinner_fUkk {
