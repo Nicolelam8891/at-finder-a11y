@@ -105,15 +105,15 @@
 .spinner_9y7u {
   animation:spinner_fUkk 2.4s linear infinite;
   animation-delay:-2.4s;
-  fill:  hsl(262, 60%, 38%);
+  fill:  #d1c0b2;
 }
 .spinner_DF2s {
   animation-delay:-1.6s;
-  fill:  hsl(262, 60%, 38%);
+  fill:  #F2BFAD;
 }
 .spinner_q27e{
   animation-delay:-.8s;
-  fill:  hsl(262, 60%, 38%);
+  fill:  hsl(202, 31%, 55%);
 }
 
 @keyframes spinner_fUkk {
@@ -148,4 +148,66 @@
   color:  hsl(0, 0%, 13%);
   margin-bottom: 1rem;
   font-size: 2rem;
+}
+
+.category {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding: 4rem;
+}
+
+.subcategory-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  animation: fade-in 1s;
+  padding: 2rem;
+  border: 2px solid #F2BFAD;
+  box-shadow: 0 0 8px #d1c0b2; 
+
+}
+
+.category-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 4rem;
+}
+
+.singled {
+  width: 100%;
+}
+
+.chat-message, .category-all {
+  font-family: 'Merriweather', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #253D52;
+  font-weight: 900;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.chat-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.category-name {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.sub {
+  color: #253D52;
+  font-weight: 900;
+  font-size: 35px;
 }
