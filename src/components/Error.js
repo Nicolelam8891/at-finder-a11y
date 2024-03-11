@@ -6,7 +6,7 @@ function Error ( {errorRoute, messageRoute} ) {
       <div className='error-bad-route-container'>
         <img
           className='error-bad-route-image'
-          alt='back home picture with branches'
+          alt='disabled people in park setting'
           src='https://www.inclusionhub.com/hubfs/Blog/disabled-people-in-park-setting-1.jpg'
         />
         <h1 className='error-bad-route-message'>ERROR!</h1>
