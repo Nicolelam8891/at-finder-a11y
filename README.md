@@ -17,9 +17,8 @@ The project required both the front-end and back-end teams to "stretch" themselv
 
 - [Define The Relationship (DTR) Document](https://www.notion.so/Assistive-Tech-DTR-3502538cc7f843c1a622af0769a18656)
 - [Project Board](https://github.com/orgs/Assistive-Tech-2307/projects/1)
-
-![AI AT A11y](https://github.com/Nicolelam8891/at-finder-a11y/assets/132624450/6351a51f-9244-4a57-b701-150245cbf800)
-
+  
+![AI AT A11y](https://github.com/Nicolelam8891/at-finder-a11y/assets/132624450/b3546fef-10fb-4385-ac39-924d6fcc5fca)
 
 </details>
 
@@ -58,7 +57,7 @@ The project required both the front-end and back-end teams to "stretch" themselv
 
 
 ## Preview of App:
-[Visit Our Deployed Site](https://at-finder.vercel.app/)
+[Visit Our Deployed Site](at-finder-a11y.vercel.app/)
 
 ## GIF of App Functionality: 
 ![AT-AT-Ally](https://gist.github.com/assets/7227063/827778f1-a17e-4489-a24c-7e72361a2add)
