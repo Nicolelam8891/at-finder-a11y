@@ -18,11 +18,6 @@ The project required both the front-end and back-end teams to "stretch" themselv
 - [Define The Relationship (DTR) Document](https://www.notion.so/Assistive-Tech-DTR-3502538cc7f843c1a622af0769a18656)
 - [Project Board](https://github.com/orgs/Assistive-Tech-2307/projects/1)
 
-## GIF of our project 
-![AI AT A11y](https://github.com/Nicolelam8891/at-finder-a11y/assets/132624450/b3546fef-10fb-4385-ac39-924d6fcc5fca)
-
-![AI AT A11y Responsive](https://github.com/Nicolelam8891/at-finder-a11y/assets/132624450/468bbf25-da9a-4324-b8f0-97bad7820b50)
-
 </details>
 
 ## Back-end Repositories and Endpoint Documentation:
@@ -63,6 +58,8 @@ The project required both the front-end and back-end teams to "stretch" themselv
 
 ## GIF of App Functionality: 
 ![AI AT A11y](https://github.com/Nicolelam8891/at-finder-a11y/assets/132624450/f204d24d-8e38-40e1-a2fd-494f534dc99a)
+
+![AI AT A11y Responsive](https://github.com/Nicolelam8891/at-finder-a11y/assets/132624450/918b65cc-94eb-46c0-8963-0a74f75df54f)
 
 ## Screenshots
 
