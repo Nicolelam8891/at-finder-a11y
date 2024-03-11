@@ -212,7 +212,7 @@
   font-size: 35px;
 }
 
-@media (max-width: 605px) {
+@media (max-width: 780px) {
   .category {
     flex-direction: column;
   }
@@ -231,3 +231,8 @@
   }
 }
 
+@media (max-width: 1655px) {
+  .category {
+    flex-direction: column;
+  }
+}
