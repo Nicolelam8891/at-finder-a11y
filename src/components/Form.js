@@ -129,7 +129,7 @@ return (
                     onKeyDown={(e) => handleTechKeyDown(e, tech)}
                     role="button"
                   >
-                    <p>{tech}</p>
+                    <p className='category-name'>{tech}</p>
                   </div>
                 );
             })}
