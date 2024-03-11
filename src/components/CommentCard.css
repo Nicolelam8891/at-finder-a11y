@@ -73,10 +73,6 @@
   box-sizing: border-box;
 }
 
-.cat-title {
-  display: flex;
-  font-size: 20px;
-}
 
 .category-list {
   display: grid;
