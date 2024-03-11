@@ -20,6 +20,7 @@ The project required both the front-end and back-end teams to "stretch" themselv
 
 ## GIF of our project 
 ![AI AT A11y](https://github.com/Nicolelam8891/at-finder-a11y/assets/132624450/b3546fef-10fb-4385-ac39-924d6fcc5fca)
+![AI AT A11y Responsive](https://github.com/Nicolelam8891/at-finder-a11y/assets/132624450/468bbf25-da9a-4324-b8f0-97bad7820b50)
 
 </details>
 
