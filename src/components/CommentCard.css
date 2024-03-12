@@ -54,3 +54,29 @@
   fill: #F2BFAD;
   padding: 0rem;
 }
+
+.img {
+  align-items: center;
+  align-content: center;
+  max-width: 20rem;
+  max-height: 17rem;
+}
+
+.category-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20rem; 
+  align-content: space-around;
+  box-sizing: border-box;
+}
+
+.category-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(3, 1fr); 
+  gap: 1rem; 
+  padding: 1rem; 
+}
